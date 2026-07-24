@@ -18,6 +18,7 @@
 
   const path = location.pathname.replace(/\/$/, '') || '/';
   if (path === '/calculator') nav?.querySelector('a[href="/calculator"]')?.setAttribute('aria-current','page');
+  if (path === '/review') nav?.querySelector('a[href="/review"]')?.setAttribute('aria-current','page');
   if (path === '/privacy') nav?.querySelector('a[href="/privacy"]')?.setAttribute('aria-current','page');
 
   if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -65,4 +66,37 @@
   installButtons.forEach(button => button.addEventListener('click', async () => { if (!installPrompt) return; installPrompt.prompt(); await installPrompt.userChoice; installPrompt = null; button.hidden = true; }));
 
   if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js'));
+})();// Version 2.1 personalised starting journey
+(() => {
+  const buttons = [...document.querySelectorAll('[data-journey]')];
+  const outcome = document.getElementById('journeyOutcome');
+  if (!buttons.length || !outcome) return;
+  const title = document.getElementById('journeyTitle');
+  const copy = document.getElementById('journeyCopy');
+  const actions = document.getElementById('journeyActions');
+  const content = {
+    save: {
+      title: 'Start with the household review.',
+      copy: 'It will help you identify whether energy, broadband or mobile deserves the first conversation.',
+      actions: '<a class="btn btn-blue" href="/review">Start the review</a><a class="btn btn-light" href="/calculator">Energy calculator</a>'
+    },
+    earn: {
+      title: 'Start with a factual earning conversation.',
+      copy: 'There is no income promise. The useful first step is understanding the activity, training, time and costs.',
+      actions: '<a class="btn btn-blue" href="https://calendly.com/save-with-paul/chat-with-paul" target="_blank" rel="noopener">Book a 30-minute chat</a><a class="btn btn-light" href="/review">Add it to my review</a>'
+    },
+    both: {
+      title: 'Build the complete household picture.',
+      copy: 'The household review combines services and earning interest, then creates one clear summary.',
+      actions: '<a class="btn btn-blue" href="/review">Start the complete review</a><a class="btn btn-light" href="https://calendly.com/save-with-paul/chat-with-paul" target="_blank" rel="noopener">Book a chat</a>'
+    }
+  };
+  buttons.forEach(button => button.addEventListener('click', () => {
+    buttons.forEach(item => { item.classList.remove('active'); item.setAttribute('aria-pressed','false'); });
+    button.classList.add('active'); button.setAttribute('aria-pressed','true');
+    const item = content[button.dataset.journey];
+    title.textContent = item.title; copy.textContent = item.copy; actions.innerHTML = item.actions;
+    outcome.classList.add('active');
+    window.trackSafe?.('journey_choice', {choice:button.dataset.journey});
+  }));
 })();

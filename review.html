@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#031b3a">
+<title>Free Household Review | Save &amp; Earn with Paul</title>
+<meta name="description" content="Complete a private, browser-based household review covering energy, broadband, mobile and flexible earning.">
+<link rel="canonical" href="https://www.saveandearnwithpaul.live/review"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="manifest" href="/manifest.webmanifest">
+<meta property="og:type" content="website"><meta property="og:title" content="Free Household Review with Paul"><meta property="og:description" content="A simple two-minute review with no personal details required."><meta property="og:url" content="https://www.saveandearnwithpaul.live/review"><meta property="og:image" content="https://www.saveandearnwithpaul.live/social-share.webp">
+<link rel="stylesheet" href="/styles.v2.css"></head><body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="/" aria-label="Save and Earn with Paul home">
+      <span class="brand-mark" aria-hidden="true">£</span>
+      <span class="brand-copy"><strong>Save &amp; Earn with Paul</strong><small>Paul Scrase • Independent UW Partner</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">Menu</button>
+    <nav class="nav-links" id="primary-navigation" aria-label="Main navigation">
+  <a href="/review">Household review</a>
+  <a href="/calculator">Energy calculator</a>
+  <a href="/#advice">Helpful guides</a>
+  <a href="/#about">About Paul</a>
+  <a href="/privacy">Privacy</a>
+  <a href="https://calendly.com/save-with-paul/chat-with-paul" target="_blank" rel="noopener" data-track="booking_header">Book a 30-min chat</a>
+  <a class="btn btn-yellow btn-small" href="https://wa.me/447925008477" target="_blank" rel="noopener" data-track="whatsapp_header">WhatsApp Paul</a>
+</nav>
+    <div class="nav-scrim" aria-hidden="true"></div>
+  </div>
+</header>
+<section class="page-hero review-page-hero"><div class="container"><span class="tag">PRIVATE IN YOUR BROWSER</span><h1 class="page-title">YOUR HOUSEHOLD REVIEW</h1><p>Energy, broadband, mobile and flexible earning—without entering your name, address or account details.</p></div></section>
+<main id="main" class="review-shell">
+  <div class="container">
+    <div class="breadcrumbs"><a href="/">Home</a> / Household review</div>
+    <div class="review-layout">
+      <form class="review-panel" id="reviewForm" novalidate>
+        <div class="review-progress-head"><span id="reviewProgressText">Step 1 of 5</span><span>About 2 minutes</span></div>
+        <div class="review-progress" aria-hidden="true"><span id="reviewProgressBar"></span></div>
+        <div id="reviewError" class="error-summary" role="alert" tabindex="-1"></div>
+
+        <section class="review-step active" data-step="0" aria-hidden="false">
+          <span class="kicker">Step 1</span><h2>What would help you most?</h2><p class="review-step-intro">Choose the main reason you are here.</p>
+          <div class="option-cards" data-required-group="priority">
+            <label class="option-card"><input type="radio" name="priority" value="save"><span><strong>Reduce household costs</strong><small>Energy, broadband or mobile.</small></span></label>
+            <label class="option-card"><input type="radio" name="priority" value="earn"><span><strong>Explore extra income</strong><small>Understand the flexible opportunity.</small></span></label>
+            <label class="option-card"><input type="radio" name="priority" value="both"><span><strong>Look at both</strong><small>The complete household picture.</small></span></label>
+          </div>
+        </section>
+
+        <section class="review-step" data-step="1" aria-hidden="true">
+          <span class="kicker">Step 2</span><h2>Energy</h2><div class="fields">
+            <div><label for="energyStatement">Do you know your annual energy usage?</label><select id="energyStatement"><option value="unknown">Not sure</option><option value="yes">Yes, I have annual kWh</option><option value="no">No, I would need an estimate</option></select></div>
+            <div><label for="energyConcern">What matters most?</label><select id="energyConcern"><option value="review">A general review</option><option value="cost">Managing costs</option><option value="usage">Understanding usage</option><option value="none">Energy is not my priority</option></select></div>
+            <div><label for="reviewHeating">Main heating</label><select id="reviewHeating"><option value="gas">Gas boiler</option><option value="electric">Electric heating</option><option value="heatpump">Heat pump</option><option value="other">Oil / other / not sure</option></select></div>
+            <div><label for="reviewSolar">Solar or electric vehicle?</label><select id="reviewSolar"><option value="neither">Neither</option><option value="solar">Solar panels</option><option value="ev">Electric vehicle</option><option value="both">Both</option></select></div>
+          </div>
+          <p class="field-hint">You can use the detailed energy calculator later. No meter or account details are needed here.</p>
+        </section>
+
+        <section class="review-step" data-step="2" aria-hidden="true">
+          <span class="kicker">Step 3</span><h2>Broadband and mobile</h2><div class="fields">
+            <div><label for="broadbandExperience">Broadband experience</label><select id="broadbandExperience"><option value="happy">Generally happy</option><option value="slow">Too slow</option><option value="unreliable">Unreliable</option><option value="expensive">Feels expensive</option><option value="unknown">Not sure</option></select></div>
+            <div><label for="broadbandContract">Contract position</label><select id="broadbandContract"><option value="unknown">Not sure</option><option value="in">Still in contract</option><option value="ending">Ending soon</option><option value="out">Out of contract</option></select></div>
+            <div><label for="mobileLines">Mobile requirements</label><select id="mobileLines"><option value="none">No mobile review needed</option><option value="one">One mobile</option><option value="family">Several / family mobiles</option><option value="unknown">Not sure</option></select></div>
+            <div><label for="mobileConcern">Main mobile concern</label><select id="mobileConcern"><option value="none">No concern</option><option value="signal">Signal / coverage</option><option value="data">Data allowance</option><option value="cost">Monthly cost</option><option value="upgrade">Upgrade timing</option></select></div>
+          </div>
+        </section>
+
+        <section class="review-step" data-step="3" aria-hidden="true">
+          <span class="kicker">Step 4</span><h2>Flexible earning</h2><p class="review-step-intro">This section is optional and does not make any income prediction.</p>
+          <div class="fields">
+            <div><label for="earningInterest">Interest level</label><select id="earningInterest"><option value="none">Not interested just now</option><option value="curious">Curious and want the facts</option><option value="explore">Open to exploring it</option><option value="ready">Ready for a conversation</option></select></div>
+            <div><label for="earningTime">Time you could realistically give</label><select id="earningTime"><option value="unknown">Not sure</option><option value="one">Around 1–2 hours a week</option><option value="few">A few hours a week</option><option value="flexible">Flexible / varies</option></select></div>
+            <div class="full"><label for="earningReason">What would extra income help with?</label><select id="earningReason"><option value="general">General financial breathing room</option><option value="bills">Household bills</option><option value="savings">Savings or a specific goal</option><option value="career">A flexible longer-term opportunity</option><option value="prefer">Prefer not to say</option></select></div>
+          </div>
+          <div class="notice small"><strong>Important:</strong> income is not guaranteed and depends on personal activity and results.</div>
+        </section>
+
+        <section class="review-step" data-step="4" aria-hidden="true">
+          <span class="kicker">Step 5</span><h2>Your suggested next steps</h2>
+          <div class="review-summary" id="reviewSummary" aria-live="polite"></div>
+          <div class="notice small">This summary is guidance only. It is generated locally from your selections and is not a quotation, recommendation or income forecast.</div>
+        </section>
+
+        <div class="review-controls no-print">
+          <button class="btn btn-light" type="button" id="reviewBack">Back</button>
+          <div><button class="btn btn-light" type="button" id="reviewReset">Reset</button><button class="btn btn-blue" type="button" id="reviewNext">Next</button></div>
+        </div>
+      </form>
+
+      <aside class="review-side">
+        <div class="review-side-card">
+          <span class="kicker">You stay in control</span><h2>No sales form. No database.</h2>
+          <ul class="checklist"><li><span class="checkmark">✓</span><span>No name or contact details requested</span></li><li><span class="checkmark">✓</span><span>Your choices remain in this browser</span></li><li><span class="checkmark">✓</span><span>Nothing is sent unless you choose WhatsApp</span></li></ul>
+        </div>
+        <div class="review-side-card paul-mini-card">
+          <img src="/paul-scrase-480.webp" width="120" height="150" loading="lazy" alt="">
+          <div><strong>Prefer to speak now?</strong><p>Book a free 30-minute chat with Paul.</p><a class="btn btn-yellow btn-small" href="https://calendly.com/save-with-paul/chat-with-paul" target="_blank" rel="noopener" data-track="booking_review_side">Choose a time</a></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+<footer class="site-footer"><div class="container"><div class="footer-grid">
+  <div><div class="footer-title">Save &amp; Earn with Paul</div><div>Helping people review household services, explore flexible extra income, or both.</div><div class="footer-actions"><button class="btn btn-light btn-small" data-share-site type="button">Share website</button><button class="btn btn-light btn-small" data-install-app type="button" hidden>Install app</button></div></div>
+  <div><div class="footer-title">Explore</div><div><a href="/">Home</a></div><div><a href="/review">Household review</a></div><div><a href="/calculator">Energy calculator</a></div><div><a href="/privacy">Privacy</a></div></div>
+  <div><div class="footer-title">Contact</div><div><a href="https://calendly.com/save-with-paul/chat-with-paul" target="_blank" rel="noopener" data-track="booking_footer">Book a free 30-minute chat</a></div><div><a href="https://wa.me/447925008477" target="_blank" rel="noopener" data-track="whatsapp_footer">WhatsApp 07925 008477</a></div><div><a href="tel:+447925008477">Call 07925 008477</a></div><div><a href="mailto:paul.scrase@uw.partners">paul.scrase@uw.partners</a></div><div><a href="https://linktr.ee/EarnNow" target="_blank" rel="noopener">Linktr.ee/EarnNow</a></div></div>
+</div><div class="footer-small">Paul Scrase is an independent Utility Warehouse Partner. This is an independent partner website and not the official Utility Warehouse corporate website. Savings depend on individual circumstances. Income is not guaranteed and depends on personal activity and results.</div></div></footer>
+<div class="sticky-mobile-cta no-print"><a class="btn btn-yellow" href="/review">Review</a><a class="btn btn-light" href="https://calendly.com/save-with-paul/chat-with-paul" target="_blank" rel="noopener">Book</a><a class="btn btn-light" href="https://wa.me/447925008477" target="_blank" rel="noopener">WhatsApp</a></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script defer src="/analytics.v2.1.js"></script><script defer src="/site.v2.js"></script><script defer src="/review.v2.1.js"></script>
+</body></html>

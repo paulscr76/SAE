@@ -15,3 +15,84 @@
 .cta-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
 .booking-note{font-size:13px;color:var(--muted);margin-top:10px}
 @media(max-width:640px){.cta-actions{justify-content:flex-start;width:100%}.cta-actions .btn{flex:1}}
+
+
+/* ===================== VERSION 2.1 ===================== */
+.hero-v21{padding:78px 0 70px}
+.hero-v21-grid{display:grid;grid-template-columns:1.12fr .88fr;align-items:center;gap:58px;position:relative;z-index:2}
+.hero-v21-copy{position:relative;z-index:2}
+.hero-intro{font-size:clamp(24px,3vw,38px)!important;font-weight:1000;color:#fff!important;margin:22px 0 4px!important}
+.hero-v21 h1{font-size:clamp(45px,6.7vw,78px);max-width:850px}
+.hero-reassurance{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:24px;color:#dbe8f6;font-weight:850;font-size:13px}
+.paul-hero-card{position:relative;border-radius:34px;background:linear-gradient(145deg,var(--yellow),var(--yellow2));padding:9px;box-shadow:0 38px 100px rgba(0,0,0,.34);overflow:hidden;transform:rotate(1deg)}
+.paul-hero-card picture,.paul-hero-card img{display:block;width:100%}
+.paul-hero-card img{aspect-ratio:4/5;object-fit:cover;object-position:center top;border-radius:27px}
+.portrait-glow{position:absolute;inset:auto -25% -25% 25%;height:60%;background:radial-gradient(circle,rgba(255,214,10,.55),transparent 70%);filter:blur(20px);z-index:0}
+.paul-card-caption{position:absolute;left:26px;right:26px;bottom:25px;background:rgba(3,27,58,.91);backdrop-filter:blur(12px);color:#fff;border:1px solid rgba(255,255,255,.15);border-radius:20px;padding:17px 18px;display:grid}
+.paul-card-caption strong{font-size:21px;color:var(--yellow)}.paul-card-caption span{font-size:12px;color:#d4e1ef}.paul-card-caption a{margin-top:8px;font-weight:1000;text-decoration:none}
+
+.choice-launch{padding:82px 0;background:linear-gradient(180deg,#fff,var(--soft))}
+.choice-launch-head{max-width:780px}.choice-launch h2{font-size:clamp(38px,5vw,58px);line-height:1;color:var(--navy);letter-spacing:-2px;margin:9px 0 14px}
+.journey-choice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:34px}
+.journey-choice{display:grid;gap:9px;text-align:left;border:2px solid var(--line);background:#fff;border-radius:24px;padding:26px;cursor:pointer;color:var(--ink);min-height:215px;box-shadow:0 12px 34px rgba(3,27,58,.07);transition:.2s ease}
+.journey-choice:hover,.journey-choice.active{transform:translateY(-4px);border-color:var(--yellow);box-shadow:0 20px 48px rgba(3,27,58,.13)}
+.journey-choice.active{background:linear-gradient(145deg,#fffdf0,#fff)}
+.journey-choice strong{font-size:24px;color:var(--navy);line-height:1.1}.journey-choice>span:last-child{color:var(--muted)}
+.journey-icon{width:52px;height:52px;border-radius:17px;background:var(--yellow);color:var(--navy);display:grid;place-items:center;font-size:25px;font-weight:1000}
+.journey-outcome{margin-top:18px;border-radius:25px;background:var(--navy);color:#fff;padding:26px;display:flex;align-items:center;justify-content:space-between;gap:24px;opacity:.88}
+.journey-outcome.active{box-shadow:var(--shadow);opacity:1}.journey-outcome h3{font-size:27px;color:var(--yellow);margin:5px 0}.journey-outcome p{margin:0;color:#d6e4f2}.journey-actions{display:flex;gap:10px;flex-wrap:wrap;flex:0 0 auto}
+
+.review-feature-section{background:#fff}
+.review-feature{display:grid;grid-template-columns:1.12fr .88fr;gap:44px;align-items:center;background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;border-radius:34px;padding:45px;box-shadow:var(--shadow);overflow:hidden}
+.review-feature h2{color:var(--yellow)}.review-feature .section-intro{color:#deebf8}.review-feature .checklist{color:#fff}
+.review-preview{display:grid;gap:13px;position:relative}
+.review-preview-progress{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}.review-preview-progress span{height:7px;border-radius:99px;background:rgba(255,255,255,.22)}.review-preview-progress span:nth-child(-n+3){background:var(--yellow)}
+.review-preview-card{background:#fff;color:var(--ink);border-radius:20px;padding:20px;box-shadow:0 18px 45px rgba(0,0,0,.18)}.review-preview-card small{display:block;color:var(--blue2);font-weight:1000;letter-spacing:.1em}.review-preview-card strong{display:block;font-size:24px;color:var(--navy);margin:6px 0}.review-preview-card p{margin:0;color:var(--muted)}.review-preview-card.accent{background:var(--yellow)}
+
+.advice-section{background:#fff}.advice-grid{display:grid;gap:13px}
+.advice-card{border:1px solid var(--line);border-radius:22px;background:#fff;overflow:hidden;box-shadow:0 10px 30px rgba(3,27,58,.06)}
+.advice-card summary{list-style:none;display:grid;grid-template-columns:64px 1fr 32px;align-items:center;gap:16px;padding:22px;cursor:pointer}.advice-card summary::-webkit-details-marker{display:none}
+.advice-number{font-size:26px;color:var(--blue2);font-weight:1000}.advice-card summary strong{display:block;font-size:21px;color:var(--navy)}.advice-card summary small{color:var(--muted)}
+.advice-plus{font-size:28px;color:var(--blue2);transition:.2s}.advice-card[open] .advice-plus{transform:rotate(45deg)}
+.advice-body{padding:0 22px 22px 102px;color:var(--muted)}.advice-body a{color:var(--blue2);font-weight:1000;text-decoration:none}
+
+/* Household review */
+.review-page-hero{background:radial-gradient(circle at 85% 20%,rgba(255,214,10,.25),transparent 26%),linear-gradient(135deg,var(--navy),var(--blue2))}
+.review-shell{padding:52px 0}.review-layout{display:grid;grid-template-columns:1.18fr .82fr;gap:24px;align-items:start}
+.review-panel,.review-side-card{background:#fff;border:1px solid var(--line);border-radius:28px;padding:28px;box-shadow:0 14px 40px rgba(3,27,58,.09)}
+.review-progress-head{display:flex;justify-content:space-between;gap:10px;font-size:13px;font-weight:900;color:var(--muted)}
+.review-progress{height:10px;border-radius:99px;background:#eaf0f7;overflow:hidden;margin:9px 0 26px}.review-progress span{display:block;height:100%;width:20%;background:var(--yellow);transition:.25s}
+.review-step{display:none}.review-step.active{display:block}.review-step h2{color:var(--navy);font-size:clamp(31px,4vw,44px);line-height:1.04;margin:8px 0 12px}.review-step-intro{color:var(--muted);font-size:17px}
+.option-cards{display:grid;gap:12px;margin-top:22px}.option-card{position:relative;border:2px solid var(--line);border-radius:18px;padding:18px;cursor:pointer;display:block}.option-card input{position:absolute;opacity:0;pointer-events:none}.option-card span{display:grid;gap:4px}.option-card strong{font-size:20px;color:var(--navy)}.option-card small{color:var(--muted)}.option-card:hover,.option-card.selected,.option-card:has(input:checked){border-color:var(--yellow);background:#fffdf0;box-shadow:0 0 0 4px rgba(255,214,10,.15)}
+.review-controls{display:flex;justify-content:space-between;gap:10px;margin-top:25px}.review-controls>div{display:flex;gap:10px}
+.review-side{display:grid;gap:16px;position:sticky;top:100px}.review-side-card h2{font-size:31px;line-height:1.04;color:var(--navy)}.paul-mini-card{display:grid;grid-template-columns:105px 1fr;gap:16px;align-items:center;background:var(--navy);color:#fff}.paul-mini-card img{width:105px;height:126px;border-radius:17px;object-fit:cover;object-position:top}.paul-mini-card p{color:#d7e5f4;margin:5px 0 13px}
+.review-summary{display:grid;gap:15px}.summary-hero,.summary-recommendation{border-radius:20px;padding:21px}.summary-hero{background:var(--yellow);color:var(--navy)}.summary-recommendation{background:linear-gradient(145deg,var(--navy),var(--blue));color:#fff}.summary-hero span,.summary-recommendation span{display:block;text-transform:uppercase;letter-spacing:.1em;font-size:11px;font-weight:1000;opacity:.75}.summary-hero strong{font-size:28px}.summary-recommendation h3{color:var(--yellow);font-size:25px;line-height:1.1;margin:7px 0 0}.review-summary-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.notice.small{font-size:13px;padding:13px 14px}
+
+/* Calculator live comparison */
+.live-badge{display:inline-flex;margin-top:14px;background:var(--yellow);color:var(--navy);border-radius:99px;padding:6px 9px;font-size:10px;font-weight:1000;letter-spacing:.06em}
+.usage-comparison{margin-top:16px;border:1px solid var(--line);border-radius:18px;padding:16px;background:#fbfdff}
+.comparison-row+ .comparison-row{margin-top:15px}.comparison-row>div:first-child{display:flex;justify-content:space-between;gap:12px;margin-bottom:7px}.comparison-row strong{color:var(--navy);font-size:13px}.comparison-row span{color:var(--muted);font-size:12px}
+.range-track{height:12px;border-radius:99px;position:relative;display:grid;grid-template-columns:1fr 1fr 1fr;overflow:visible;background:#e9eff6}.range-track>span{height:100%}.range-low{background:#bfe4d4;border-radius:99px 0 0 99px}.range-typical{background:var(--yellow)}.range-high{background:#f0beb8;border-radius:0 99px 99px 0}.range-track i{position:absolute;top:-5px;width:4px;height:22px;border-radius:4px;background:var(--navy);transform:translateX(-50%);box-shadow:0 0 0 3px #fff}
+
+/* Three-way mobile bar */
+.sticky-mobile-cta{grid-template-columns:repeat(3,1fr)}
+
+@media(max-width:960px){
+  .hero-v21-grid,.review-feature,.review-layout{grid-template-columns:1fr}
+  .paul-hero-card{max-width:600px;margin:auto;transform:none}
+  .journey-choice-grid{grid-template-columns:1fr}
+  .journey-outcome{align-items:flex-start;flex-direction:column}
+  .review-side{position:static;grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .hero-v21{padding:54px 0}.hero-v21 h1{letter-spacing:-2px}
+  .hero-reassurance{display:grid}.paul-card-caption{left:16px;right:16px;bottom:16px}
+  .choice-launch{padding:64px 0}.journey-choice{min-height:0}
+  .review-feature{padding:28px}.advice-card summary{grid-template-columns:48px 1fr 25px;padding:18px}.advice-body{padding:0 18px 18px}
+  .review-layout,.review-side{grid-template-columns:1fr}.review-panel,.review-side-card{padding:21px}.review-summary-actions{grid-template-columns:1fr}.paul-mini-card{grid-template-columns:82px 1fr}.paul-mini-card img{width:82px;height:100px}
+  .review-controls{align-items:flex-start}.review-controls>div{flex-wrap:wrap;justify-content:flex-end}
+}
+@media print{
+  .review-side,.review-controls,.review-summary-actions{display:none!important}.review-layout{grid-template-columns:1fr}.review-panel{box-shadow:none;border:0}
+}

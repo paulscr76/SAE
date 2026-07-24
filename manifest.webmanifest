@@ -23,6 +23,12 @@
   ],
   "shortcuts": [
     {
+      "name": "Household Review",
+      "short_name": "Review",
+      "description": "Start the private household review",
+      "url": "/review"
+    },
+    {
       "name": "Energy calculator",
       "url": "/calculator",
       "description": "Estimate annual household energy use"

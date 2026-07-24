@@ -1,0 +1,28 @@
+SAVE & EARN WITH PAUL — VERSION 2.1
+
+PUBLIC EXPERIENCE
+- New portrait-led homepage introduction.
+- New personalised Save / Earn / Both starting journey.
+- New private-in-the-browser Household Review at /review.
+- New practical advice guides; no testimonials added.
+- Refined mobile action bar with Review, Book and WhatsApp.
+
+HOUSEHOLD REVIEW
+- Five guided steps covering priorities, energy, broadband, mobile and flexible earning.
+- No name, address, email, telephone number, account details or meter details requested.
+- Browser-generated summary with Calendly, WhatsApp, calculator and print actions.
+- No database and no automatic submission.
+
+ENERGY CALCULATOR
+- Live results after the first calculation.
+- Broad low / typical / high comparison indicators.
+- Existing actual-kWh mode, warnings, summary, reset, share, print and WhatsApp retained.
+
+MEASUREMENT READY
+- Anonymous interaction labels are prepared in analytics.v2.1.js.
+- Form answers and energy figures are never included in tracking events.
+- Vercel Web Analytics must still be enabled and integrated using the project-specific script route shown in the Vercel dashboard.
+
+CONTACT
+- Calendly: https://calendly.com/save-with-paul/chat-with-paul
+- WhatsApp: 07925 008477

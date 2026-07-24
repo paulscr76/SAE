@@ -1,7 +1,9 @@
-const CACHE='sewp-v2-0-3-calendly';
+const CACHE='sewp-v2-1';
 const STATIC=[
   '/styles.v2.css',
   '/site.v2.js',
+  '/analytics.v2.1.js',
+  '/review.v2.1.js',
   '/calculator.v2.js',
   '/paul-scrase-480.webp',
   '/paul-scrase-800.webp',

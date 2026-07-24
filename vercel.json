@@ -57,6 +57,11 @@
       "source": "/privacy.html",
       "destination": "/privacy",
       "permanent": true
+    },
+    {
+      "source": "/review.html",
+      "destination": "/review",
+      "permanent": true
     }
   ]
 }

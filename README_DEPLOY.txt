@@ -1,30 +1,21 @@
-SAVE & EARN WITH PAUL — VERSION 2.0.2 RESTORED DESIGN
+SAVE & EARN WITH PAUL — VERSION 2.1
 
-This package preserves the original premium Version 2 design.
+UPLOAD
+1. Extract the ZIP.
+2. Open GitHub repository paulscr76/SAE.
+3. Choose Add file > Upload files.
+4. Upload every file from the extracted folder.
+5. Commit directly to main with:
+   Launch Version 2.1 household review
+6. Wait for the Vercel deployment to show Ready.
+7. Test:
+   /
+   /review
+   /calculator
+   /privacy
 
-Why this package is different:
-- Every required file is at the top level.
-- There is no assets folder to accidentally miss during GitHub upload.
-- Privacy works at /privacy and appears in the top navigation.
-- The calculator remains at /calculator.
-- The clean-shaven portrait, social-sharing artwork, SEO and PWA features are included.
-- Old .html addresses redirect to clean Vercel URLs.
-- The service worker fetches pages from the network first so an old design is not kept in cache.
-
-UPLOAD:
-1. Extract this ZIP.
-2. In GitHub, choose Add file > Upload files.
-3. Upload every file shown inside the extracted folder.
-4. Commit directly to main with:
-   Restore Version 2 design and fix Privacy
-5. Wait for Vercel to show Ready.
-6. Open the live site in a private/incognito tab for the first check.
-
-
-VERSION 2.0.3 UPDATE
-- Calendly booking link added throughout: https://calendly.com/save-with-paul/chat-with-paul
-- WhatsApp retained.
-- Testimonials deliberately omitted for now.
-
-Recommended commit message:
-Add Calendly booking without testimonials
+IMPORTANT
+- Upload all files, including review.html, review.v2.1.js and analytics.v2.1.js.
+- The site does not collect or store customer data.
+- Testimonials are not included.
+- Enable Vercel Web Analytics and Speed Insights separately in the Vercel dashboard. Static HTML integration requires the project-specific script path provided after enabling the feature.
