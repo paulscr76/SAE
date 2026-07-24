@@ -1,0 +1,43 @@
+VERSION 2.0 CHANGELOG
+
+DESIGN
+- Refined poster-inspired blue-and-yellow visual system
+- More consistent spacing, card depth, mobile layout and touch targets
+- Sticky mobile contact bar
+
+PERFORMANCE
+- Replaced the multi-megabyte portrait with responsive WebP images
+- Added long-lived caching for versioned static assets
+- Kept the site dependency-free and system-font based
+
+ACCESSIBILITY
+- Added skip link and strong keyboard focus styling
+- Added aria-expanded/aria-controls to navigation and FAQs
+- Added Escape-to-close mobile navigation and reduced-motion handling
+- Added calculator progress semantics, error summary and live result region
+
+CALCULATOR
+- Added guided validation and implausible-value warnings
+- Added household input summary and calculation date
+- Added reset, native share fallback, WhatsApp sharing and print/PDF output
+- Added methodology and clear limitations
+
+SEO / SHARING
+- Added canonical URLs, unique descriptions, Open Graph and Twitter cards
+- Added 1200x630 social-sharing artwork
+- Added Person and WebSite structured data
+- Updated sitemap, robots.txt and security.txt
+
+DEPLOYMENT / SECURITY
+- Added 404 page
+- Improved Vercel security and asset-cache headers
+- Kept adviser/customer data functionality outside the public package
+
+
+VERSION 2.0.1 PRIVACY HOTFIX
+- Added Privacy to the top navigation on every page.
+- Confirmed all production links use /privacy.
+- Added permanent redirects from privacy.html to /privacy.
+- Made service-worker installation independent of routed HTML pages.
+- Added current-page accessibility state to Privacy.
+- Added local homepage and privacy previews with relative links.

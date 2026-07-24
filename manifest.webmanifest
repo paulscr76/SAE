@@ -1,17 +1,31 @@
 {
   "name": "Save and Earn with Paul",
   "short_name": "Save & Earn",
+  "description": "Household services and flexible earning information with Paul Scrase",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#031b3a",
   "icons": [
     {
-      "src": "favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "src": "/assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
       "purpose": "any maskable"
     }
   ],
-  "scope": "/"
+  "shortcuts": [
+    {
+      "name": "Energy calculator",
+      "url": "/calculator",
+      "description": "Estimate annual household energy use"
+    }
+  ]
 }

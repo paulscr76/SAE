@@ -1,0 +1,4 @@
+Contact: mailto:paul.scrase@uw.partners
+Canonical: https://www.saveandearnwithpaul.live/security.txt
+Expires: 2027-07-24T00:00:00Z
+Preferred-Languages: en

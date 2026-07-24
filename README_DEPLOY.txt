@@ -1,20 +1,31 @@
-SAVE & EARN WITH PAUL — ALL LINKS FIXED
+SAVE & EARN WITH PAUL — VERSION 2.0
 
-This package replaces the current GitHub repository contents.
+WHAT IS NEW
+- Fully rebuilt responsive blue-and-yellow public website
+- Optimised WebP portrait in two responsive sizes
+- Dedicated social-sharing image for WhatsApp, Facebook and LinkedIn previews
+- Canonical URLs, Open Graph, Twitter metadata and structured data
+- Accessible mobile menu, FAQs, keyboard controls and reduced-motion support
+- Guided calculator with validation, warnings, input summary, reset, share and print
+- Sticky mobile calls to action
+- Installable PWA with app icons and offline support
+- 404 page, security.txt, sitemap and improved security/cache headers
+- All internal links use clean Vercel URLs
+- Private adviser dashboard remains separate and no real customer data is included
 
-Fixes included:
-- Every header, footer, hero and breadcrumb link uses Vercel clean URLs.
-- Homepage section links use /#services, /#faq, /#about and /#paths.
-- Calculator uses /calculator.
-- Privacy uses /privacy.
-- Old .html addresses redirect to the clean versions.
-- Service worker now uses network-first page loading so old cached navigation does not remain after deployment.
-- Clean-shaven Paul portrait and WhatsApp number 07925 008477 are included.
-- The energy calculator and its updated WhatsApp sharing are included.
-
-UPLOAD METHOD:
+DEPLOY TO GITHUB / VERCEL
 1. Extract this ZIP.
-2. In GitHub, replace the existing repository files with every file inside this folder.
-3. Commit directly to main using: Replace site with fully fixed navigation
-4. Wait for Vercel to show the new deployment as Ready.
-5. Refresh the live site. On a phone, close and reopen the browser if an old cached version appears.
+2. In paulscr76/SAE, choose Add file > Upload files.
+3. Upload every file and the assets folder from the extracted package.
+4. Commit directly to main with: Deploy Version 2.0
+5. Wait for Vercel to show the deployment as Ready.
+6. Test /, /calculator and /privacy.
+
+OPTIONAL VERCEL FEATURES
+- Analytics: open the Vercel project > Analytics and enable it, then follow Vercel's current static HTML setup instructions.
+- Speed Insights: open the Vercel project > Speed Insights and enable it, then follow Vercel's current static HTML setup instructions.
+These are deliberately not hard-coded because Vercel now creates project-specific script paths after the feature is enabled.
+
+CONTACT DETAILS
+WhatsApp / phone: 07925 008477
+Email: paul.scrase@uw.partners

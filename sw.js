@@ -1,22 +1,24 @@
-const CACHE = "save-earn-v1-1-links-fixed";
-const STATIC_ASSETS = [
-  "/styles.css",
-  "/site.js",
-  "/calculator.js",
-  "/favicon.svg",
-  "/manifest.webmanifest",
-  "/paul-scrase.png"
+const CACHE = 'sewp-v2-0-1-privacy-fixed';
+const STATIC = [
+  '/assets/styles.v2.css',
+  '/assets/site.v2.js',
+  '/assets/calculator.v2.js',
+  '/assets/paul-scrase-480.webp',
+  '/assets/paul-scrase-800.webp',
+  '/assets/social-share.webp',
+  '/favicon.svg',
+  '/manifest.webmanifest'
 ];
 
-self.addEventListener("install", event => {
+self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE)
-      .then(cache => cache.addAll(STATIC_ASSETS))
+      .then(cache => cache.addAll(STATIC))
       .then(() => self.skipWaiting())
   );
 });
 
-self.addEventListener("activate", event => {
+self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys()
       .then(keys => Promise.all(keys.filter(key => key !== CACHE).map(key => caches.delete(key))))
@@ -24,33 +26,38 @@ self.addEventListener("activate", event => {
   );
 });
 
-self.addEventListener("fetch", event => {
+self.addEventListener('fetch', event => {
   const request = event.request;
+  if (request.method !== 'GET') return;
 
-  if (request.mode === "navigate") {
+  if (request.mode === 'navigate') {
     event.respondWith(
       fetch(request)
         .then(response => {
-          const copy = response.clone();
-          caches.open(CACHE).then(cache => cache.put(request, copy));
+          if (response.ok) {
+            const copy = response.clone();
+            caches.open(CACHE).then(cache => cache.put(request, copy));
+          }
           return response;
         })
-        .catch(() => caches.match(request).then(hit => hit || caches.match("/")))
+        .catch(async () => {
+          return (await caches.match(request)) ||
+                 (await caches.match('/')) ||
+                 (await caches.match('/404'));
+        })
     );
     return;
   }
 
   event.respondWith(
     caches.match(request).then(cached => {
-      const network = fetch(request)
-        .then(response => {
-          if (response && response.status === 200 && response.type === "basic") {
-            const copy = response.clone();
-            caches.open(CACHE).then(cache => cache.put(request, copy));
-          }
-          return response;
-        })
-        .catch(() => cached);
+      const network = fetch(request).then(response => {
+        if (response.ok) {
+          const copy = response.clone();
+          caches.open(CACHE).then(cache => cache.put(request, copy));
+        }
+        return response;
+      });
       return cached || network;
     })
   );
