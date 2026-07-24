@@ -1,7 +1,7 @@
 {
-  "name": "Save and Earn with Paul 4.0 \u2014 Household OS",
-  "short_name": "Household OS",
-  "description": "Local-first household dashboard, action plan, Copilot, tools and privacy controls.",
+  "name": "Save and Earn with Paul 5.0 \u2014 Professional Reports",
+  "short_name": "Save & Earn 5",
+  "description": "Household OS, professional reports, plan builder, Copilot and privacy controls.",
   "start_url": "/household-os",
   "scope": "/",
   "display": "standalone",
@@ -28,7 +28,12 @@
       "url": "/household-os"
     },
     {
-      "name": "Build plan",
+      "name": "Professional Report Studio",
+      "short_name": "Reports",
+      "url": "/report-studio"
+    },
+    {
+      "name": "Build household plan",
       "short_name": "Build",
       "url": "/command-centre"
     },
@@ -36,11 +41,6 @@
       "name": "Household Copilot",
       "short_name": "Copilot",
       "url": "/copilot"
-    },
-    {
-      "name": "Privacy and sharing",
-      "short_name": "Privacy",
-      "url": "/consent-centre"
     }
   ]
 }

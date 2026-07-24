@@ -1,0 +1,9 @@
+VERSION 5.0 — PROFESSIONAL REPORTS EDITION
+- Added a dedicated professional Report Studio.
+- Added complete household, action-plan, energy-scenario and meeting-brief report types.
+- Added branded A4 cover pages, page numbers, footers, visual metrics and controlled page breaks.
+- Added professional contact and booking pages with a Calendly QR code.
+- Routed Command Centre and Scenario Lab print actions into the Report Studio.
+- Removed plain-text report output.
+- Retained JSON and encrypted backups only as technical data-portability formats.
+- Migrates Version 4.0 local plans into Version 5.0.

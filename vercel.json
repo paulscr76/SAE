@@ -56,6 +56,11 @@
       "source": "/consent-centre.html",
       "destination": "/consent-centre",
       "permanent": true
+    },
+    {
+      "source": "/report-studio.html",
+      "destination": "/report-studio",
+      "permanent": true
     }
   ],
   "headers": [
