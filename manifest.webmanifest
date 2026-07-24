@@ -1,7 +1,7 @@
 {
   "name": "Save and Earn with Paul",
   "short_name": "Save & Earn",
-  "start_url": "./index.html",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#031b3a",
@@ -12,5 +12,6 @@
       "type": "image/svg+xml",
       "purpose": "any maskable"
     }
-  ]
+  ],
+  "scope": "/"
 }

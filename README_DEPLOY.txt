@@ -1,15 +1,20 @@
-SAVE & EARN WITH PAUL — WEBSITE PACKAGE WITH PHOTO
+SAVE & EARN WITH PAUL — ALL LINKS FIXED
 
-Included updates:
-- Your original photo added to the About Paul section
-- WhatsApp number updated throughout to 07925 008477
-- Blue-and-yellow branded homepage
-- Guided energy usage calculator
-- Privacy page, PWA support, and Vercel configuration
+This package replaces the current GitHub repository contents.
 
-Deploy:
-Replace the files in the GitHub repository connected to the Vercel project, then commit and push.
+Fixes included:
+- Every header, footer, hero and breadcrumb link uses Vercel clean URLs.
+- Homepage section links use /#services, /#faq, /#about and /#paths.
+- Calculator uses /calculator.
+- Privacy uses /privacy.
+- Old .html addresses redirect to the clean versions.
+- Service worker now uses network-first page loading so old cached navigation does not remain after deployment.
+- Clean-shaven Paul portrait and WhatsApp number 07925 008477 are included.
+- The energy calculator and its updated WhatsApp sharing are included.
 
-Updated portrait: clean-shaven website image.
-WhatsApp: 07925 008477.
-Website deployment triggered
+UPLOAD METHOD:
+1. Extract this ZIP.
+2. In GitHub, replace the existing repository files with every file inside this folder.
+3. Commit directly to main using: Replace site with fully fixed navigation
+4. Wait for Vercel to show the new deployment as Ready.
+5. Refresh the live site. On a phone, close and reopen the browser if an old cached version appears.
