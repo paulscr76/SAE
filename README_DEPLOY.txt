@@ -1,31 +1,21 @@
-SAVE & EARN WITH PAUL — VERSION 2.0
+SAVE & EARN WITH PAUL — VERSION 2.0.2 RESTORED DESIGN
 
-WHAT IS NEW
-- Fully rebuilt responsive blue-and-yellow public website
-- Optimised WebP portrait in two responsive sizes
-- Dedicated social-sharing image for WhatsApp, Facebook and LinkedIn previews
-- Canonical URLs, Open Graph, Twitter metadata and structured data
-- Accessible mobile menu, FAQs, keyboard controls and reduced-motion support
-- Guided calculator with validation, warnings, input summary, reset, share and print
-- Sticky mobile calls to action
-- Installable PWA with app icons and offline support
-- 404 page, security.txt, sitemap and improved security/cache headers
-- All internal links use clean Vercel URLs
-- Private adviser dashboard remains separate and no real customer data is included
+This package preserves the original premium Version 2 design.
 
-DEPLOY TO GITHUB / VERCEL
+Why this package is different:
+- Every required file is at the top level.
+- There is no assets folder to accidentally miss during GitHub upload.
+- Privacy works at /privacy and appears in the top navigation.
+- The calculator remains at /calculator.
+- The clean-shaven portrait, social-sharing artwork, SEO and PWA features are included.
+- Old .html addresses redirect to clean Vercel URLs.
+- The service worker fetches pages from the network first so an old design is not kept in cache.
+
+UPLOAD:
 1. Extract this ZIP.
-2. In paulscr76/SAE, choose Add file > Upload files.
-3. Upload every file and the assets folder from the extracted package.
-4. Commit directly to main with: Deploy Version 2.0
-5. Wait for Vercel to show the deployment as Ready.
-6. Test /, /calculator and /privacy.
-
-OPTIONAL VERCEL FEATURES
-- Analytics: open the Vercel project > Analytics and enable it, then follow Vercel's current static HTML setup instructions.
-- Speed Insights: open the Vercel project > Speed Insights and enable it, then follow Vercel's current static HTML setup instructions.
-These are deliberately not hard-coded because Vercel now creates project-specific script paths after the feature is enabled.
-
-CONTACT DETAILS
-WhatsApp / phone: 07925 008477
-Email: paul.scrase@uw.partners
+2. In GitHub, choose Add file > Upload files.
+3. Upload every file shown inside the extracted folder.
+4. Commit directly to main with:
+   Restore Version 2 design and fix Privacy
+5. Wait for Vercel to show Ready.
+6. Open the live site in a private/incognito tab for the first check.

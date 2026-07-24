@@ -1,0 +1,7 @@
+VERSION 2.0.2
+- Restored the complete premium Version 2 design.
+- Flattened all assets for reliable GitHub web uploads.
+- Added Privacy to the top navigation.
+- Added current-page accessibility state for Privacy.
+- Retained the advanced calculator and Version 2 performance/SEO work.
+- Updated service-worker cache version and network-first page loading.
