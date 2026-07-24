@@ -1,7 +1,7 @@
 {
-  "name": "Save and Earn with Paul 3.0",
+  "name": "Save and Earn with Paul 3.1",
   "short_name": "Save & Earn",
-  "description": "Household Command Centre, bill helper, energy calculator and guides.",
+  "description": "Editable Household Command Centre, scenario comparison, bill helper and household guides.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

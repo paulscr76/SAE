@@ -1,7 +1,7 @@
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#02172f">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="manifest" href="/manifest.webmanifest">
-<link rel="stylesheet" href="/styles.v3.css">
+<link rel="stylesheet" href="/styles.v3.1.css">
 <title>Privacy | Save &amp; Earn with Paul</title><meta name="description" content="How the Save and Earn with Paul public website and browser-based tools handle information."><link rel="canonical" href="https://www.saveandearnwithpaul.live/privacy"></head><body>
 <a class="skip-link" href="#main">Skip to main content</a>
 <header class="site-header">
@@ -23,14 +23,14 @@
   </div>
 </header>
 
-<main id="main" class="section"><div class="narrow privacy-content"><div class="breadcrumbs"><a href="/">Home</a> / Privacy</div><span class="kicker">Privacy and local data</span><h1>Your information stays under your control.</h1><p class="section-intro">Version 3.0 does not include a public customer account or website database.</p>
-<h2>Household Command Centre</h2><p>The Command Centre stores answers in the browser’s local storage so progress can continue on the same device. The information is not automatically sent to Paul, Vercel, GitHub or a customer database. Use “Clear saved plan” to remove it.</p><p>Do not enter names, addresses, account numbers, payment details or other identifying information into the public tools.</p>
+<main id="main" class="section"><div class="narrow privacy-content"><div class="breadcrumbs"><a href="/">Home</a> / Privacy</div><span class="kicker">Privacy and local data</span><h1>Your information stays under your control.</h1><p class="section-intro">Version 3.1 does not include a public customer account or website database.</p>
+<section class="local-data-control"><span class="kicker">Local data check</span><h2>See what this device is storing.</h2><p id="localDataStatus">Checking this browser…</p><div class="helper-actions no-print"><button class="btn btn-blue" id="checkLocalData" type="button">Check local data</button><button class="btn btn-light" id="clearLocalData" type="button">Erase local plan and tool data</button></div></section><h2>Household Command Centre</h2><p>The Command Centre stores answers in the browser’s local storage so progress can continue on the same device. The information is not automatically sent to Paul, Vercel, GitHub or a customer database. Use “Clear saved plan” to remove it.</p><p>Do not enter names, addresses, account numbers, payment details or other identifying information into the public tools.</p>
 <h2>Bill-reading helper</h2><p>Selected images or PDFs are displayed locally in the browser tab using a temporary object URL. The document is not uploaded by this website and is not saved into local storage. Closing or refreshing the page removes the preview.</p>
 <h2>Energy calculator</h2><p>The calculator runs in the browser. Results can be saved to the Command Centre on the same device, printed or shared only when the visitor chooses an action.</p>
 <h2>Calendly, WhatsApp and other services</h2><p>Calendly, WhatsApp, telephone, email and Linktree are third-party services. They handle information under their own privacy terms when a visitor chooses to use them.</p>
 <h2>Analytics-ready events</h2><p>The package includes anonymous interaction labels for future Vercel Analytics integration. Household answers, bill figures and calculator values are not included in those events. Analytics does not become active merely because the labels exist; the feature must be enabled and integrated in Vercel.</p>
 <h2>Private adviser dashboard</h2><p>The private adviser platform is deliberately separate and is not included in the public website or GitHub files. Real customer information must never be placed in this public repository.</p>
-<h2>Contact</h2><p>Privacy questions can be sent to <a href="mailto:paul.scrase@uw.partners">paul.scrase@uw.partners</a>.</p><p><small>Last updated: 24 July 2026. Version 3.0.</small></p></div></main>
+<h2>Contact</h2><p>Privacy questions can be sent to <a href="mailto:paul.scrase@uw.partners">paul.scrase@uw.partners</a>.</p><p><small>Last updated: 24 July 2026. Version 3.1.</small></p></div></main>
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
@@ -43,4 +43,4 @@
 </footer>
 <div class="sticky-mobile-cta no-print"><a class="btn btn-yellow" href="/command-centre">Plan</a><a class="btn btn-light" href="https://calendly.com/save-with-paul/chat-with-paul" target="_blank" rel="noopener">Book</a><a class="btn btn-light" href="https://wa.me/447925008477" target="_blank" rel="noopener">WhatsApp</a></div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script defer src="/analytics.v3.js"></script><script defer src="/site.v3.js"></script></body></html>
+<script defer src="/analytics.v3.1.js"></script><script defer src="/site.v3.1.js"></script><script defer src="/privacy.v3.1.js"></script></body></html>

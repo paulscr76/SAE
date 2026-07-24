@@ -1,0 +1,9 @@
+VERSION 3.1
+- Editable Command Centre dashboard and actions.
+- Readiness measures and outstanding-information prompts.
+- Branded report, meeting brief and tailored booking actions.
+- Local JSON plan export/import.
+- Side-by-side energy scenario comparison.
+- Improved local bill viewer with zoom, rotation, drag-and-drop and validation.
+- Contextual guidance, guide filters and privacy data controls.
+- Versioned assets to prevent stale design caches.
