@@ -1,0 +1,58 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#02172f">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="manifest" href="/manifest.webmanifest">
+<link rel="stylesheet" href="/styles.v4.css">
+<title>My Household | Save & Earn with Paul 4.0</title><meta name="description" content="Your local-first household dashboard, living action plan, digital twin and selective sharing controls."><link rel="canonical" href="https://www.saveandearnwithpaul.live/household-os">
+<meta property="og:type" content="website"><meta property="og:title" content="My Household | Save & Earn with Paul 4.0"><meta property="og:description" content="Your local-first household dashboard, living action plan, digital twin and selective sharing controls."><meta property="og:url" content="https://www.saveandearnwithpaul.live/household-os"><meta property="og:image" content="https://www.saveandearnwithpaul.live/social-share.webp">
+<meta name="twitter:card" content="summary_large_image">
+</head><body><a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="/" aria-label="Save and Earn with Paul home">
+      <span class="brand-mark" aria-hidden="true">£</span>
+      <span class="brand-copy"><strong>Save &amp; Earn with Paul</strong><small>Household OS • Paul Scrase</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">Menu</button>
+    <nav class="nav-links" id="primary-navigation" aria-label="Main navigation">
+      <a href="/household-os">My Household</a>
+      <a href="/command-centre">Build plan</a>
+      <a href="/copilot">Household Copilot</a>
+      <a href="/bill-helper">Bill helper</a>
+      <a href="/calculator">Scenario lab</a>
+      <a href="/consent-centre">Privacy &amp; sharing</a>
+      <a class="btn btn-yellow btn-small" href="https://calendly.com/save-with-paul/chat-with-paul" target="_blank" rel="noopener" data-track="booking_header">Book a chat</a>
+    </nav>
+    <div class="nav-scrim" aria-hidden="true"></div>
+  </div>
+</header>
+<section class="page-hero"><div class="container"><span class="tag">YOUR LOCAL-FIRST HOUSEHOLD OS</span><h1 class="page-title">MY HOUSEHOLD</h1><p>Your plan, actions, household model and privacy controls in one place. Information remains on this device unless you deliberately export or share it.</p></div></section>
+<main id="main" class="os-shell"><div class="container"><div class="breadcrumbs"><a href="/">Home</a> / My Household</div>
+<div class="os-layout"><aside class="os-sidebar no-print"><span class="kicker" style="color:var(--yellow)">Household OS</span><h2>Your private workspace</h2><p>Local browser storage is convenient, not the same as an encrypted cloud account.</p>
+<nav class="os-tabs" aria-label="Household sections">
+<button class="os-tab active" data-os-tab="overview"><span>⌂</span>Overview</button>
+<button class="os-tab" data-os-tab="plan"><span>✓</span>Living plan</button>
+<button class="os-tab" data-os-tab="twin"><span>◇</span>Digital twin</button>
+<button class="os-tab" data-os-tab="documents"><span>◫</span>Documents</button>
+<button class="os-tab" data-os-tab="share"><span>⇄</span>Share</button>
+<button class="os-tab" data-os-tab="preferences"><span>◐</span>Preferences</button>
+</nav></aside>
+<div class="os-main">
+<section class="os-view active" data-os-view="overview"><div id="osOverview"></div></section>
+<section class="os-view" data-os-view="plan"><div class="os-card"><div class="os-head"><div><span class="kicker">Living action plan</span><h1>What happens next?</h1><p>Tasks can have an owner, due date and status. All changes stay on this device.</p></div><span class="local-pill">Stored locally</span></div><div class="task-toolbar"><button class="btn btn-light btn-small" id="seedTasks" type="button">Generate suggested tasks</button><button class="btn btn-light btn-small" id="clearCompleted" type="button">Remove completed</button></div><div class="task-list" id="taskList"></div><form class="task-form" id="taskForm"><label for="taskTitle">Task</label><input id="taskTitle" required placeholder="Add a household action"><label for="taskOwner">Owner</label><select id="taskOwner"><option>Household</option><option>Paul</option><option>Both</option></select><label for="taskDue">Due date</label><input id="taskDue" type="date"><button class="btn btn-blue" type="submit">Add task</button></form></div></section>
+<section class="os-view" data-os-view="twin"><div id="digitalTwin"></div></section>
+<section class="os-view" data-os-view="documents"><div class="os-card"><div class="os-head"><div><span class="kicker">Local document register</span><h1>What information do you have?</h1><p>The register stores labels and useful metadata—not the bill or statement file.</p></div><a class="btn btn-light btn-small" href="/bill-helper">Open bill helper</a></div><div class="document-list" id="documentList"></div></div></section>
+<section class="os-view" data-os-view="share"><div id="shareWorkspace"></div></section>
+<section class="os-view" data-os-view="preferences"><div class="os-card"><div class="os-head"><div><span class="kicker">Accessibility and appearance</span><h1>Make the Household OS comfortable.</h1><p>Preferences are stored locally and applied across the site.</p></div></div><div class="preference-grid"><div class="preference-option"><label for="themePreference">Appearance</label><select id="themePreference"><option value="light">Light</option><option value="dark">Dark</option></select></div><div class="preference-option"><label for="textPreference">Text size</label><select id="textPreference"><option value="standard">Standard</option><option value="large">Larger</option></select></div><div class="preference-option"><div class="toggle-line"><label for="motionPreference">Reduce motion</label><input id="motionPreference" type="checkbox"></div></div></div><div class="share-actions"><a class="btn btn-blue" href="/consent-centre">Open full Privacy &amp; Consent Centre</a></div></div></section>
+</div></div></div></main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="footer-title">Save &amp; Earn with Paul 4.0</div><div>A local-first Household OS for understanding services, building a plan and preparing for a useful conversation.</div><div class="footer-actions"><button class="btn btn-light btn-small" data-share-site type="button">Share website</button><button class="btn btn-light btn-small" data-install-app type="button" hidden>Install app</button></div></div>
+      <div><div class="footer-title">Household OS</div><div><a href="/household-os">My Household</a></div><div><a href="/command-centre">Build plan</a></div><div><a href="/copilot">Copilot</a></div><div><a href="/consent-centre">Privacy &amp; sharing</a></div></div>
+      <div><div class="footer-title">Contact Paul</div><div><a href="https://calendly.com/save-with-paul/chat-with-paul" target="_blank" rel="noopener" data-track="booking_footer">Book a free 30-minute chat</a></div><div><a href="https://wa.me/447925008477" target="_blank" rel="noopener" data-track="whatsapp_footer">WhatsApp 07925 008477</a></div><div><a href="tel:+447925008477">Call 07925 008477</a></div><div><a href="mailto:paul.scrase@uw.partners">paul.scrase@uw.partners</a></div></div>
+    </div>
+    <div class="footer-small">Paul Scrase is an independent Utility Warehouse Partner. This is an independent partner website and not the official Utility Warehouse corporate website. Savings depend on individual circumstances. Income is not guaranteed and depends on personal activity and results. Version 4.0 is local-first: it does not provide secure cloud accounts, encrypted server storage or a private adviser database.</div>
+  </div>
+</footer>
+<div class="sticky-mobile-cta no-print"><a class="btn btn-yellow" href="/household-os">My plan</a><a class="btn btn-light" href="https://calendly.com/save-with-paul/chat-with-paul" target="_blank" rel="noopener">Book</a><a class="btn btn-light" href="https://wa.me/447925008477" target="_blank" rel="noopener">WhatsApp</a></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div><script defer src="/analytics.v4.js"></script><script defer src="/site.v4.js"></script><script defer src="/household-os.v4.js"></script></body></html>

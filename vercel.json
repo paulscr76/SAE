@@ -41,6 +41,21 @@
       "source": "/review.html",
       "destination": "/command-centre",
       "permanent": true
+    },
+    {
+      "source": "/household-os.html",
+      "destination": "/household-os",
+      "permanent": true
+    },
+    {
+      "source": "/copilot.html",
+      "destination": "/copilot",
+      "permanent": true
+    },
+    {
+      "source": "/consent-centre.html",
+      "destination": "/consent-centre",
+      "permanent": true
     }
   ],
   "headers": [

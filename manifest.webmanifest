@@ -1,8 +1,8 @@
 {
-  "name": "Save and Earn with Paul 3.1",
-  "short_name": "Save & Earn",
-  "description": "Editable Household Command Centre, scenario comparison, bill helper and household guides.",
-  "start_url": "/",
+  "name": "Save and Earn with Paul 4.0 \u2014 Household OS",
+  "short_name": "Household OS",
+  "description": "Local-first household dashboard, action plan, Copilot, tools and privacy controls.",
+  "start_url": "/household-os",
   "scope": "/",
   "display": "standalone",
   "background_color": "#ffffff",
@@ -23,19 +23,24 @@
   ],
   "shortcuts": [
     {
-      "name": "Command Centre",
-      "short_name": "Plan",
+      "name": "My Household",
+      "short_name": "My plan",
+      "url": "/household-os"
+    },
+    {
+      "name": "Build plan",
+      "short_name": "Build",
       "url": "/command-centre"
     },
     {
-      "name": "Bill helper",
-      "short_name": "Bill",
-      "url": "/bill-helper"
+      "name": "Household Copilot",
+      "short_name": "Copilot",
+      "url": "/copilot"
     },
     {
-      "name": "Energy calculator",
-      "short_name": "Energy",
-      "url": "/calculator"
+      "name": "Privacy and sharing",
+      "short_name": "Privacy",
+      "url": "/consent-centre"
     }
   ]
 }

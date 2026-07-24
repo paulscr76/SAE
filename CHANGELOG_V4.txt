@@ -1,0 +1,12 @@
+VERSION 4.0 — LOCAL-FIRST HOUSEHOLD OS
+- Added a personalised returning dashboard.
+- Added a living action plan with task owners, dates and status.
+- Added a visual household digital twin.
+- Added an approved-content, plan-aware local Copilot.
+- Added selective sharing and a previewable meeting brief.
+- Added an encrypted portable backup using PBKDF2 and AES-GCM through Web Crypto.
+- Added a local document metadata register without retaining bill files.
+- Added light/dark mode, larger text and reduced-motion controls.
+- Migrates Version 3.1 browser plans into Version 4.0.
+- Retains the advanced plan builder, bill helper, scenario laboratory and guides.
+- Does not claim secure accounts, cloud document storage or a private adviser database.

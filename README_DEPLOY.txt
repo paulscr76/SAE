@@ -1,34 +1,48 @@
-SAVE & EARN WITH PAUL — VERSION 3.1
+SAVE & EARN WITH PAUL — VERSION 4.0
+LOCAL-FIRST HOUSEHOLD OS
 
-MAJOR UPGRADES
-- Editable dashboard cards with direct edit links
-- Honest readiness measures instead of a made-up score
-- Reorder, dismiss and restore action-plan steps
-- Tailored meeting brief with copy and WhatsApp handover
-- Branded visual report with browser Print / Save as PDF
-- Export and import a private JSON plan file
-- Current-versus-future energy scenario comparison
-- Bill viewer with drag-and-drop, zoom, rotation and figure validation
-- Topic filters, reading time and usefulness feedback in the guides
-- Privacy-page local data checker and one-click erasure
-- Contextual guidance throughout the Command Centre
+CORE ROUTES
+/                  Homepage
+/household-os      Personal returning dashboard
+/command-centre    Household plan builder
+/copilot           Approved local Household Copilot
+/bill-helper       Local bill preview and document register
+/calculator        Household scenario lab
+/guides            Knowledge base
+/consent-centre    Privacy, selective sharing and encrypted backups
+/privacy           Privacy information
 
-PRIVACY
-- No customer account or website database
-- Plan answers remain in browser local storage
-- Imported/exported plan files are handled by the visitor
-- Bill images and PDFs remain local to the browser tab
-- No testimonials or real customer data
+WHAT IS REAL IN THIS STATIC RELEASE
+- Local browser-saved household plan
+- Personal returning dashboard
+- Living tasks with owner, due date and status
+- Household digital twin visualisation
+- Deterministic approved-content Copilot
+- Document metadata register; bill files are not retained
+- Selective meeting brief and WhatsApp handover
+- AES-GCM encrypted portable backups using browser Web Crypto
+- Light/dark mode, larger text and reduced motion
+- Existing Version 3.1 plan builder, bill viewer and scenario comparison
 
-DEPLOY
-1. Extract the ZIP.
+WHAT IS DELIBERATELY NOT CLAIMED
+- No secure cloud account
+- No server-side encrypted document vault
+- No automatic OCR or bill extraction
+- No private adviser database
+- No cross-device sync unless the visitor exports/imports a backup
+- No live tariff quoting, guaranteed savings or income forecast
+
+DEPLOYMENT
+1. Extract this ZIP.
 2. Open GitHub repository paulscr76/SAE.
-3. Choose Add file > Upload files.
-4. Upload every file from this folder.
-5. Commit directly to main with:
-   Launch Version 3.1 feature upgrade
+3. Add file > Upload files.
+4. Upload every file in the extracted folder.
+5. Commit to main with:
+   Launch Version 4.0 Household OS
 6. Wait for Vercel to show Ready.
-7. Test /, /command-centre, /bill-helper, /calculator, /guides and /privacy.
+7. Test every core route above in a private/incognito window.
 
+CONTACT
 Calendly: https://calendly.com/save-with-paul/chat-with-paul
 WhatsApp: 07925 008477
+Email: paul.scrase@uw.partners
