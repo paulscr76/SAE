@@ -1,12 +1,12 @@
 {
-  "name": "Save and Earn with Paul",
+  "name": "Save and Earn with Paul 3.0",
   "short_name": "Save & Earn",
-  "description": "Household services and flexible earning information with Paul Scrase",
+  "description": "Household Command Centre, bill helper, energy calculator and guides.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#031b3a",
+  "theme_color": "#02172f",
   "icons": [
     {
       "src": "/icon-192.png",
@@ -23,15 +23,19 @@
   ],
   "shortcuts": [
     {
-      "name": "Household Review",
-      "short_name": "Review",
-      "description": "Start the private household review",
-      "url": "/review"
+      "name": "Command Centre",
+      "short_name": "Plan",
+      "url": "/command-centre"
+    },
+    {
+      "name": "Bill helper",
+      "short_name": "Bill",
+      "url": "/bill-helper"
     },
     {
       "name": "Energy calculator",
-      "url": "/calculator",
-      "description": "Estimate annual household energy use"
+      "short_name": "Energy",
+      "url": "/calculator"
     }
   ]
 }

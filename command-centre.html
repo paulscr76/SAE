@@ -1,0 +1,72 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#02172f">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="manifest" href="/manifest.webmanifest">
+<link rel="stylesheet" href="/styles.v3.css">
+
+<title>Household Command Centre | Save &amp; Earn with Paul</title><meta name="description" content="Build a private household action plan covering energy, broadband, mobile and flexible earning."><link rel="canonical" href="https://www.saveandearnwithpaul.live/command-centre">
+<meta property="og:title" content="Household Command Centre"><meta property="og:description" content="Your household. One clear plan."><meta property="og:image" content="https://www.saveandearnwithpaul.live/social-share.webp">
+</head><body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="/" aria-label="Save and Earn with Paul home">
+      <span class="brand-mark" aria-hidden="true">£</span>
+      <span class="brand-copy"><strong>Save &amp; Earn with Paul</strong><small>Paul Scrase • Independent UW Partner</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">Menu</button>
+    <nav class="nav-links" id="primary-navigation" aria-label="Main navigation">
+      <a href="/command-centre">Command Centre</a>
+      <a href="/bill-helper">Bill helper</a>
+      <a href="/calculator">Energy calculator</a>
+      <a href="/guides">Guides</a>
+      <a href="/#about">About Paul</a>
+      <a class="btn btn-yellow btn-small" href="https://calendly.com/save-with-paul/chat-with-paul" target="_blank" rel="noopener" data-track="booking_header">Book a chat</a>
+    </nav>
+    <div class="nav-scrim" aria-hidden="true"></div>
+  </div>
+</header>
+<section class="page-hero"><div class="container"><span class="tag">PRIVATE • SAVED ONLY ON THIS DEVICE</span><h1 class="page-title">HOUSEHOLD COMMAND CENTRE</h1><p>Complete the steps, see your status dashboard and create a practical action plan. No account or personal contact details are required.</p></div></section>
+<main id="main" class="app-shell"><div class="container"><div class="breadcrumbs"><a href="/">Home</a> / Command Centre</div><div class="command-layout">
+<aside class="command-sidebar no-print"><div><span class="kicker" style="color:var(--yellow)">Your plan</span><h2>Household Command Centre</h2><p>Your answers are stored only in this browser using local storage. Clear them at any time.</p></div>
+<div class="command-steps" id="commandSteps">
+<button class="command-step-link active" data-step-link="0"><span>1</span>Priorities</button><button class="command-step-link" data-step-link="1"><span>2</span>Home</button><button class="command-step-link" data-step-link="2"><span>3</span>Energy</button><button class="command-step-link" data-step-link="3"><span>4</span>Connectivity</button><button class="command-step-link" data-step-link="4"><span>5</span>Earning</button><button class="command-step-link" data-step-link="5"><span>6</span>Dashboard</button>
+</div><div class="saved-state" id="savedState">Progress will save automatically on this device.</div></aside>
+
+<form class="command-main" id="commandForm" novalidate>
+<div class="error-box" id="commandError" role="alert" tabindex="-1"></div>
+
+<section class="app-panel wizard-panel active" data-panel="0"><div class="panel-head"><div><span class="kicker">Step 1</span><h2>What matters most?</h2><p>Choose the main reason for building your plan.</p></div><span class="step-count">1 of 6</span></div>
+<div class="choice-grid"><label class="choice-card"><input type="radio" name="priority" value="save"><strong>Reduce household costs</strong><small>Focus on services and usage.</small></label><label class="choice-card"><input type="radio" name="priority" value="understand"><strong>Understand my household</strong><small>Build a complete picture first.</small></label><label class="choice-card"><input type="radio" name="priority" value="earn"><strong>Explore flexible earning</strong><small>Learn the facts responsibly.</small></label><label class="choice-card"><input type="radio" name="priority" value="both"><strong>Save and earn</strong><small>Look at both sides together.</small></label></div>
+<div class="notice blue">Nothing is sent to Paul when you complete these steps.</div></section>
+
+<section class="app-panel wizard-panel" data-panel="1"><div class="panel-head"><div><span class="kicker">Step 2</span><h2>Your household</h2><p>Basic details help create a sensible energy estimate when annual kWh is unavailable.</p></div><span class="step-count">2 of 6</span></div>
+<div class="fields"><div><label for="propertyType">Property type</label><select id="propertyType"><option value="flat">Flat / apartment</option><option value="terrace">Terraced house</option><option value="semi" selected>Semi-detached</option><option value="detached">Detached house</option><option value="bungalow">Bungalow</option></select></div><div><label for="bedrooms">Bedrooms</label><select id="bedrooms"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option></select></div><div><label for="occupants">People in the home</label><select id="occupants"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select></div><div><label for="heating">Main heating</label><select id="heating"><option value="gas" selected>Gas boiler</option><option value="electric">Electric heating</option><option value="heatpump">Heat pump</option><option value="other">Oil / other</option></select></div><div><label for="efficiency">Home efficiency</label><select id="efficiency"><option value="efficient">Well insulated / newer</option><option value="average" selected>Average / unknown</option><option value="inefficient">Older / draughty</option></select></div><div><label for="daytime">Daytime occupancy</label><select id="daytime"><option value="low">Usually empty</option><option value="mixed" selected>Mixed</option><option value="high">Usually occupied</option></select></div></div></section>
+
+<section class="app-panel wizard-panel" data-panel="2"><div class="panel-head"><div><span class="kicker">Step 3</span><h2>Energy picture</h2><p>Use actual annual kWh when possible, or create an indicative estimate.</p></div><span class="step-count">3 of 6</span></div>
+<div class="fields"><div><label for="energyMode">Energy information</label><select id="energyMode"><option value="estimate">Estimate from the home</option><option value="actual">I know annual kWh</option></select></div><div><label for="energyConcern">Main energy priority</label><select id="energyConcern"><option value="review">General review</option><option value="cost">Managing costs</option><option value="usage">Understanding usage</option><option value="none">Not a priority</option></select></div><div id="electricField" class="hidden-actual"><label for="actualElectric">Electricity kWh per year</label><input id="actualElectric" type="number" min="0" inputmode="decimal" placeholder="e.g. 2900"></div><div id="gasField" class="hidden-actual"><label for="actualGas">Gas kWh per year</label><input id="actualGas" type="number" min="0" inputmode="decimal" placeholder="e.g. 11500"></div><div><label for="ev">Electric vehicle</label><select id="ev"><option value="no">No</option><option value="yes">Yes</option></select></div><div><label for="solar">Solar panels</label><select id="solar"><option value="no">No</option><option value="yes">Yes</option></select></div></div>
+<div class="notice blue"><a href="/bill-helper">Use the bill helper</a> to identify annual kWh without uploading the document.</div></section>
+
+<section class="app-panel wizard-panel" data-panel="3"><div class="panel-head"><div><span class="kicker">Step 4</span><h2>Broadband and mobile</h2><p>Contract position and everyday experience often matter as much as headline price.</p></div><span class="step-count">4 of 6</span></div>
+<div class="fields"><div><label for="broadbandExperience">Broadband experience</label><select id="broadbandExperience"><option value="happy">Generally happy</option><option value="slow">Too slow</option><option value="unreliable">Unreliable</option><option value="expensive">Feels expensive</option><option value="unknown">Not sure</option></select></div><div><label for="broadbandContract">Broadband contract</label><select id="broadbandContract"><option value="unknown">Not sure</option><option value="in">Still in contract</option><option value="ending">Ending soon</option><option value="out">Out of contract</option></select></div><div><label for="workFromHome">Home usage</label><select id="workFromHome"><option value="standard">Standard browsing and streaming</option><option value="work">Regular home working</option><option value="heavy">Heavy streaming / gaming / large household</option></select></div><div><label for="mobileLines">Mobile lines</label><select id="mobileLines"><option value="none">No mobile review needed</option><option value="one">One mobile</option><option value="family">Several / family mobiles</option><option value="unknown">Not sure</option></select></div><div><label for="mobileConcern">Mobile concern</label><select id="mobileConcern"><option value="none">No concern</option><option value="signal">Signal / coverage</option><option value="data">Data allowance</option><option value="cost">Monthly cost</option><option value="upgrade">Upgrade timing</option></select></div><div><label for="mobileContract">Mobile contract timing</label><select id="mobileContract"><option value="unknown">Not sure</option><option value="in">Still in contract</option><option value="ending">Ending soon</option><option value="out">Out of contract</option></select></div></div></section>
+
+<section class="app-panel wizard-panel" data-panel="4"><div class="panel-head"><div><span class="kicker">Step 5</span><h2>Flexible earning</h2><p>Optional. This creates discussion points, not an income forecast.</p></div><span class="step-count">5 of 6</span></div>
+<div class="fields"><div><label for="earningInterest">Interest level</label><select id="earningInterest"><option value="none">Not interested just now</option><option value="curious">Curious and want the facts</option><option value="explore">Open to exploring it</option><option value="ready">Ready for a conversation</option></select></div><div><label for="earningTime">Realistic weekly time</label><select id="earningTime"><option value="unknown">Not sure</option><option value="one">Around 1–2 hours</option><option value="few">A few hours</option><option value="flexible">Flexible / varies</option></select></div><div class="full"><label for="earningGoal">What would extra income help with?</label><select id="earningGoal"><option value="general">General financial breathing room</option><option value="bills">Household bills</option><option value="savings">Savings or a specific goal</option><option value="career">A flexible longer-term opportunity</option><option value="prefer">Prefer not to say</option></select></div></div>
+<div class="notice"><strong>Important:</strong> income is not guaranteed and depends on personal activity and results.</div></section>
+
+<section class="app-panel wizard-panel" data-panel="5"><div id="dashboardContent"></div></section>
+
+<div class="app-panel wizard-actions no-print"><button class="btn btn-light" type="button" id="commandBack">Back</button><div><button class="btn btn-light" type="button" id="clearPlan">Clear saved plan</button><button class="btn btn-blue" type="button" id="commandNext">Next</button></div></div>
+</form></div></div></main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="footer-title">Save &amp; Earn with Paul</div><div>A personal household decision platform for reviewing services, understanding usage and planning a sensible next step.</div><div class="footer-actions"><button class="btn btn-light btn-small" data-share-site type="button">Share website</button><button class="btn btn-light btn-small" data-install-app type="button" hidden>Install app</button></div></div>
+      <div><div class="footer-title">Explore</div><div><a href="/command-centre">Command Centre</a></div><div><a href="/bill-helper">Bill helper</a></div><div><a href="/calculator">Energy calculator</a></div><div><a href="/guides">Guides</a></div><div><a href="/privacy">Privacy</a></div></div>
+      <div><div class="footer-title">Contact Paul</div><div><a href="https://calendly.com/save-with-paul/chat-with-paul" target="_blank" rel="noopener" data-track="booking_footer">Book a free 30-minute chat</a></div><div><a href="https://wa.me/447925008477" target="_blank" rel="noopener" data-track="whatsapp_footer">WhatsApp 07925 008477</a></div><div><a href="tel:+447925008477">Call 07925 008477</a></div><div><a href="mailto:paul.scrase@uw.partners">paul.scrase@uw.partners</a></div><div><a href="https://linktr.ee/EarnNow" target="_blank" rel="noopener">Linktr.ee/EarnNow</a></div></div>
+    </div>
+    <div class="footer-small">Paul Scrase is an independent Utility Warehouse Partner. This is an independent partner website and not the official Utility Warehouse corporate website. Savings depend on individual circumstances. Income is not guaranteed and depends on personal activity and results. Public tools run in the visitor’s browser and do not create a customer account.</div>
+  </div>
+</footer>
+<div class="sticky-mobile-cta no-print"><a class="btn btn-yellow" href="/command-centre">Plan</a><a class="btn btn-light" href="https://calendly.com/save-with-paul/chat-with-paul" target="_blank" rel="noopener">Book</a><a class="btn btn-light" href="https://wa.me/447925008477" target="_blank" rel="noopener">WhatsApp</a></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script defer src="/analytics.v3.js"></script><script defer src="/site.v3.js"></script><script defer src="/command-centre.v3.js"></script></body></html>

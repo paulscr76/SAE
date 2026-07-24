@@ -1,6 +1,48 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/command-centre.html",
+      "destination": "/command-centre",
+      "permanent": true
+    },
+    {
+      "source": "/bill-helper.html",
+      "destination": "/bill-helper",
+      "permanent": true
+    },
+    {
+      "source": "/calculator.html",
+      "destination": "/calculator",
+      "permanent": true
+    },
+    {
+      "source": "/guides.html",
+      "destination": "/guides",
+      "permanent": true
+    },
+    {
+      "source": "/privacy.html",
+      "destination": "/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/review",
+      "destination": "/command-centre",
+      "permanent": true
+    },
+    {
+      "source": "/review.html",
+      "destination": "/command-centre",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -19,16 +61,7 @@
         },
         {
           "key": "X-Frame-Options",
-          "value": "DENY"
-        }
-      ]
-    },
-    {
-      "source": "/sw.js",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
+          "value": "SAMEORIGIN"
         }
       ]
     },
@@ -40,28 +73,6 @@
           "value": "public, max-age=31536000, immutable"
         }
       ]
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/index.html",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/calculator.html",
-      "destination": "/calculator",
-      "permanent": true
-    },
-    {
-      "source": "/privacy.html",
-      "destination": "/privacy",
-      "permanent": true
-    },
-    {
-      "source": "/review.html",
-      "destination": "/review",
-      "permanent": true
     }
   ]
 }

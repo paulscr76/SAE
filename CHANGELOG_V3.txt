@@ -1,0 +1,10 @@
+VERSION 3.0
+- Rebuilt the public experience as a household decision platform.
+- Added a unified local-only Household Command Centre.
+- Added browser-saved progress, status dashboard and ordered action plan.
+- Added text download, print/PDF, WhatsApp and Calendly handover.
+- Added a local bill preview and manual figure helper.
+- Added a scenario-based Energy Usage Laboratory.
+- Added a searchable household guide.
+- Retained the clean-shaven portrait and blue/yellow design.
+- No testimonials, customer database or private adviser dashboard included.

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#02172f">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="manifest" href="/manifest.webmanifest">
+<link rel="stylesheet" href="/styles.v3.css">
+<title>Bill-reading Helper | Save &amp; Earn with Paul</title><meta name="description" content="Open an energy bill locally, identify useful figures and save them to your household plan without uploading the document."><link rel="canonical" href="https://www.saveandearnwithpaul.live/bill-helper"></head><body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="/" aria-label="Save and Earn with Paul home">
+      <span class="brand-mark" aria-hidden="true">£</span>
+      <span class="brand-copy"><strong>Save &amp; Earn with Paul</strong><small>Paul Scrase • Independent UW Partner</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">Menu</button>
+    <nav class="nav-links" id="primary-navigation" aria-label="Main navigation">
+      <a href="/command-centre">Command Centre</a>
+      <a href="/bill-helper">Bill helper</a>
+      <a href="/calculator">Energy calculator</a>
+      <a href="/guides">Guides</a>
+      <a href="/#about">About Paul</a>
+      <a class="btn btn-yellow btn-small" href="https://calendly.com/save-with-paul/chat-with-paul" target="_blank" rel="noopener" data-track="booking_header">Book a chat</a>
+    </nav>
+    <div class="nav-scrim" aria-hidden="true"></div>
+  </div>
+</header>
+
+<section class="page-hero"><div class="container"><span class="tag">DOCUMENT STAYS ON YOUR DEVICE</span><h1 class="page-title">BILL-READING HELPER</h1><p>Open a bill or statement locally, identify the useful figures and save them into the Command Centre. This version does not upload or automatically read the document.</p></div></section>
+<main id="main" class="helper-shell"><div class="container"><div class="breadcrumbs"><a href="/">Home</a> / Bill helper</div><div class="helper-layout">
+<section class="helper-panel"><span class="kicker">Step 1</span><h2>Open the document locally</h2><p class="section-intro">Images and PDFs are displayed only in this browser tab.</p><div class="upload-zone"><strong>Choose an energy bill or annual statement</strong><p>Accepted for local preview: JPG, PNG, WebP or PDF.</p><input id="billFile" type="file" accept="image/*,application/pdf"><div class="file-preview" id="filePreview"></div></div>
+<div class="notice blue">For privacy, close this page when finished. The file itself is not saved into the website’s local storage.</div></section>
+<section class="helper-panel"><span class="kicker">Step 2</span><h2>Look for these labels</h2><div class="bill-clues"><div class="bill-clue"><strong>Annual electricity consumption</strong><span>Usually shown in kWh. Do not enter the account balance, bill cost or meter reading.</span></div><div class="bill-clue"><strong>Annual gas consumption</strong><span>Gas annual usage is also shown in kWh, even though the meter may record cubic metres.</span></div><div class="bill-clue"><strong>Unit rate</strong><span>Often shown as pence per kWh. This is not the annual usage figure.</span></div><div class="bill-clue"><strong>Standing charge</strong><span>Usually pence per day. This is separate from usage.</span></div><div class="bill-clue"><strong>Tariff or contract end date</strong><span>Useful for a conversation, but not needed for the calculator.</span></div></div></section>
+<section class="helper-panel"><span class="kicker">Step 3</span><h2>Type the figures you find</h2><div class="fields"><div><label for="billElectric">Annual electricity kWh</label><input id="billElectric" type="number" min="0" placeholder="e.g. 2900"></div><div><label for="billGas">Annual gas kWh</label><input id="billGas" type="number" min="0" placeholder="e.g. 11500"></div><div><label for="electricRate">Electricity unit rate (p/kWh)</label><input id="electricRate" type="number" min="0" step="0.01" placeholder="Optional"></div><div><label for="gasRate">Gas unit rate (p/kWh)</label><input id="gasRate" type="number" min="0" step="0.01" placeholder="Optional"></div><div><label for="standingCharge">Standing charge (p/day)</label><input id="standingCharge" type="number" min="0" step="0.01" placeholder="Optional"></div><div><label for="contractEnd">Contract or tariff end date</label><input id="contractEnd" type="date"></div></div><div id="billMessage" class="notice blue" hidden></div><div class="helper-actions"><button class="btn btn-blue" id="saveBill" type="button">Save figures to Command Centre</button><a class="btn btn-light" href="/calculator">Use in calculator</a></div></section>
+<section class="helper-panel"><span class="kicker">What this tool does not do</span><h2>No automatic extraction yet.</h2><p>This release helps you find and record the figures but does not use OCR or artificial intelligence to read the document. That avoids sending sensitive documents to an external service.</p><p>A future secure version could add confirmed, consent-based extraction.</p><a class="btn btn-yellow" href="/command-centre">Open Command Centre</a></section>
+</div></div></main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="footer-title">Save &amp; Earn with Paul</div><div>A personal household decision platform for reviewing services, understanding usage and planning a sensible next step.</div><div class="footer-actions"><button class="btn btn-light btn-small" data-share-site type="button">Share website</button><button class="btn btn-light btn-small" data-install-app type="button" hidden>Install app</button></div></div>
+      <div><div class="footer-title">Explore</div><div><a href="/command-centre">Command Centre</a></div><div><a href="/bill-helper">Bill helper</a></div><div><a href="/calculator">Energy calculator</a></div><div><a href="/guides">Guides</a></div><div><a href="/privacy">Privacy</a></div></div>
+      <div><div class="footer-title">Contact Paul</div><div><a href="https://calendly.com/save-with-paul/chat-with-paul" target="_blank" rel="noopener" data-track="booking_footer">Book a free 30-minute chat</a></div><div><a href="https://wa.me/447925008477" target="_blank" rel="noopener" data-track="whatsapp_footer">WhatsApp 07925 008477</a></div><div><a href="tel:+447925008477">Call 07925 008477</a></div><div><a href="mailto:paul.scrase@uw.partners">paul.scrase@uw.partners</a></div><div><a href="https://linktr.ee/EarnNow" target="_blank" rel="noopener">Linktr.ee/EarnNow</a></div></div>
+    </div>
+    <div class="footer-small">Paul Scrase is an independent Utility Warehouse Partner. This is an independent partner website and not the official Utility Warehouse corporate website. Savings depend on individual circumstances. Income is not guaranteed and depends on personal activity and results. Public tools run in the visitor’s browser and do not create a customer account.</div>
+  </div>
+</footer>
+<div class="sticky-mobile-cta no-print"><a class="btn btn-yellow" href="/command-centre">Plan</a><a class="btn btn-light" href="https://calendly.com/save-with-paul/chat-with-paul" target="_blank" rel="noopener">Book</a><a class="btn btn-light" href="https://wa.me/447925008477" target="_blank" rel="noopener">WhatsApp</a></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script defer src="/analytics.v3.js"></script><script defer src="/site.v3.js"></script><script defer src="/bill-helper.v3.js"></script></body></html>
