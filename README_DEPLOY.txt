@@ -12,3 +12,4 @@ Replace the files in the GitHub repository connected to the Vercel project, then
 
 Updated portrait: clean-shaven website image.
 WhatsApp: 07925 008477.
+Website deployment triggered
