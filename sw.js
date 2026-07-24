@@ -1,4 +1,4 @@
-const CACHE='sewp-v2-0-2-restored';
+const CACHE='sewp-v2-0-3-calendly';
 const STATIC=[
   '/styles.v2.css',
   '/site.v2.js',

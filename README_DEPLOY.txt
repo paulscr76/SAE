@@ -19,3 +19,12 @@ UPLOAD:
    Restore Version 2 design and fix Privacy
 5. Wait for Vercel to show Ready.
 6. Open the live site in a private/incognito tab for the first check.
+
+
+VERSION 2.0.3 UPDATE
+- Calendly booking link added throughout: https://calendly.com/save-with-paul/chat-with-paul
+- WhatsApp retained.
+- Testimonials deliberately omitted for now.
+
+Recommended commit message:
+Add Calendly booking without testimonials

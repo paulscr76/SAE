@@ -1,0 +1,10 @@
+VERSION 2.0.3 — CALENDLY BOOKING
+
+- Added a free 30-minute booking option using:
+  https://calendly.com/save-with-paul/chat-with-paul
+- Added booking links to the header, homepage hero, About Paul section,
+  final call-to-action, calculator results, footer and mobile action bar.
+- Retained WhatsApp as a direct alternative.
+- Updated Privacy wording to mention Calendly as a third-party service.
+- Updated the service-worker cache version.
+- No testimonials or testimonial placeholders were added.
