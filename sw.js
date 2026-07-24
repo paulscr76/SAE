@@ -1,5 +1,5 @@
 
-const CACHE='save-earn-v5-0';
+const CACHE='save-earn-v5-0-2';
 const STATIC=[
 '/styles.v5.css','/report.v5.css','/site.v5.js','/analytics.v5.js','/home.v5.js','/household-os.v5.js',
 '/copilot.v5.js','/consent-centre.v5.js','/command-centre.v5.js','/bill-helper.v5.js','/document-register.v5.js',

@@ -349,3 +349,6 @@ input:focus,select:focus,textarea:focus{border-color:var(--blue-2);box-shadow:0 
 .os-capability{display:block;text-decoration:none;color:inherit;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
 .os-capability:hover{transform:translateY(-4px);border-color:var(--yellow);box-shadow:0 20px 48px rgba(2,23,47,.14)}
 .capability-link{display:block;margin-top:15px;color:var(--blue);font-size:12px}
+
+/* 5.0.2 customer-first messaging */
+.footer-version{font-size:.72em;opacity:.72;font-weight:800;white-space:nowrap}.os-capability:focus-visible{outline:4px solid var(--yellow);outline-offset:4px}.launch-item strong{letter-spacing:-.02em}.hero .tag{max-width:max-content}.section-heading .section-intro{max-width:850px}

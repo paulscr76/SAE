@@ -1,7 +1,7 @@
 {
-  "name": "Save and Earn with Paul - Professional Household Reports",
+  "name": "Save and Earn with Paul",
   "short_name": "Save & Earn",
-  "description": "Household planning, professional reports, scenario tools and privacy controls.",
+  "description": "Explore simpler household bills, possible savings and an optional additional-income opportunity.",
   "start_url": "/household-os",
   "scope": "/",
   "display": "standalone",
@@ -28,8 +28,8 @@
       "url": "/household-os"
     },
     {
-      "name": "Professional Report Studio",
-      "short_name": "Reports",
+      "name": "Printable household summary",
+      "short_name": "Summary",
       "url": "/report-studio"
     },
     {
@@ -38,8 +38,8 @@
       "url": "/command-centre"
     },
     {
-      "name": "Household Copilot",
-      "short_name": "Copilot",
+      "name": "Household help and guidance",
+      "short_name": "Help",
       "url": "/copilot"
     }
   ]

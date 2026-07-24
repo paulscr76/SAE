@@ -96,7 +96,7 @@
   }
 
   function footer(page,total,title){
-    return `<div class="report-page-footer"><span><strong>Save &amp; Earn with Paul 5.0.1</strong> • ${esc(title)}</span><span>Confidential household planning document • Page ${page} of ${total}</span></div>`;
+    return `<div class="report-page-footer"><span><strong>Save &amp; Earn with Paul v5.0.2</strong> • ${esc(title)}</span><span>Confidential household planning document • Page ${page} of ${total}</span></div>`;
   }
   function wrapPage(content,page,total,title,classes=''){
     return `<section class="report-page ${classes}">${content}${classes.includes('report-cover')?'':footer(page,total,title)}</section>`;
@@ -105,7 +105,7 @@
     return `<div class="report-page-header"><div><div class="label">${esc(labelText)}</div><div class="title">${esc(title)}</div></div><div class="label">${reportRef}</div></div>`;
   }
   function cover(title,subtitle,page,total){
-    return wrapPage(`<div class="report-cover-content"><div class="report-brand"><span class="report-brand-mark">£</span><span>Save &amp; Earn with Paul<small>Professional Household Report</small></span></div><div class="report-cover-main"><span class="report-eyebrow">Professional report • Prepared locally</span><h1>${esc(title)}<br><span>${esc(subtitle)}</span></h1><p class="report-cover-lead">A professionally structured planning document generated from the information saved in this browser.</p><div class="report-cover-meta"><div><span>Main priority</span><strong>${esc(plan?priorityLabel(plan.priority):'No plan found')}</strong></div><div><span>Generated</span><strong>${generated}</strong></div><div><span>Report reference</span><strong>${reportRef}</strong></div></div></div><div class="report-cover-bottom"><div class="report-cover-contact"><strong>Paul Scrase</strong>Independent Utility Warehouse Partner<br>${esc('07925 008477')} • paul.scrase@uw.partners</div><img class="report-cover-photo" src="${asset('/paul-scrase-480.webp')}" alt="Paul Scrase"></div></div>`,page,total,title,'report-cover');
+    return wrapPage(`<div class="report-cover-content"><div class="report-brand"><span class="report-brand-mark">£</span><span>Save &amp; Earn with Paul<small>Printable Household Summary</small></span></div><div class="report-cover-main"><span class="report-eyebrow">Printable summary • Prepared locally</span><h1>${esc(title)}<br><span>${esc(subtitle)}</span></h1><p class="report-cover-lead">A professionally structured planning document generated from the information saved in this browser.</p><div class="report-cover-meta"><div><span>Main priority</span><strong>${esc(plan?priorityLabel(plan.priority):'No plan found')}</strong></div><div><span>Generated</span><strong>${generated}</strong></div><div><span>Report reference</span><strong>${reportRef}</strong></div></div></div><div class="report-cover-bottom"><div class="report-cover-contact"><strong>Paul Scrase</strong>Independent Utility Warehouse Partner<br>${esc('07925 008477')} • paul.scrase@uw.partners</div><img class="report-cover-photo" src="${asset('/paul-scrase-480.webp')}" alt="Paul Scrase"></div></div>`,page,total,title,'report-cover');
   }
   function executivePage(page,total){
     const statuses=[
@@ -120,7 +120,7 @@
     const max=Math.max(en.e,en.g||0,plan.meta?.scenarioComparison?.e||0,1);
     const pct=n=>Math.max(5,Math.min(100,(n/max)*100));
     const scenario=plan.meta?.scenarioComparison;
-    return wrapPage(`${header('Household profile','Property and energy picture')}<div class="report-profile"><div><span>Property type</span><strong>${esc(label('propertyType',plan.propertyType))}</strong></div><div><span>Bedrooms</span><strong>${esc(plan.bedrooms)}</strong></div><div><span>Occupants</span><strong>${esc(plan.occupants)}</strong></div><div><span>Main heating</span><strong>${esc(label('heating',plan.heating))}</strong></div><div><span>Home efficiency</span><strong>${esc(label('efficiency',plan.efficiency))}</strong></div><div><span>Daytime occupancy</span><strong>${esc(label('daytime',plan.daytime))}</strong></div><div><span>Electric vehicle</span><strong>${plan.ev==='yes'?'Yes':'No'}</strong></div><div><span>Solar panels</span><strong>${plan.solar==='yes'?'Yes':'No'}</strong></div></div><div class="report-section"><h2>Annual energy picture</h2><div class="energy-hero"><div class="energy-value"><span>Electricity</span><strong>${fmt(en.e)}</strong></div><div class="energy-value"><span>Gas</span><strong>${en.g?fmt(en.g):'Not applicable'}</strong></div></div><div class="energy-bars"><div class="energy-bar-row"><span>Electricity</span><div class="energy-track"><span style="width:${pct(en.e)}%"></span></div><strong>${fmt(en.e)}</strong></div>${en.g?`<div class="energy-bar-row"><span>Gas</span><div class="energy-track"><span style="width:${pct(en.g)}%"></span></div><strong>${fmt(en.g)}</strong></div>`:''}${scenario?`<div class="energy-bar-row"><span>${esc(scenario.name||'Future scenario')}</span><div class="energy-track"><span style="width:${pct(scenario.e)}%"></span></div><strong>${fmt(scenario.e)}</strong></div>`:''}</div></div><div class="report-section"><h2>Basis and confidence</h2><div class="report-callout">${en.actual?'Actual annual kWh has been supplied for at least one fuel. Scenario comparisons remain modelled and indicative.':'The figures are estimated from property and household information. Actual annual kWh would improve confidence.'}</div></div>${scenario?`<div class="report-section"><h2>Saved scenario comparison</h2><div class="report-grid-2"><div class="report-card"><h3>Current electricity</h3><p><strong>${fmt(scenario.currentE||en.e)}</strong></p></div><div class="report-card"><h3>${esc(scenario.name||'Future scenario')}</h3><p><strong>${fmt(scenario.e)}</strong></p><p>Difference: ${Math.round((scenario.e-(scenario.currentE||en.e))).toLocaleString('en-GB')} kWh</p></div></div></div>`:''}`,page,total,'Household Profile & Energy');
+    return wrapPage(`${header('Household profile','Property and energy picture')}<div class="report-profile"><div><span>Property type</span><strong>${esc(label('propertyType',plan.propertyType))}</strong></div><div><span>Bedrooms</span><strong>${esc(plan.bedrooms)}</strong></div><div><span>Occupants</span><strong>${esc(plan.occupants)}</strong></div><div><span>Main heating</span><strong>${esc(label('heating',plan.heating))}</strong></div><div><span>Home efficiency</span><strong>${esc(label('efficiency',plan.efficiency))}</strong></div><div><span>Daytime occupancy</span><strong>${esc(label('daytime',plan.daytime))}</strong></div><div><span>Electric vehicle</span><strong>${plan.ev==='yes'?'Yes':'No'}</strong></div><div><span>Solar panels</span><strong>${plan.solar==='yes'?'Yes':'No'}</strong></div></div><div class="report-section"><h2>Annual energy picture</h2><div class="energy-hero"><div class="energy-value"><span>Electricity</span><strong>${fmt(en.e)}</strong></div><div class="energy-value"><span>Gas</span><strong>${en.g?fmt(en.g):'Not applicable'}</strong></div></div><div class="energy-bars"><div class="energy-bar-row"><span>Electricity</span><div class="energy-track"><span style="width:${pct(en.e)}%"></span></div><strong>${fmt(en.e)}</strong></div>${en.g?`<div class="energy-bar-row"><span>Gas</span><div class="energy-track"><span style="width:${pct(en.g)}%"></span></div><strong>${fmt(en.g)}</strong></div>`:''}${scenario?`<div class="energy-bar-row"><span>${esc(scenario.name||'Future scenario')}</span><div class="energy-track"><span style="width:${pct(scenario.e)}%"></span></div><strong>${fmt(scenario.e)}</strong></div>`:''}</div></div><div class="report-section"><h2>Basis and confidence</h2><div class="report-callout">${en.actual?'Actual annual kWh has been supplied for at least one fuel. Future scenarios remain modelled and indicative.':'The figures are estimated from property and household information. Actual annual kWh would improve confidence.'}</div></div>${scenario?`<div class="report-section"><h2>Saved energy-use scenario</h2><div class="report-grid-2"><div class="report-card"><h3>Current electricity</h3><p><strong>${fmt(scenario.currentE||en.e)}</strong></p></div><div class="report-card"><h3>${esc(scenario.name||'Future scenario')}</h3><p><strong>${fmt(scenario.e)}</strong></p><p>Difference: ${Math.round((scenario.e-(scenario.currentE||en.e))).toLocaleString('en-GB')} kWh</p></div></div></div>`:''}`,page,total,'Household Profile & Energy');
   }
   function taskPages(startPage,total){
     const visible=tasks.length?tasks:[{title:'No active tasks have been generated.',owner:'Household',due:'',status:'open'}];
@@ -140,17 +140,17 @@
 
   function render(type){
     const root=document.getElementById('reportDocument');
-    if(!plan){root.innerHTML=`<section class="report-page"><div class="no-data"><h2>No household plan found.</h2><p>Build a plan first, then return to the Report Studio.</p><a href="/command-centre">Open the Plan Builder</a></div></section>`;return;}
+    if(!plan){root.innerHTML=`<section class="report-page"><div class="no-data"><h2>No household plan found.</h2><p>Build a household plan first, then return to the printable-summary page.</p><a href="/command-centre">Open the Plan Builder</a></div></section>`;return;}
     const taskCount=Math.max(1,Math.ceil((tasks.length||1)/6));
     let pageBuilders=[];
     if(type==='energy'){
-      pageBuilders=[()=>cover('Energy & Scenario','Professional Report'),profileEnergyPage,energyAssumptionsPage,contactPage];
+      pageBuilders=[()=>cover('Energy-use scenario','Printable Summary'),profileEnergyPage,energyAssumptionsPage,contactPage];
     }else if(type==='actions'){
-      pageBuilders=[()=>cover('Living Action Plan','Professional Report'),{taskPages:true,count:taskCount},contactPage];
+      pageBuilders=[()=>cover('Living Action Plan','Printable Summary'),{taskPages:true,count:taskCount},contactPage];
     }else if(type==='brief'){
-      pageBuilders=[()=>cover('Meeting Brief','Professional Report'),briefPage,contactPage];
+      pageBuilders=[()=>cover('Meeting Brief','Printable Summary'),briefPage,contactPage];
     }else{
-      pageBuilders=[()=>cover('Complete Household','Professional Report'),executivePage,profileEnergyPage,{taskPages:true,count:taskCount},briefPage,contactPage];
+      pageBuilders=[()=>cover('Complete Household','Printable Summary'),executivePage,profileEnergyPage,{taskPages:true,count:taskCount},briefPage,contactPage];
     }
     const total=pageBuilders.reduce((sum,item)=>sum+(item?.taskPages?item.count:1),0);
     let html='',page=1;
@@ -163,7 +163,7 @@
       }
     }
     root.innerHTML=html;
-    document.title=`${type==='energy'?'Energy & Scenario':type==='actions'?'Action Plan':type==='brief'?'Meeting Brief':'Complete Household'} Report | Save & Earn with Paul`;
+    document.title=`${type==='energy'?'Energy-use scenario':type==='actions'?'Action Plan':type==='brief'?'Meeting Brief':'Complete Household'} Report | Save & Earn with Paul`;
   }
 
   const select=document.getElementById('reportType');

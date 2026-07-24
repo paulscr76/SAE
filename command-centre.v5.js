@@ -239,7 +239,7 @@
   }
 
   function meetingBrief(s, energy, actions) {
-    const priorityLabel = {save:'Household costs',understand:'Understanding the household',earn:'Flexible earning',both:'Saving and earning'}[s.priority] || 'General household review';
+    const priorityLabel = {save:'Reducing household costs',understand:'Simplifying household bills',earn:'Flexible earning',both:'Saving and perhaps earning'}[s.priority] || 'General household review';
     const areas = actions.map(a => a.id).filter(id => id !== 'general').join(', ') || 'general review';
     return `Main priority: ${priorityLabel}. Areas to discuss: ${areas}. Energy: ${energy.actual ? 'actual annual kWh available' : 'indicative estimate only'}. Broadband contract: ${s.broadbandContract || 'unknown'}.`;
   }
@@ -274,7 +274,7 @@
     const built = buildActions(s);
     const actions = built.visible;
     const readinessInfo = readiness(s,energy,actions);
-    const priorityLabel = {save:'Reducing household costs',understand:'Understanding the household',earn:'Exploring flexible earning',both:'Saving and earning'}[s.priority] || 'General review';
+    const priorityLabel = {save:'Reducing household costs',understand:'Simplifying household bills',earn:'Exploring flexible earning',both:'Saving and perhaps earning'}[s.priority] || 'General review';
     const energyKind = s.energyConcern === 'none' && !['save','understand','both'].includes(s.priority) ? 'low' : energy.actual ? 'ready' : 'review';
     const broadbandNeeds = ['slow','unreliable','expensive'].includes(s.broadbandExperience) || ['ending','out'].includes(s.broadbandContract);
     const mobileNeeds = s.mobileLines !== 'none' || s.mobileConcern !== 'none' || ['ending','out'].includes(s.mobileContract);
@@ -290,7 +290,7 @@
     const outstanding = readinessInfo.outstanding.length ? readinessInfo.outstanding.map(item=>`<li>${item}</li>`).join('') : '<li>No essential gaps identified.</li>';
     const actionHtml = actions.length ? actions.map((a,i)=>`<div class="action-item editable-action"><span class="action-no">${i+1}</span><div><strong>${a.title}</strong><span>${a.detail}</span><div class="action-controls no-print"><button type="button" data-action-up="${a.id}" aria-label="Move ${a.title} up">↑</button><button type="button" data-action-down="${a.id}" aria-label="Move ${a.title} down">↓</button><button type="button" data-action-edit="${a.step}">Edit</button><button type="button" data-action-dismiss="${a.id}">Dismiss</button></div></div></div>`).join('') : '<div class="notice blue">All suggested actions are dismissed. Restore them below.</div>';
     const brief = meetingBrief(s,energy,actions);
-    const tailoredBooking = ['earn'].includes(s.priority) ? 'Book a flexible-earning conversation' : s.priority === 'both' ? 'Book a complete household review' : 'Book an energy and services review';
+    const tailoredBooking = ['earn'].includes(s.priority) ? 'Book a flexible-earning conversation' : s.priority === 'both' ? 'Book a saving and earning conversation' : 'Book a household savings conversation';
 
     document.getElementById('dashboardContent').innerHTML = `
       <div class="dashboard-head"><div><span class="kicker" style="color:var(--yellow)">Your editable household plan</span><h2>${priorityLabel}</h2><p>Generated locally on ${new Date().toLocaleDateString('en-GB',{dateStyle:'long'})}.</p></div><div class="plan-count"><div><strong>${actions.length}</strong><span>active steps</span></div></div></div>
@@ -299,7 +299,7 @@
       <section class="outstanding-box"><div><h3>Outstanding information</h3><ul>${outstanding}</ul></div><button class="btn btn-light btn-small no-print" type="button" id="jumpFirstGap">Go to first gap</button></section>
       <div class="action-plan"><div class="action-plan-head"><div><h3>Your ordered action plan</h3><p>Move, edit or dismiss actions. Changes remain on this device.</p></div>${built.all.length !== actions.length ? '<button class="btn btn-light btn-small no-print" type="button" id="restoreActions">Restore dismissed actions</button>' : ''}</div><div class="action-list">${actionHtml}</div></div>
       <section class="meeting-brief"><span class="kicker">Meeting brief</span><h3>Arrive at the conversation prepared.</h3><p id="meetingBriefText">${brief}</p><button class="btn btn-light btn-small no-print" id="copyBrief" type="button">Copy meeting brief</button></section>
-      <div class="dashboard-actions no-print"><a class="btn btn-blue" href="${CALENDLY}" target="_blank" rel="noopener" data-track="booking_dashboard">${tailoredBooking}</a><button class="btn btn-yellow" type="button" id="sendPlan">WhatsApp my summary</button><button class="btn btn-light" type="button" id="visualReport">Open professional report</button><button class="btn btn-light" type="button" id="exportPlan">Export plan file</button><button class="btn btn-light" type="button" id="importPlanDashboard">Import plan</button></div>
+      <div class="dashboard-actions no-print"><a class="btn btn-blue" href="${CALENDLY}" target="_blank" rel="noopener" data-track="booking_dashboard">${tailoredBooking}</a><button class="btn btn-yellow" type="button" id="sendPlan">WhatsApp my summary</button><button class="btn btn-light" type="button" id="visualReport">Create printable summary</button><button class="btn btn-light" type="button" id="exportPlan">Export plan file</button><button class="btn btn-light" type="button" id="importPlanDashboard">Import plan</button></div>
       <div class="notice blue">Guidance only—not a quotation, supplier recommendation, financial advice or income forecast.</div>`;
 
     document.querySelectorAll('[data-edit-step]').forEach(btn => btn.onclick = () => show(+btn.dataset.editStep));
