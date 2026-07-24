@@ -1,7 +1,7 @@
 {
-  "name": "Save and Earn with Paul 5.0 \u2014 Professional Reports",
-  "short_name": "Save & Earn 5",
-  "description": "Household OS, professional reports, plan builder, Copilot and privacy controls.",
+  "name": "Save and Earn with Paul - Professional Household Reports",
+  "short_name": "Save & Earn",
+  "description": "Household planning, professional reports, scenario tools and privacy controls.",
   "start_url": "/household-os",
   "scope": "/",
   "display": "standalone",

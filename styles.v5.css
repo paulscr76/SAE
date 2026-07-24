@@ -344,3 +344,8 @@ input:focus,select:focus,textarea:focus{border-color:var(--blue-2);box-shadow:0 
 .os-capability-grid{grid-template-columns:repeat(3,1fr)}
 @media(max-width:1050px){.os-capability-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:700px){.report-promo{grid-template-columns:1fr}.os-capability-grid{grid-template-columns:1fr}}
+
+/* Public-content refinement */
+.os-capability{display:block;text-decoration:none;color:inherit;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+.os-capability:hover{transform:translateY(-4px);border-color:var(--yellow);box-shadow:0 20px 48px rgba(2,23,47,.14)}
+.capability-link{display:block;margin-top:15px;color:var(--blue);font-size:12px}

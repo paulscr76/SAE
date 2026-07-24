@@ -26,7 +26,7 @@
       const tasks=(os.tasks||[]).filter(t=>t.status!=='done').slice(0,4).map(t=>t.title);
       return 'Before speaking to Paul, have annual energy kWh if available, broadband and mobile contract timing, and your main household priority. '+(tasks.length?'Your open plan items include: '+tasks.join('; ')+'.':'Open My Household to generate an action list.');
     }
-    if(/privacy|data|stored|share|delete|account/.test(x)) return 'The public Version 5.0 platform stores the household plan in this browser. It does not create a secure cloud account or automatically send answers to Paul. Bill files are previewed locally and are not retained by the site. The Privacy & Consent Centre can export, selectively share or erase local data.';
+    if(/privacy|data|stored|share|delete|account/.test(x)) return 'The public household workspace stores the plan in this browser. It does not create a secure cloud account or automatically send answers to Paul. Bill files are previewed locally and are not retained by the site. The Privacy & Consent Centre can export, selectively share or erase local data.';
     if(/my plan|summary|household/.test(x)&&plan){
       const labels={save:'reducing household costs',understand:'understanding the household',earn:'exploring flexible earning',both:'saving and earning'};
       return `Your saved priority is ${labels[plan.priority]||'not selected'}. The home is recorded as ${plan.propertyType||'not set'} with ${plan.bedrooms||'?'} bedrooms and ${plan.occupants||'?'} occupants. Energy is based on ${plan.energyMode==='actual'?'annual kWh':'an estimate'}. Open My Household for the living plan and sharing controls.`;

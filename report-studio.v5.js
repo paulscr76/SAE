@@ -96,7 +96,7 @@
   }
 
   function footer(page,total,title){
-    return `<div class="report-page-footer"><span><strong>Save &amp; Earn with Paul</strong> • ${esc(title)}</span><span>Confidential household planning document • Page ${page} of ${total}</span></div>`;
+    return `<div class="report-page-footer"><span><strong>Save &amp; Earn with Paul 5.0.1</strong> • ${esc(title)}</span><span>Confidential household planning document • Page ${page} of ${total}</span></div>`;
   }
   function wrapPage(content,page,total,title,classes=''){
     return `<section class="report-page ${classes}">${content}${classes.includes('report-cover')?'':footer(page,total,title)}</section>`;
@@ -105,7 +105,7 @@
     return `<div class="report-page-header"><div><div class="label">${esc(labelText)}</div><div class="title">${esc(title)}</div></div><div class="label">${reportRef}</div></div>`;
   }
   function cover(title,subtitle,page,total){
-    return wrapPage(`<div class="report-cover-content"><div class="report-brand"><span class="report-brand-mark">£</span><span>Save &amp; Earn with Paul<small>Professional Household Report</small></span></div><div class="report-cover-main"><span class="report-eyebrow">Version 5.0 • Prepared locally</span><h1>${esc(title)}<br><span>${esc(subtitle)}</span></h1><p class="report-cover-lead">A professionally structured planning document generated from the information saved in this browser.</p><div class="report-cover-meta"><div><span>Main priority</span><strong>${esc(plan?priorityLabel(plan.priority):'No plan found')}</strong></div><div><span>Generated</span><strong>${generated}</strong></div><div><span>Report reference</span><strong>${reportRef}</strong></div></div></div><div class="report-cover-bottom"><div class="report-cover-contact"><strong>Paul Scrase</strong>Independent Utility Warehouse Partner<br>${esc('07925 008477')} • paul.scrase@uw.partners</div><img class="report-cover-photo" src="${asset('/paul-scrase-480.webp')}" alt="Paul Scrase"></div></div>`,page,total,title,'report-cover');
+    return wrapPage(`<div class="report-cover-content"><div class="report-brand"><span class="report-brand-mark">£</span><span>Save &amp; Earn with Paul<small>Professional Household Report</small></span></div><div class="report-cover-main"><span class="report-eyebrow">Professional report • Prepared locally</span><h1>${esc(title)}<br><span>${esc(subtitle)}</span></h1><p class="report-cover-lead">A professionally structured planning document generated from the information saved in this browser.</p><div class="report-cover-meta"><div><span>Main priority</span><strong>${esc(plan?priorityLabel(plan.priority):'No plan found')}</strong></div><div><span>Generated</span><strong>${generated}</strong></div><div><span>Report reference</span><strong>${reportRef}</strong></div></div></div><div class="report-cover-bottom"><div class="report-cover-contact"><strong>Paul Scrase</strong>Independent Utility Warehouse Partner<br>${esc('07925 008477')} • paul.scrase@uw.partners</div><img class="report-cover-photo" src="${asset('/paul-scrase-480.webp')}" alt="Paul Scrase"></div></div>`,page,total,title,'report-cover');
   }
   function executivePage(page,total){
     const statuses=[

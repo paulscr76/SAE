@@ -1,0 +1,16 @@
+SAVE & EARN WITH PAUL - DEPLOYMENT NOTES
+
+1. Extract the ZIP file.
+2. Open the website project repository.
+3. Upload every file from the extracted folder, replacing the existing files.
+4. Commit the update with:
+   Refine public content and feature links
+5. Wait for the production deployment to complete.
+6. Test the homepage, My Household, Report Studio, Plan Builder, Bill Helper, Scenario Lab and Privacy & Consent Centre.
+
+PUBLIC CONTENT CHANGES
+- Release number appears in the footer only.
+- The homepage feature area is now positive, useful and fully clickable.
+- Public hosting-platform and repository references have been removed.
+- Professional report covers no longer display a release number.
+- Professional report footers display the release number.
