@@ -1,8 +1,8 @@
 {
   "name": "Save and Earn with Paul",
   "short_name": "Save & Earn",
-  "description": "Explore simpler household bills, possible savings and an optional additional-income opportunity.",
-  "start_url": "/household-os",
+  "description": "Explore simpler household bills, potential savings and an optional additional-income opportunity.",
+  "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "background_color": "#ffffff",
@@ -23,24 +23,24 @@
   ],
   "shortcuts": [
     {
-      "name": "My Household",
-      "short_name": "My plan",
-      "url": "/household-os"
-    },
-    {
-      "name": "Printable household summary",
-      "short_name": "Summary",
-      "url": "/report-studio"
-    },
-    {
-      "name": "Build household plan",
-      "short_name": "Build",
+      "name": "Build my household plan",
+      "short_name": "Build plan",
       "url": "/command-centre"
     },
     {
-      "name": "Household help and guidance",
-      "short_name": "Help",
-      "url": "/copilot"
+      "name": "Find useful bill figures",
+      "short_name": "Bill helper",
+      "url": "/bill-helper"
+    },
+    {
+      "name": "Understand energy use",
+      "short_name": "Energy",
+      "url": "/calculator"
+    },
+    {
+      "name": "My household",
+      "short_name": "My household",
+      "url": "/household-os"
     }
   ]
 }

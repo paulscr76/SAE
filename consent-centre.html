@@ -1,7 +1,7 @@
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#02172f">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="manifest" href="/manifest.webmanifest">
-<link rel="stylesheet" href="/styles.v5.css">
+<link rel="stylesheet" href="/styles.v5.1.css">
 <title>Privacy and Sharing | Save &amp; Earn with Paul</title><meta name="description" content="Inspect, selectively share, export, encrypt or erase household information stored locally in this browser."><link rel="canonical" href="https://www.saveandearnwithpaul.live/consent-centre">
 <meta property="og:type" content="website"><meta property="og:title" content="Privacy and Sharing | Save &amp; Earn with Paul"><meta property="og:description" content="Inspect, selectively share, export, encrypt or erase household information stored locally in this browser."><meta property="og:url" content="https://www.saveandearnwithpaul.live/consent-centre"><meta property="og:image" content="https://www.saveandearnwithpaul.live/social-share.webp">
 <meta name="twitter:card" content="summary_large_image">
@@ -14,13 +14,11 @@
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">Menu</button>
     <nav class="nav-links" id="primary-navigation" aria-label="Main navigation">
+      <a href="/#how-it-works">How it works</a>
+      <a href="/#save-money">Save money</a>
+      <a href="/#earn-extra">Earn extra</a>
+      <a href="/#about-paul">About Paul</a>
       <a href="/household-os">My household</a>
-      <a href="/command-centre">Build my plan</a>
-      <a href="/report-studio">Printable summary</a>
-      <a href="/copilot">Help &amp; guidance</a>
-      <a href="/bill-helper">Bill helper</a>
-      <a href="/calculator">Energy planner</a>
-      <a href="/consent-centre">Privacy</a>
       <a class="btn btn-yellow btn-small" href="https://calendly.com/save-with-paul/chat-with-paul" target="_blank" rel="noopener" data-track="booking_header">Book a chat</a>
     </nav>
     <div class="nav-scrim" aria-hidden="true"></div>
@@ -31,17 +29,38 @@
 <section class="consent-card"><span class="kicker">Printable summary</span><h2>Create a clear meeting brief.</h2><p>Turn only the household information you select into a professionally formatted printable summary.</p><a class="btn btn-yellow" href="/report-studio?type=brief">Create meeting brief</a></section><section class="consent-card"><span class="kicker">Selective meeting brief</span><h2>Choose exactly what to share.</h2><div class="share-options" id="consentOptions"></div><div class="share-preview" style="margin-top:13px"><h3>Preview</h3><pre id="consentBrief"></pre></div><div class="share-actions"><button class="btn btn-blue" id="copyConsentBrief" type="button">Copy brief</button><button class="btn btn-yellow" id="whatsappConsentBrief" type="button">WhatsApp Paul</button><a class="btn btn-light" href="https://calendly.com/save-with-paul/chat-with-paul" target="_blank" rel="noopener">Open Calendly</a></div></section>
 <section class="consent-card"><span class="kicker">Encrypted portable backup</span><h2>Protect an export with a passphrase.</h2><p>The browser uses PBKDF2 and AES-GCM through Web Crypto. The passphrase is never stored. Losing it means the backup cannot be restored.</p><div class="backup-form"><div class="inline"><input id="backupPassphrase" type="password" autocomplete="new-password" minlength="10" placeholder="Passphrase — at least 10 characters"><button class="btn btn-blue" id="encryptedExport" type="button">Export encrypted backup</button></div><div class="inline"><input id="encryptedImportFile" type="file" accept=".sewp4,application/json"><button class="btn btn-light" id="encryptedImport" type="button">Restore encrypted backup</button></div><div id="backupStatus" class="notice blue" hidden></div></div></section>
 <section class="consent-card"><span class="kicker">Plain portable plan</span><h2>Compatibility export</h2><p>A normal JSON export is easier to inspect and import, but it is not encrypted. Avoid placing personal information in it.</p><div class="share-actions"><button class="btn btn-light" id="plainExport" type="button">Export plain JSON</button><label class="btn btn-light" for="plainImportFile">Import plain JSON</label><input id="plainImportFile" type="file" accept=".json,application/json" hidden></div></section>
-<section class="consent-card danger-zone"><span class="kicker">Danger zone</span><h2>Erase local household data.</h2><p>This removes the plan, living tasks, document metadata, guide feedback and preferences from this browser. It cannot be undone.</p><button class="btn btn-blue" id="eraseV4Data" type="button">Erase all local data</button></section>
+<section class="consent-card danger-zone"><span class="kicker">Danger zone</span><h2>Erase local household data.</h2><p>This removes the plan, living tasks, document metadata, guide feedback and preferences from this browser. It cannot be undone.</p><button class="btn btn-blue" id="eraseLocalData" type="button">Erase all local data</button></section>
 <section class="consent-card"><span class="kicker">How this website works</span><h2>Your plan stays on this device until you choose to share it.</h2><p>The household tools use this browser’s local storage. Paul does not receive your answers automatically. Use the sharing controls to choose what enters a meeting brief, or erase the local information at any time.</p></section>
 </div></div></main><footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
-      <div><div class="footer-title">Save &amp; Earn with Paul <span class="footer-version">v5.0.2</span></div><div>Helping households explore simpler bills, possible savings and an optional way to earn additional income.</div><div class="footer-actions"><button class="btn btn-light btn-small" data-share-site type="button">Share website</button><button class="btn btn-light btn-small" data-install-app type="button" hidden>Install app</button></div></div>
-      <div><div class="footer-title">Explore</div><div><a href="/#how-it-works">How it works</a></div><div><a href="/command-centre">Build my plan</a></div><div><a href="/household-os">My household</a></div><div><a href="/report-studio">Printable summary</a></div><div><a href="/consent-centre">Privacy &amp; sharing</a></div></div>
-      <div><div class="footer-title">Contact Paul</div><div><a href="https://calendly.com/save-with-paul/chat-with-paul" target="_blank" rel="noopener">Book a free 30-minute chat</a></div><div><a href="https://wa.me/447925008477" target="_blank" rel="noopener">WhatsApp 07925 008477</a></div><div><a href="tel:+447925008477">Call 07925 008477</a></div><div><a href="mailto:paul.scrase@uw.partners">paul.scrase@uw.partners</a></div></div>
+      <div>
+        <div class="footer-title">Save &amp; Earn with Paul <span class="footer-version">v5.1</span></div>
+        <div>Helping households explore simpler bills, potential savings and an optional way to earn additional income.</div>
+        <div class="footer-actions"><button class="btn btn-light btn-small" data-share-site type="button">Share website</button><button class="btn btn-light btn-small" data-install-app type="button" hidden>Install app</button></div>
+      </div>
+      <div>
+        <div class="footer-title">Explore</div>
+        <div><a href="/#how-it-works">How it works</a></div>
+        <div><a href="/#save-money">Save money</a></div>
+        <div><a href="/#earn-extra">Earn extra</a></div>
+        <div><a href="/#about-paul">About Paul</a></div>
+        <div><a href="/household-os">My household</a></div>
+      </div>
+      <div>
+        <div class="footer-title">Contact Paul</div>
+        <div><a href="https://calendly.com/save-with-paul/chat-with-paul" target="_blank" rel="noopener">Book a free 30-minute chat</a></div>
+        <div><a href="https://wa.me/447925008477" target="_blank" rel="noopener">WhatsApp 07925 008477</a></div>
+        <div><a href="tel:+447925008477">Call 07925 008477</a></div>
+        <div><a href="mailto:paul.scrase@uw.partners">paul.scrase@uw.partners</a></div>
+      </div>
     </div>
-    <div class="footer-small">Paul Scrase is an independent Utility Warehouse Partner. This is not a supplier-comparison website and it does not rank tariffs or providers. Eligibility and savings depend on individual circumstances. Any earning opportunity is optional; income is not guaranteed and depends on personal activity and results. Printable summaries are planning documents, not quotations, financial advice or guarantees.</div>
+    <div class="footer-small">Paul Scrase is an independent Utility Warehouse Partner. This is not a supplier-comparison website and does not rank tariffs or providers. Eligibility, service availability and savings depend on individual circumstances and current terms. The earning opportunity is optional; income is not guaranteed and depends on personal activity and results. Printable summaries are planning documents, not quotations, financial advice or guarantees.</div>
   </div>
 </footer>
-<div class="sticky-mobile-cta no-print"><a class="btn btn-yellow" href="/command-centre">Build plan</a><a class="btn btn-light" href="https://calendly.com/save-with-paul/chat-with-paul" target="_blank" rel="noopener">Book chat</a><a class="btn btn-light" href="https://wa.me/447925008477" target="_blank" rel="noopener">WhatsApp</a></div>
-<div class="toast" id="toast" role="status" aria-live="polite"></div><script defer src="/analytics.v5.js"></script><script defer src="/site.v5.js"></script><script defer src="/consent-centre.v5.js"></script></body></html>
+<div class="sticky-mobile-cta no-print" data-sticky-cta aria-label="Quick contact options">
+  <a class="btn btn-yellow" href="/command-centre">See what could help</a>
+  <a class="btn btn-light" href="https://calendly.com/save-with-paul/chat-with-paul" target="_blank" rel="noopener">Book chat</a>
+  <a class="btn btn-light" href="https://wa.me/447925008477" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div><script defer src="/analytics.v5.1.js"></script><script defer src="/site.v5.1.js"></script><script defer src="/consent-centre.v5.1.js"></script></body></html>
