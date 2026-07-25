@@ -1,8 +1,11 @@
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#02172f">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="manifest" href="/manifest.webmanifest">
-<link rel="stylesheet" href="/styles.v5.1.css">
-<title>Energy Use Planner | Save &amp; Earn with Paul</title><meta name="description" content="Estimate annual household electricity and gas usage, then explore how changes to the home may affect annual kWh."><link rel="canonical" href="https://www.saveandearnwithpaul.live/calculator"></head><body>
+<link rel="stylesheet" href="/styles.v6.css">
+<title>Energy Data Passport | Save &amp; Earn with Paul</title>
+<meta name="description" content="Combine official property information, customer-supplied annual kWh, meter readings and national benchmarks into a transparent household energy picture.">
+<link rel="canonical" href="https://www.saveandearnwithpaul.live/calculator">
+</head><body>
 <a class="skip-link" href="#main">Skip to main content</a>
 <header class="site-header">
   <div class="container navbar">
@@ -22,24 +25,161 @@
     <div class="nav-scrim" aria-hidden="true"></div>
   </div>
 </header>
+<section class="page-hero energy-passport-hero"><div class="container"><span class="tag">ENERGY DATA PASSPORT</span><h1 class="page-title">USE THE STRONGEST ENERGY INFORMATION YOU HAVE</h1><p>Start with actual annual kWh where possible. Add official property information, meter readings or a transparent household estimate—each clearly labelled by source and confidence.</p></div></section>
 
-<section class="page-hero"><div class="container"><span class="tag">UNDERSTAND YOUR ENERGY USE</span><h1 class="page-title">ENERGY USE PLANNER</h1><p>Build a current household energy picture, then model how solar, an EV, heating, occupancy or efficiency changes may affect estimated annual kWh.</p></div></section>
-<main id="main" class="calc-shell"><div class="container"><div class="breadcrumbs"><a href="/">Home</a> / Energy calculator</div><div class="calc-layout">
-<div class="calc-left"><form class="calc-panel" id="calculatorForm"><span class="kicker">Your scenario</span><h2>Household details</h2><div class="fields">
-<div><label for="calcMode">Usage information</label><select id="calcMode"><option value="estimate">Estimate from the home</option><option value="actual">I know annual kWh</option></select></div><div><label for="calcProperty">Property type</label><select id="calcProperty"><option value="flat">Flat / apartment</option><option value="terrace">Terraced house</option><option value="semi" selected>Semi-detached</option><option value="detached">Detached house</option><option value="bungalow">Bungalow</option></select></div><div><label for="calcBedrooms">Bedrooms</label><select id="calcBedrooms"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option></select></div><div><label for="calcOccupants">Occupants</label><select id="calcOccupants"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select></div><div><label for="calcHeating">Main heating</label><select id="calcHeating"><option value="gas" selected>Gas boiler</option><option value="electric">Electric heating</option><option value="heatpump">Heat pump</option><option value="other">Oil / other</option></select></div><div><label for="calcEfficiency">Home efficiency</label><select id="calcEfficiency"><option value="efficient">Well insulated / newer</option><option value="average" selected>Average / unknown</option><option value="inefficient">Older / draughty</option></select></div><div><label for="calcDaytime">Daytime occupancy</label><select id="calcDaytime"><option value="low">Usually empty</option><option value="mixed" selected>Mixed</option><option value="high">Usually occupied</option></select></div><div><label for="calcEv">Electric vehicle</label><select id="calcEv"><option value="no">No</option><option value="yes">Yes</option></select></div><div><label for="calcSolar">Solar panels</label><select id="calcSolar"><option value="no">No</option><option value="yes">Yes</option></select></div><div class="actual-only"><label for="calcElectric">Electricity kWh/year</label><input id="calcElectric" type="number" min="0"></div><div class="actual-only"><label for="calcGas">Gas kWh/year</label><input id="calcGas" type="number" min="0"></div></div>
-<div id="calcWarning" class="error-box" role="alert"></div><div class="helper-actions no-print"><button class="btn btn-blue" id="calculateEnergy" type="button">Calculate scenario</button><button class="btn btn-light" id="resetEnergy" type="button">Reset</button><a class="btn btn-light" href="/bill-helper">Find figures on a bill</a></div></form><section class="calc-panel scenario-panel" id="scenarioPanel"><span class="kicker">Future energy-use scenario</span><h2>What could change?</h2><p class="section-intro">Calculate the current household first, then model one or more changes. This models estimated kWh—not supplier prices, tariffs or guaranteed savings.</p><div class="fields"><div><label for="scenarioName">Scenario name</label><input id="scenarioName" value="Future household" maxlength="50"></div><div><label for="scenarioHeating">Heating</label><select id="scenarioHeating"><option value="same">Keep current heating</option><option value="gas">Gas boiler</option><option value="electric">Electric heating</option><option value="heatpump">Heat pump</option><option value="other">Oil / other</option></select></div><div><label for="scenarioOccupants">Occupants</label><select id="scenarioOccupants"><option value="same">Keep current number</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select></div><div><label for="scenarioDaytime">Daytime occupancy</label><select id="scenarioDaytime"><option value="same">Keep current pattern</option><option value="low">Usually empty</option><option value="mixed">Mixed</option><option value="high">Usually occupied</option></select></div><div><label for="scenarioEv">Electric vehicle</label><select id="scenarioEv"><option value="same">Keep current choice</option><option value="no">No</option><option value="yes">Yes</option></select></div><div><label for="scenarioSolar">Solar panels</label><select id="scenarioSolar"><option value="same">Keep current choice</option><option value="no">No</option><option value="yes">Yes</option></select></div><div class="full"><label for="scenarioEfficiency">Home efficiency</label><select id="scenarioEfficiency"><option value="same">Keep current level</option><option value="efficient">Well insulated / newer</option><option value="average">Average / unknown</option><option value="inefficient">Older / draughty</option></select></div></div><div class="helper-actions no-print"><button class="btn btn-yellow" id="compareScenario" type="button">Model this scenario</button><button class="btn btn-light" id="resetScenario" type="button">Reset scenario</button></div><div class="scenario-results" id="scenarioResults" hidden></div></section></div>
+<main id="main" class="energy-passport-shell"><div class="container">
+<div class="breadcrumbs"><a href="/">Home</a> / Energy Data Passport</div>
 
-<aside class="calc-panel calc-results" id="calcResults"><span class="kicker">Your result</span><h2>Household snapshot</h2><div class="result-grid"><div class="metric"><span>ANNUAL ELECTRICITY</span><strong id="electricResult">—</strong></div><div class="metric"><span>ANNUAL GAS</span><strong id="gasResult">—</strong></div></div>
-<div class="range-card" id="rangeCard" hidden><div class="range-row"><div class="range-label"><strong>Electricity position</strong><span id="electricBand">—</span></div><div class="range-track"><span class="low"></span><span class="typical"></span><span class="high"></span><i class="range-marker" id="electricMarker"></i></div></div><div class="range-row" id="gasRangeRow"><div class="range-label"><strong>Gas position</strong><span id="gasBand">—</span></div><div class="range-track"><span class="low"></span><span class="typical"></span><span class="high"></span><i class="range-marker" id="gasMarker"></i></div></div></div>
-<div class="calc-summary" id="calcSummary"></div><div class="result-note" id="calcNote">Complete the details and calculate. Actual annual kWh is more reliable than an estimate.</div>
-<div class="result-actions no-print"><button class="btn btn-yellow" id="saveToCommand" type="button">Save result to Command Centre</button><a class="btn btn-blue" href="https://calendly.com/save-with-paul/chat-with-paul" target="_blank" rel="noopener">Book a free 30-minute chat</a><button class="btn btn-light" id="shareEnergy" type="button">Share result</button><button class="btn btn-light" id="printEnergy" type="button">Create printable energy summary</button></div>
-<p style="font-size:11px;color:var(--muted)">Indicative only. This is not a meter reading, tariff quotation, EPC assessment or guarantee of future consumption.</p></aside>
-</div></div></main>
+<section class="energy-truth-banner">
+  <div><span class="truth-icon" aria-hidden="true">✓</span><div><strong>Actual household usage is not normally available through an open internet search.</strong><p>Official property records can improve the picture, but real consumption must come from a bill, supplier export, authorised smart-meter service or meter readings supplied by the household.</p></div></div>
+</section>
+
+<div class="passport-layout">
+<div class="passport-workspace">
+
+<section class="passport-panel source-panel">
+  <span class="kicker">Step 1</span><h2>Choose the best available source</h2>
+  <div class="source-choice-grid" role="tablist" aria-label="Energy information source">
+    <button type="button" class="source-choice active" data-source="epc" role="tab" aria-selected="true"><span>Official property data</span><small>EPC-informed model</small><b>Medium confidence</b></button>
+    <button type="button" class="source-choice" data-source="actual" role="tab" aria-selected="false"><span>Annual kWh</span><small>From a bill or supplier</small><b>Highest confidence</b></button>
+    <button type="button" class="source-choice" data-source="meter" role="tab" aria-selected="false"><span>Meter readings</span><small>Annualised from a period</small><b>Medium confidence</b></button>
+    <button type="button" class="source-choice" data-source="estimate" role="tab" aria-selected="false"><span>Household estimate</span><small>Property and occupancy model</small><b>Indicative</b></button>
+  </div>
+</section>
+
+<section class="passport-panel source-view active" id="source-epc" data-source-view="epc">
+  <span class="kicker">Official property information</span><h2>Find an Energy Performance Certificate</h2>
+  <p class="section-intro">Available for England and Wales when the official data connection is configured. An EPC describes the building and uses standard assumptions; it is not an actual meter record.</p>
+  <div class="lookup-status" id="epcApiStatus" role="status"><span class="status-dot checking"></span><span>Checking official property-data connection…</span></div>
+  <div class="fields lookup-fields">
+    <div><label for="epcPostcode">Property postcode</label><input id="epcPostcode" inputmode="text" autocomplete="postal-code" maxlength="9" placeholder="For example, BN21 1AA"></div>
+    <div class="full consent-check"><label><input id="epcConsent" type="checkbox"> Search the official EPC dataset for this postcode. I understand that the postcode is sent only when I press search.</label></div>
+  </div>
+  <div class="helper-actions"><button class="btn btn-blue" id="searchEpc" type="button">Find property records</button><button class="btn btn-light" id="useDemoProperty" type="button" hidden>Use demonstration property</button></div>
+  <div class="lookup-message" id="epcMessage" role="alert"></div>
+  <div class="property-results" id="propertyResults" hidden></div>
+  <div class="selected-property" id="selectedProperty" hidden></div>
+  <div class="household-context" id="epcContext" hidden>
+    <h3>Add household context</h3><p>EPC information describes the building. Occupancy and lifestyle information helps create a separate, clearly labelled estimate.</p>
+    <div class="fields">
+      <div><label for="epcOccupants">Occupants</label><select id="epcOccupants"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select></div>
+      <div><label for="epcDaytime">Daytime occupancy</label><select id="epcDaytime"><option value="low">Usually empty</option><option value="mixed" selected>Mixed</option><option value="high">Usually occupied</option></select></div>
+      <div><label for="epcEv">Electric vehicle</label><select id="epcEv"><option value="no">No</option><option value="yes">Yes</option></select></div>
+      <div><label for="epcSolar">Solar panels</label><select id="epcSolar"><option value="no">No</option><option value="yes">Yes</option></select></div>
+    </div>
+    <button class="btn btn-yellow" id="calculateEpcEstimate" type="button">Create EPC-informed estimate</button>
+  </div>
+</section>
+
+<section class="passport-panel source-view" id="source-actual" data-source-view="actual" hidden>
+  <span class="kicker">Customer-supplied actual usage</span><h2>Enter annual kWh from a bill or supplier</h2>
+  <p class="section-intro">Look for “annual consumption”, “estimated annual usage” or a twelve-month total. Record whether the supplier figure is actual or estimated.</p>
+  <div class="fields">
+    <div><label for="actualElectric">Electricity kWh/year</label><input id="actualElectric" type="number" min="0" inputmode="decimal"></div>
+    <div><label for="actualGas">Gas kWh/year</label><input id="actualGas" type="number" min="0" inputmode="decimal"></div>
+    <div><label for="actualPeriodEnd">Statement or period end</label><input id="actualPeriodEnd" type="date"></div>
+    <div><label for="actualQuality">Supplier figure</label><select id="actualQuality"><option value="actual">Based on actual readings</option><option value="supplier-estimate">Supplier estimate</option><option value="unknown">Not sure</option></select></div>
+  </div>
+  <div class="helper-actions"><button class="btn btn-blue" id="useActual" type="button">Use these annual figures</button><a class="btn btn-light" href="/bill-helper">Open the Bill Helper</a></div>
+  <div class="lookup-message" id="actualMessage" role="alert"></div>
+</section>
+
+<section class="passport-panel source-view" id="source-meter" data-source-view="meter" hidden>
+  <span class="kicker">Meter-reading annualisation</span><h2>Estimate a year from two readings</h2>
+  <p class="section-intro">This uses the consumption between two dates and scales it to 365 days. Seasonal heating means a short period can be misleading, so longer periods are better.</p>
+  <div class="fields">
+    <div><label for="meterStartDate">Start date</label><input id="meterStartDate" type="date"></div>
+    <div><label for="meterEndDate">End date</label><input id="meterEndDate" type="date"></div>
+    <div><label for="electricStart">Electricity start reading (kWh)</label><input id="electricStart" type="number" min="0" step="0.1"></div>
+    <div><label for="electricEnd">Electricity end reading (kWh)</label><input id="electricEnd" type="number" min="0" step="0.1"></div>
+    <div><label for="gasStart">Gas start reading</label><input id="gasStart" type="number" min="0" step="0.001"></div>
+    <div><label for="gasEnd">Gas end reading</label><input id="gasEnd" type="number" min="0" step="0.001"></div>
+    <div><label for="gasMeterUnit">Gas meter unit</label><select id="gasMeterUnit"><option value="metric">Cubic metres (m³)</option><option value="imperial">Hundreds of cubic feet</option><option value="kwh">Already in kWh</option></select></div>
+    <div><label for="calorificValue">Gas calorific value</label><input id="calorificValue" type="number" min="37.5" max="43" step="0.1" value="39.2"><small>Use the value on the bill where available.</small></div>
+  </div>
+  <button class="btn btn-blue" id="annualiseMeters" type="button">Annualise the readings</button>
+  <div class="lookup-message" id="meterMessage" role="alert"></div>
+</section>
+
+<section class="passport-panel source-view" id="source-estimate" data-source-view="estimate" hidden>
+  <span class="kicker">Transparent household estimate</span><h2>Estimate from the home and household</h2>
+  <div class="fields">
+    <div><label for="calcProperty">Property type</label><select id="calcProperty"><option value="flat">Flat / apartment</option><option value="terrace">Terraced house</option><option value="semi" selected>Semi-detached</option><option value="detached">Detached house</option><option value="bungalow">Bungalow</option></select></div>
+    <div><label for="calcBedrooms">Bedrooms</label><select id="calcBedrooms"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option></select></div>
+    <div><label for="calcOccupants">Occupants</label><select id="calcOccupants"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select></div>
+    <div><label for="calcHeating">Main heating</label><select id="calcHeating"><option value="gas" selected>Gas boiler</option><option value="electric">Electric heating</option><option value="heatpump">Heat pump</option><option value="other">Oil / other</option></select></div>
+    <div><label for="calcEfficiency">Home efficiency</label><select id="calcEfficiency"><option value="efficient">Well insulated / newer</option><option value="average" selected>Average / unknown</option><option value="inefficient">Older / draughty</option></select></div>
+    <div><label for="calcDaytime">Daytime occupancy</label><select id="calcDaytime"><option value="low">Usually empty</option><option value="mixed" selected>Mixed</option><option value="high">Usually occupied</option></select></div>
+    <div><label for="calcEv">Electric vehicle</label><select id="calcEv"><option value="no">No</option><option value="yes">Yes</option></select></div>
+    <div><label for="calcSolar">Solar panels</label><select id="calcSolar"><option value="no">No</option><option value="yes">Yes</option></select></div>
+  </div>
+  <button class="btn btn-blue" id="calculateEstimate" type="button">Create household estimate</button>
+</section>
+
+<section class="passport-panel benchmark-settings">
+  <span class="kicker">Step 2</span><h2>Choose the public benchmark</h2>
+  <div class="fields">
+    <div><label for="benchmarkRegion">National benchmark</label><select id="benchmarkRegion"><option value="england-wales">England and Wales</option><option value="scotland">Scotland</option></select></div>
+  </div>
+  <p class="source-note">Benchmarks use 2024 domestic medians from the government’s National Energy Efficiency Data-Framework 2026 release. They describe typical groups, not this individual household.</p>
+</section>
+
+<section class="passport-panel scenario-panel" id="scenarioPanel">
+  <span class="kicker">Optional scenario</span><h2>What could change?</h2>
+  <p class="section-intro">After creating a current result, model broad changes to heating, occupancy, solar or an electric vehicle. The scenario is indicative and does not calculate prices or guaranteed savings.</p>
+  <div class="fields">
+    <div><label for="scenarioName">Scenario name</label><input id="scenarioName" value="Future household" maxlength="50"></div>
+    <div><label for="scenarioHeating">Heating</label><select id="scenarioHeating"><option value="same">Keep current heating</option><option value="gas">Gas boiler</option><option value="electric">Electric heating</option><option value="heatpump">Heat pump</option><option value="other">Oil / other</option></select></div>
+    <div><label for="scenarioOccupants">Occupants</label><select id="scenarioOccupants"><option value="same">Keep current number</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select></div>
+    <div><label for="scenarioDaytime">Daytime occupancy</label><select id="scenarioDaytime"><option value="same">Keep current pattern</option><option value="low">Usually empty</option><option value="mixed">Mixed</option><option value="high">Usually occupied</option></select></div>
+    <div><label for="scenarioEv">Electric vehicle</label><select id="scenarioEv"><option value="same">Keep current choice</option><option value="no">No</option><option value="yes">Yes</option></select></div>
+    <div><label for="scenarioSolar">Solar panels</label><select id="scenarioSolar"><option value="same">Keep current choice</option><option value="no">No</option><option value="yes">Yes</option></select></div>
+    <div class="full"><label for="scenarioEfficiency">Home efficiency</label><select id="scenarioEfficiency"><option value="same">Keep current level</option><option value="efficient">Well insulated / newer</option><option value="average">Average / unknown</option><option value="inefficient">Older / draughty</option></select></div>
+  </div>
+  <div class="helper-actions"><button class="btn btn-yellow" id="modelScenario" type="button">Model this scenario</button><button class="btn btn-light" id="resetScenario" type="button">Reset scenario</button></div>
+  <div class="scenario-results" id="scenarioResults" hidden></div>
+</section>
+
+</div>
+
+<aside class="passport-result-panel" id="passportResults">
+  <span class="kicker">Energy Data Passport</span><h2>Your current energy picture</h2>
+  <div class="passport-empty" id="passportEmpty"><strong>No result yet</strong><p>Choose the strongest source available and create the current household picture.</p></div>
+  <div id="passportOutput" hidden>
+    <div class="source-ribbon"><span id="resultSource">—</span><b id="resultConfidence">—</b></div>
+    <div class="result-grid"><div class="metric"><span>ANNUAL ELECTRICITY</span><strong id="electricResult">—</strong></div><div class="metric"><span>ANNUAL GAS</span><strong id="gasResult">—</strong></div></div>
+    <div class="benchmark-comparison" id="benchmarkComparison"></div>
+    <div class="property-model-card" id="propertyModelCard" hidden></div>
+    <div class="data-provenance"><h3>Where this result came from</h3><div id="provenanceList"></div></div>
+    <div class="passport-guidance" id="passportGuidance"></div>
+    <div class="result-actions">
+      <button class="btn btn-yellow" id="saveEnergyPassport" type="button">Save to My household</button>
+      <button class="btn btn-light" id="shareEnergy" type="button">Share summary</button>
+      <button class="btn btn-light" id="printEnergy" type="button">Create professional PDF summary</button>
+      <a class="btn btn-blue" href="https://calendly.com/save-with-paul/chat-with-paul" target="_blank" rel="noopener">Book a free chat</a>
+    </div>
+  </div>
+  <div class="result-disclaimer">Actual means supplied by the household or calculated from its readings. Official EPC data is modelled property information. Public benchmarks are aggregated statistics. None of these is a supplier quotation or guarantee.</div>
+</aside>
+</div>
+
+<section class="passport-panel official-sources">
+  <span class="kicker">Data transparency</span><h2>Source labels used by this tool</h2>
+  <div class="source-explainer-grid">
+    <article><span class="source-grade grade-a">A</span><h3>Actual annual usage</h3><p>From a bill, supplier export or authorised data connection. Strongest basis when the period and reading quality are clear.</p></article>
+    <article><span class="source-grade grade-b">B</span><h3>Meter annualisation</h3><p>Calculated from readings supplied by the household. Longer periods reduce seasonal distortion.</p></article>
+    <article><span class="source-grade grade-c">C</span><h3>Official property model</h3><p>EPC building information combined with household context. Useful, but not actual consumption.</p></article>
+    <article><span class="source-grade grade-d">D</span><h3>Household estimate</h3><p>A transparent planning model based on property type, heating, occupancy and selected changes.</p></article>
+  </div>
+  <p class="official-links"><a href="https://get-energy-performance-data.communities.gov.uk/" target="_blank" rel="noopener">Official EPC data service</a> · <a href="https://www.gov.uk/government/statistics/national-energy-efficiency-data-framework-need-consumption-data-tables-2026" target="_blank" rel="noopener">Official NEED consumption statistics</a></p>
+</section>
+
+</div></main>
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="footer-title">Save &amp; Earn with Paul <span class="footer-version">v5.1</span></div>
+        <div class="footer-title">Save &amp; Earn with Paul <span class="footer-version">v6.0</span></div>
         <div>Helping households explore simpler bills, potential savings and an optional way to earn additional income.</div>
         <div class="footer-actions"><button class="btn btn-light btn-small" data-share-site type="button">Share website</button><button class="btn btn-light btn-small" data-install-app type="button" hidden>Install app</button></div>
       </div>
@@ -49,7 +189,7 @@
         <div><a href="/#save-money">Save money</a></div>
         <div><a href="/#earn-extra">Earn extra</a></div>
         <div><a href="/#about-paul">About Paul</a></div>
-        <div><a href="/household-os">My household</a></div>
+        <div><a href="/calculator">Energy Data Passport</a></div><div><a href="/household-os">My household</a></div>
       </div>
       <div>
         <div class="footer-title">Contact Paul</div>
@@ -68,4 +208,5 @@
   <a class="btn btn-light" href="https://wa.me/447925008477" target="_blank" rel="noopener">WhatsApp</a>
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script defer src="/analytics.v5.1.js"></script><script defer src="/site.v5.1.js"></script><script defer src="/calculator.v5.1.js"></script></body></html>
+<script defer src="/analytics.v6.js"></script><script defer src="/site.v6.js"></script><script defer src="/energy-model.v6.js"></script><script defer src="/calculator.v6.js"></script>
+</body></html>

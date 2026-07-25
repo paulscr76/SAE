@@ -1,0 +1,13 @@
+VERSION 6.0 - ENERGY DATA PASSPORT
+- Added optional live official EPC postcode/address lookup for England and Wales.
+- Added protected server-side API proxy with private credential handling.
+- Added customer-supplied annual kWh as the highest-confidence source.
+- Added electricity and gas meter-reading annualisation.
+- Added gas unit conversion using volume correction and user-editable calorific value.
+- Added official 2024 NEED medians and quartiles for England and Wales and Scotland.
+- Added source grades, confidence labels and visible provenance.
+- Added EPC-informed estimates without claiming EPC values are actual household usage.
+- Added property data and source provenance to professional energy summaries.
+- Added Version 5.1 local-data migration.
+- Updated privacy information for postcode lookup and property records.
+- Renamed all static assets for cache-safe Version 6 deployment.

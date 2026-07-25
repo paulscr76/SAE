@@ -1,7 +1,7 @@
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#02172f">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="manifest" href="/manifest.webmanifest">
-<link rel="stylesheet" href="/styles.v5.1.css">
+<link rel="stylesheet" href="/styles.v6.css">
 
 <title>Build My Household Plan | Save &amp; Earn with Paul</title><meta name="description" content="Build a private household plan covering eligible energy, broadband, mobile, insurance and optional flexible earning."><link rel="canonical" href="https://www.saveandearnwithpaul.live/command-centre">
 <meta property="og:title" content="Household plan"><meta property="og:description" content="Your household. One clear plan."><meta property="og:image" content="https://www.saveandearnwithpaul.live/social-share.webp">
@@ -43,7 +43,7 @@
 <div class="fields"><div><label for="propertyType">Property type</label><select id="propertyType"><option value="flat">Flat / apartment</option><option value="terrace">Terraced house</option><option value="semi" selected>Semi-detached</option><option value="detached">Detached house</option><option value="bungalow">Bungalow</option></select></div><div><label for="bedrooms">Bedrooms</label><select id="bedrooms"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option></select></div><div><label for="occupants">People in the home</label><select id="occupants"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select></div><div><label for="heating">Main heating</label><select id="heating"><option value="gas" selected>Gas boiler</option><option value="electric">Electric heating</option><option value="heatpump">Heat pump</option><option value="other">Oil / other</option></select></div><div><label for="efficiency">Home efficiency</label><select id="efficiency"><option value="efficient">Well insulated / newer</option><option value="average" selected>Average / unknown</option><option value="inefficient">Older / draughty</option></select></div><div><label for="daytime">Daytime occupancy</label><select id="daytime"><option value="low">Usually empty</option><option value="mixed" selected>Mixed</option><option value="high">Usually occupied</option></select></div></div></section>
 
 <section class="app-panel wizard-panel" data-panel="2"><div class="panel-head"><div><span class="kicker">Step 3</span><h2>Energy picture</h2><p>Use actual annual kWh when possible, or create an indicative estimate.</p></div><span class="step-count">3 of 6</span></div>
-<div class="fields"><div><label for="energyMode">Energy information</label><select id="energyMode"><option value="estimate">Estimate from the home</option><option value="actual">I know annual kWh</option></select></div><div><label for="energyConcern">Main energy priority</label><select id="energyConcern"><option value="review">General review</option><option value="cost">Managing costs</option><option value="usage">Understanding usage</option><option value="none">Not a priority</option></select></div><div id="electricField" class="hidden-actual"><label for="actualElectric">Electricity kWh per year</label><input id="actualElectric" type="number" min="0" inputmode="decimal" placeholder="e.g. 2900"></div><div id="gasField" class="hidden-actual"><label for="actualGas">Gas kWh per year</label><input id="actualGas" type="number" min="0" inputmode="decimal" placeholder="e.g. 11500"></div><div><label for="ev">Electric vehicle</label><select id="ev"><option value="no">No</option><option value="yes">Yes</option></select></div><div><label for="solar">Solar panels</label><select id="solar"><option value="no">No</option><option value="yes">Yes</option></select></div></div>
+<div class="fields"><div><label for="energyMode">Energy information</label><select id="energyMode"><option value="estimate">Estimate from the home</option><option value="actual">Annual kWh from a bill or supplier</option><option value="annualised">Annualised from meter readings</option><option value="epc">EPC-informed household estimate</option></select></div><div><label for="energyConcern">Main energy priority</label><select id="energyConcern"><option value="review">General review</option><option value="cost">Managing costs</option><option value="usage">Understanding usage</option><option value="none">Not a priority</option></select></div><div id="electricField" class="hidden-actual"><label for="actualElectric">Electricity kWh per year</label><input id="actualElectric" type="number" min="0" inputmode="decimal" placeholder="e.g. 2900"></div><div id="gasField" class="hidden-actual"><label for="actualGas">Gas kWh per year</label><input id="actualGas" type="number" min="0" inputmode="decimal" placeholder="e.g. 11500"></div><div><label for="ev">Electric vehicle</label><select id="ev"><option value="no">No</option><option value="yes">Yes</option></select></div><div><label for="solar">Solar panels</label><select id="solar"><option value="no">No</option><option value="yes">Yes</option></select></div></div>
 <div class="notice blue"><a href="/bill-helper">Use the bill helper</a> to identify annual kWh without uploading the document.</div></section>
 
 <section class="app-panel wizard-panel" data-panel="3"><div class="panel-head"><div><span class="kicker">Step 4</span><h2>Services that may be brought together</h2><p>Add broadband, mobile and insurance details so Paul can discuss which eligible services may suit your household.</p></div><span class="step-count">4 of 6</span></div>
@@ -61,7 +61,7 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="footer-title">Save &amp; Earn with Paul <span class="footer-version">v5.1</span></div>
+        <div class="footer-title">Save &amp; Earn with Paul <span class="footer-version">v6.0</span></div>
         <div>Helping households explore simpler bills, potential savings and an optional way to earn additional income.</div>
         <div class="footer-actions"><button class="btn btn-light btn-small" data-share-site type="button">Share website</button><button class="btn btn-light btn-small" data-install-app type="button" hidden>Install app</button></div>
       </div>
@@ -71,7 +71,7 @@
         <div><a href="/#save-money">Save money</a></div>
         <div><a href="/#earn-extra">Earn extra</a></div>
         <div><a href="/#about-paul">About Paul</a></div>
-        <div><a href="/household-os">My household</a></div>
+        <div><a href="/calculator">Energy Data Passport</a></div><div><a href="/household-os">My household</a></div>
       </div>
       <div>
         <div class="footer-title">Contact Paul</div>
@@ -90,4 +90,4 @@
   <a class="btn btn-light" href="https://wa.me/447925008477" target="_blank" rel="noopener">WhatsApp</a>
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script defer src="/analytics.v5.1.js"></script><script defer src="/site.v5.1.js"></script><script defer src="/command-centre.v5.1.js"></script></body></html>
+<script defer src="/analytics.v6.js"></script><script defer src="/site.v6.js"></script><script defer src="/command-centre.v6.js"></script></body></html>

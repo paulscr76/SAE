@@ -1,10 +1,10 @@
-const CACHE='save-earn-v5-1';
+const CACHE='save-earn-v6-0';
 const STATIC=[
-'/styles.v5.1.css','/report.v5.1.css','/site.v5.1.js','/analytics.v5.1.js','/home.v5.1.js','/household-os.v5.1.js',
-'/copilot.v5.1.js','/consent-centre.v5.1.js','/command-centre.v5.1.js','/bill-helper.v5.1.js','/document-register.v5.1.js',
-'/calculator.v5.1.js','/guides.v5.1.js','/privacy.v5.1.js','/report-studio.v5.1.js',
+'/styles.v6.css','/report.v6.css','/site.v6.js','/analytics.v6.js','/home.v6.js','/household-os.v6.js',
+'/copilot.v6.js','/consent-centre.v6.js','/command-centre.v6.js','/bill-helper.v6.js','/document-register.v6.js',
+'/calculator.v6.js','/energy-model.v6.js','/guides.v6.js','/privacy.v6.js','/report-studio.v6.js',
 '/paul-scrase-480.webp','/paul-scrase-800.webp','/social-share.webp','/calendly-qr.png','/whatsapp-qr.png',
-'/favicon.svg','/manifest.webmanifest','/icon-192.png','/icon-512.png'
+'/favicon.svg','/manifest.webmanifest','/icon-192.png','/icon-512.png','/data/need-benchmarks-2024.json'
 ];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(STATIC)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));

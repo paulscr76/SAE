@@ -1,7 +1,7 @@
 {
   "name": "Save and Earn with Paul",
   "short_name": "Save & Earn",
-  "description": "Explore simpler household bills, potential savings and an optional additional-income opportunity.",
+  "description": "Explore simpler household bills, potential savings, an optional earning opportunity and a source-labelled Energy Data Passport.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -33,8 +33,8 @@
       "url": "/bill-helper"
     },
     {
-      "name": "Understand energy use",
-      "short_name": "Energy",
+      "name": "Build my Energy Data Passport",
+      "short_name": "Energy data",
       "url": "/calculator"
     },
     {

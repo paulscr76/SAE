@@ -1,7 +1,7 @@
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#02172f">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="manifest" href="/manifest.webmanifest">
-<link rel="stylesheet" href="/styles.v5.1.css">
+<link rel="stylesheet" href="/styles.v6.css">
 <title>Privacy | Save &amp; Earn with Paul</title><meta name="description" content="How the Save and Earn with Paul public website and browser-based tools handle information."><link rel="canonical" href="https://www.saveandearnwithpaul.live/privacy"></head><body>
 <a class="skip-link" href="#main">Skip to main content</a>
 <header class="site-header">
@@ -26,16 +26,20 @@
 <main id="main" class="section"><div class="narrow privacy-content"><div class="breadcrumbs"><a href="/">Home</a> / Privacy</div><span class="kicker">Privacy and local data</span><h1>Your information stays under your control.</h1><p class="section-intro">The planning tools save information locally in this browser so you remain in control of what is shared.</p>
 <section class="local-data-control"><span class="kicker">Local data check</span><h2>See what this device is storing.</h2><p id="localDataStatus">Checking this browser…</p><div class="helper-actions no-print"><button class="btn btn-blue" id="checkLocalData" type="button">Check local data</button><button class="btn btn-light" id="clearLocalData" type="button">Erase local plan and tool data</button></div></section><h2>Household plan</h2><p>The Command Centre stores answers in the browser’s local storage so progress can continue on the same device. The information is not automatically sent to Paul or to a customer database. Use “Clear saved plan” to remove it.</p><p>Do not enter names, addresses, account numbers, payment details or other identifying information into the public tools.</p>
 <h2>Bill-reading helper</h2><p>Selected images or PDFs are displayed locally in the browser tab using a temporary object URL. The document is not uploaded by this website and is not saved into local storage. Closing or refreshing the page removes the preview.</p>
-<h2>Printable summaries</h2><p>The printable-summary tool creates formatted A4 pages in the browser. Printing or saving as PDF uses the browser’s print system. Summaries are not automatically uploaded or sent to Paul.</p><p>Review a summary before saving or sharing it because it may contain household figures, action items and selected meeting-brief information.</p><h2>Energy calculator</h2><p>The calculator runs in the browser. Results can be saved to the Command Centre on the same device, printed or shared only when the visitor chooses an action.</p>
+<h2>Printable summaries</h2><p>The printable-summary tool creates formatted A4 pages in the browser. Printing or saving as PDF uses the browser’s print system. Summaries are not automatically uploaded or sent to Paul.</p><p>Review a summary before saving or sharing it because it may contain household figures, action items and selected meeting-brief information.</p><h2>Energy Data Passport</h2>
+<p>Annual kWh, meter readings and household estimates are processed in the browser. They are saved on the device only when the visitor chooses to save them.</p>
+<p>When a visitor actively searches for an Energy Performance Certificate, the postcode is sent through this website’s protected server-side connection to the official Energy Performance of Buildings data service. The private API credential is never placed in the browser. Search results describe the property and are not the household’s actual consumption.</p>
+<p>The postcode and selected EPC record are not automatically sent to Paul. The selected property information can be saved locally as part of the household plan only when the visitor chooses to save the Energy Data Passport.</p>
+<p>Government consumption benchmarks are aggregated statistics. They do not identify an individual household.</p>
 <h2>Calendly, WhatsApp and other services</h2><p>Calendly, WhatsApp, telephone, email and Linktree are third-party services. They handle information under their own privacy terms when a visitor chooses to use them.</p>
 <h2>Website usage information</h2><p>The website may record basic page and button activity to understand which public features are useful. Household answers, bill figures and calculator values are not included in those interaction labels.</p>
 
-<h2>Contact</h2><p>Privacy questions can be sent to <a href="mailto:paul.scrase@uw.partners">paul.scrase@uw.partners</a>.</p><p><small>Last updated: 24 July 2026.</small></p></div></main>
+<h2>Contact</h2><p>Privacy questions can be sent to <a href="mailto:paul.scrase@uw.partners">paul.scrase@uw.partners</a>.</p><p><small>Last updated: 25 July 2026.</small></p></div></main>
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="footer-title">Save &amp; Earn with Paul <span class="footer-version">v5.1</span></div>
+        <div class="footer-title">Save &amp; Earn with Paul <span class="footer-version">v6.0</span></div>
         <div>Helping households explore simpler bills, potential savings and an optional way to earn additional income.</div>
         <div class="footer-actions"><button class="btn btn-light btn-small" data-share-site type="button">Share website</button><button class="btn btn-light btn-small" data-install-app type="button" hidden>Install app</button></div>
       </div>
@@ -45,7 +49,7 @@
         <div><a href="/#save-money">Save money</a></div>
         <div><a href="/#earn-extra">Earn extra</a></div>
         <div><a href="/#about-paul">About Paul</a></div>
-        <div><a href="/household-os">My household</a></div>
+        <div><a href="/calculator">Energy Data Passport</a></div><div><a href="/household-os">My household</a></div>
       </div>
       <div>
         <div class="footer-title">Contact Paul</div>
@@ -64,4 +68,4 @@
   <a class="btn btn-light" href="https://wa.me/447925008477" target="_blank" rel="noopener">WhatsApp</a>
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script defer src="/analytics.v5.1.js"></script><script defer src="/site.v5.1.js"></script><script defer src="/privacy.v5.1.js"></script></body></html>
+<script defer src="/analytics.v6.js"></script><script defer src="/site.v6.js"></script><script defer src="/privacy.v6.js"></script></body></html>

@@ -1,0 +1,43 @@
+SAVE & EARN WITH PAUL - VERSION 6.0
+ENERGY DATA PASSPORT SETUP
+
+WHAT WORKS WITHOUT ANY CREDENTIALS
+- Customer-supplied annual electricity and gas kWh
+- Meter-reading annualisation
+- Transparent household estimate
+- England and Wales / Scotland national NEED benchmarks
+- Local save, sharing and professional PDF summaries
+- Demonstration property in the local preview
+
+OPTIONAL OFFICIAL PROPERTY LOOKUP
+The postcode/address lookup uses the official Energy Performance of Buildings developer API for England and Wales.
+
+1. Create developer access through:
+   https://get-energy-performance-data.communities.gov.uk/
+
+2. Obtain the encoded API token required by the developer API.
+
+3. Add this private environment variable to the hosting project:
+   EPC_API_TOKEN=<encoded token>
+
+4. Optional test or migration setting:
+   EPC_API_BASE_URL=https://epc.opendatacommunities.org
+
+   The code also supports an alternative official base URL supplied through that variable.
+
+5. Redeploy the website.
+
+SECURITY
+- The token is read only by /api/epc-search.js.
+- The token is never written into HTML, browser JavaScript or local storage.
+- The public browser calls the website's own /api/epc-search endpoint.
+- Inputs are validated and responses are reduced to the property fields used by the Energy Data Passport.
+- No actual household meter consumption is requested from the EPC service.
+
+IMPORTANT DATA BOUNDARY
+An EPC is a model of a building using standard assumptions. It is not actual household electricity or gas consumption.
+Actual usage must be supplied by the household, its supplier, an authorised smart-meter data service or its own meter readings.
+
+COVERAGE
+- Official EPC lookup: England and Wales
+- Scotland and Northern Ireland: use annual kWh, meter readings or the household estimate until a suitable official integration is added.

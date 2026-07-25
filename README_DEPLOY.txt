@@ -1,48 +1,44 @@
-SAVE & EARN WITH PAUL — VERSION 5.0
-PROFESSIONAL REPORTS EDITION
+SAVE & EARN WITH PAUL - VERSION 6.0
 
-NEW CORE FEATURE
-/report-studio
+CUSTOMER PROPOSITION
+Help households explore simpler bills and potential savings by bringing eligible services together:
+one bill, one app and one payment. The optional Partner opportunity is presented separately and income is not guaranteed.
 
-The Report Studio creates professionally designed A4 outputs:
-- Complete Household Report
-- Living Action Plan Report
-- Energy & Scenario Report
-- Meeting Brief
+MAJOR VERSION 6 FEATURE
+ENERGY DATA PASSPORT
 
-PROFESSIONAL OUTPUT STANDARD
-- Branded cover page
-- Report reference and generation date
-- Executive summary and readiness cards
-- Household profile and energy visuals
-- Multi-page action-plan layout
-- Consent and sharing summary
-- Paul’s contact details and booking QR code
-- Responsible-use statements
-- A4 page sizing, controlled page breaks and repeated page footers
-- Browser Print / Save PDF workflow
-- No report is downloaded as a plain-text file
+The Energy Data Passport clearly separates:
+A - Customer-supplied annual usage
+B - Meter-reading annualisation
+C - Official EPC-informed property model
+D - Transparent household estimate
 
-DATA PORTABILITY
-JSON and encrypted .sewp4 exports remain available as technical backup formats. They are not presented as printable reports.
+It also displays current national domestic medians and quartiles from the NEED 2026 release, using 2024 consumption.
 
-DEPLOY
+LIVE PROPERTY LOOKUP
+The deployment includes protected API functions in the /api folder.
+Official EPC lookup activates only after the private EPC_API_TOKEN environment variable is configured.
+See ENERGY_DATA_SETUP.txt.
+
+DEPLOYMENT
 1. Extract the ZIP.
-2. Open GitHub repository paulscr76/SAE.
-3. Choose Add file > Upload files.
-4. Upload every file from the extracted folder.
-5. Commit directly to main:
-   Launch Version 5.0 professional reports
-6. Wait for Vercel to show Ready.
-7. Test:
+2. Upload all files and folders, including /api and /data, to the repository root.
+3. Commit:
+   Launch Version 6.0 Energy Data Passport
+4. Configure EPC_API_TOKEN in the hosting project's private environment settings.
+5. Redeploy.
+6. Test:
    /
-   /household-os
-   /command-centre
-   /report-studio
    /calculator
-   /consent-centre
+   /api/epc-status
+   /command-centre
+   /household-os
+   /report-studio?type=energy
+   /privacy
 
-CONTACT
-Calendly: https://calendly.com/save-with-paul/chat-with-paul
-WhatsApp: 07925 008477
-Email: paul.scrase@uw.partners
+PROFESSIONAL OUTPUT
+Print actions create branded A4 summaries. No customer-facing report is downloaded as a plain-text file.
+
+PRIVACY
+Postcodes are sent to the official property-data service only when the visitor actively searches and confirms the search.
+Annual kWh, readings and estimates remain in the browser unless the visitor chooses to save or share them.
