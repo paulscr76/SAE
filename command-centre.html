@@ -1,10 +1,11 @@
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#02172f">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="manifest" href="/manifest.webmanifest">
-<link rel="stylesheet" href="/styles.v6.css">
-
-<title>Build My Household Plan | Save &amp; Earn with Paul</title><meta name="description" content="Build a private household plan covering eligible energy, broadband, mobile, insurance and optional flexible earning."><link rel="canonical" href="https://www.saveandearnwithpaul.live/command-centre">
-<meta property="og:title" content="Household plan"><meta property="og:description" content="Your household. One clear plan."><meta property="og:image" content="https://www.saveandearnwithpaul.live/social-share.webp">
+<link rel="stylesheet" href="/styles.v6.1.css">
+<title>Five-minute Household Check | Save &amp; Earn with Paul</title>
+<meta name="description" content="Complete a simple five-minute household check covering eligible services, energy information, renewal dates and optional earning.">
+<link rel="canonical" href="https://www.saveandearnwithpaul.live/command-centre">
+<meta property="og:title" content="Five-minute Household Check"><meta property="og:description" content="One simple guided check. One clear household snapshot."><meta property="og:image" content="https://www.saveandearnwithpaul.live/social-share.webp">
 </head><body>
 <a class="skip-link" href="#main">Skip to main content</a>
 <header class="site-header">
@@ -25,43 +26,148 @@
     <div class="nav-scrim" aria-hidden="true"></div>
   </div>
 </header>
-<section class="page-hero"><div class="container"><span class="tag">SAVE MONEY • SIMPLIFY BILLS • OPTIONAL EARNING</span><h1 class="page-title">BUILD MY HOUSEHOLD PLAN</h1><p>Bring together the details Paul needs to discuss eligible household services, possible savings and—only when relevant—an optional way to earn additional income.</p></div></section>
-<main id="main" class="app-shell"><div class="mobile-command-progress no-print"><span id="mobileProgressFill"></span><strong id="mobileProgressLabel">Step 1 of 6</strong></div><div class="container"><div class="breadcrumbs"><a href="/">Home</a> / Build my plan</div><div class="command-layout">
-<aside class="command-sidebar no-print"><div><span class="kicker" style="color:var(--yellow)">Your plan</span><h2>Build my plan</h2><p>Your answers are stored only in this browser using local storage. Clear them at any time.</p></div>
-<div class="command-steps" id="commandSteps">
-<button class="command-step-link active" data-step-link="0"><span>1</span>Priorities</button><button class="command-step-link" data-step-link="1"><span>2</span>Home</button><button class="command-step-link" data-step-link="2"><span>3</span>Energy</button><button class="command-step-link" data-step-link="3"><span>4</span>Services</button><button class="command-step-link" data-step-link="4"><span>5</span>Earning</button><button class="command-step-link" data-step-link="5"><span>6</span>Dashboard</button>
-</div><div class="saved-state" id="savedState">Progress will save automatically on this device.</div></aside>
+<section class="page-hero household-check-hero"><div class="container"><span class="tag">FIVE-MINUTE HOUSEHOLD CHECK</span><h1 class="page-title">ONE SIMPLE CHECK. ONE CLEAR NEXT STEP.</h1><p>Tell Paul what matters, add the details you already know, and receive a clear household snapshot. Nothing changes and nothing is sent unless you choose to contact Paul.</p></div></section>
 
-<form class="command-main" id="commandForm" novalidate>
-<div class="error-box" id="commandError" role="alert" tabindex="-1"></div>
+<main id="main" class="check-shell">
+<div class="check-mobile-progress no-print"><span id="checkMobileFill"></span><strong id="checkMobileLabel">Step 1 of 5</strong></div>
+<div class="container">
+  <div class="breadcrumbs"><a href="/">Home</a> / Household Check</div>
+  <div class="check-layout">
+    <aside class="check-sidebar no-print">
+      <div class="check-sidebar-brand"><span class="kicker" style="color:var(--yellow)">Your household</span><h2>Five-minute check</h2><p>Progress saves automatically in this browser.</p></div>
+      <nav class="check-steps" id="checkSteps" aria-label="Household Check progress">
+        <button type="button" class="check-step active" data-step-link="0"><span>1</span><b>Your goal</b><small>What matters most</small></button>
+        <button type="button" class="check-step" data-step-link="1"><span>2</span><b>Your home</b><small>Useful context</small></button>
+        <button type="button" class="check-step" data-step-link="2"><span>3</span><b>Energy</b><small>Strongest information</small></button>
+        <button type="button" class="check-step" data-step-link="3"><span>4</span><b>Services</b><small>Contracts and renewals</small></button>
+        <button type="button" class="check-step" data-step-link="4"><span>5</span><b>Optional earning</b><small>Only when relevant</small></button>
+        <button type="button" class="check-step result-step" data-step-link="5"><span>✓</span><b>Your snapshot</b><small>Clear next actions</small></button>
+      </nav>
+      <div class="check-saved" id="checkSaved">Progress will save automatically.</div>
+      <button type="button" class="text-action" id="clearCheck">Start again</button>
+    </aside>
 
-<section class="app-panel wizard-panel active" data-panel="0"><div class="panel-head"><div><span class="kicker">Step 1</span><h2>What matters most?</h2><p>Choose the main reason for building your plan.</p></div><span class="step-count">1 of 6</span></div>
-<div class="choice-grid"><label class="choice-card"><input type="radio" name="priority" value="save"><strong>Reduce household costs</strong><small>Explore whether bundling eligible services may help.</small></label><label class="choice-card"><input type="radio" name="priority" value="understand"><strong>Simplify my bills</strong><small>See what may be brought into one bill, one app and one payment.</small></label><label class="choice-card"><input type="radio" name="priority" value="earn"><strong>Explore flexible earning</strong><small>Learn the facts responsibly.</small></label><label class="choice-card"><input type="radio" name="priority" value="both"><strong>Save and perhaps earn</strong><small>Explore possible household savings and optional additional income.</small></label></div>
-<div class="notice blue">Nothing is sent to Paul when you complete these steps.</div></section>
+    <section class="check-main">
+      <div class="check-error" id="checkError" role="alert" tabindex="-1"></div>
+      <form id="householdCheckForm" novalidate>
 
-<section class="app-panel wizard-panel" data-panel="1"><div class="panel-head"><div><span class="kicker">Step 2</span><h2>Your household</h2><p>Basic details help create a sensible energy estimate when annual kWh is unavailable.</p></div><span class="step-count">2 of 6</span></div>
-<div class="fields"><div><label for="propertyType">Property type</label><select id="propertyType"><option value="flat">Flat / apartment</option><option value="terrace">Terraced house</option><option value="semi" selected>Semi-detached</option><option value="detached">Detached house</option><option value="bungalow">Bungalow</option></select></div><div><label for="bedrooms">Bedrooms</label><select id="bedrooms"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option></select></div><div><label for="occupants">People in the home</label><select id="occupants"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select></div><div><label for="heating">Main heating</label><select id="heating"><option value="gas" selected>Gas boiler</option><option value="electric">Electric heating</option><option value="heatpump">Heat pump</option><option value="other">Oil / other</option></select></div><div><label for="efficiency">Home efficiency</label><select id="efficiency"><option value="efficient">Well insulated / newer</option><option value="average" selected>Average / unknown</option><option value="inefficient">Older / draughty</option></select></div><div><label for="daytime">Daytime occupancy</label><select id="daytime"><option value="low">Usually empty</option><option value="mixed" selected>Mixed</option><option value="high">Usually occupied</option></select></div></div></section>
+        <section class="check-panel active" data-check-panel="0">
+          <div class="check-panel-head"><div><span class="kicker">Step 1</span><h2>What would make the biggest difference?</h2><p>Choose the main outcome. This keeps the final snapshot focused.</p></div><span>1 of 5</span></div>
+          <div class="choice-grid check-choice-grid">
+            <label class="choice-card"><input type="radio" name="priority" value="save"><strong>Reduce household costs</strong><small>Explore whether eligible services may be worth bringing together.</small></label>
+            <label class="choice-card"><input type="radio" name="priority" value="understand"><strong>Simplify my monthly bills</strong><small>Fewer separate services, apps and payment dates.</small></label>
+            <label class="choice-card"><input type="radio" name="priority" value="earn"><strong>Explore optional earning</strong><small>Understand the activity, time, training and current costs.</small></label>
+            <label class="choice-card"><input type="radio" name="priority" value="both"><strong>Save money and perhaps earn</strong><small>Look at the household first, then discuss earning separately.</small></label>
+          </div>
+          <div class="fields check-personal-fields">
+            <div><label for="householdName">Household name or label <small>Stored only on this device</small></label><input id="householdName" maxlength="50" autocomplete="off" placeholder="For example, The Smith household"></div>
+            <div><label for="postcode">Postcode <small>Optional</small></label><input id="postcode" maxlength="9" autocomplete="postal-code" placeholder="For example, BN21 1AA"></div>
+          </div>
+          <aside class="paul-coach"><img src="/paul-scrase-480.webp" alt="" width="70" height="88"><div><strong>Paul’s note</strong><p>There is no wrong place to start. Choose what matters most today; the plan can change later.</p></div></aside>
+        </section>
 
-<section class="app-panel wizard-panel" data-panel="2"><div class="panel-head"><div><span class="kicker">Step 3</span><h2>Energy picture</h2><p>Use actual annual kWh when possible, or create an indicative estimate.</p></div><span class="step-count">3 of 6</span></div>
-<div class="fields"><div><label for="energyMode">Energy information</label><select id="energyMode"><option value="estimate">Estimate from the home</option><option value="actual">Annual kWh from a bill or supplier</option><option value="annualised">Annualised from meter readings</option><option value="epc">EPC-informed household estimate</option></select></div><div><label for="energyConcern">Main energy priority</label><select id="energyConcern"><option value="review">General review</option><option value="cost">Managing costs</option><option value="usage">Understanding usage</option><option value="none">Not a priority</option></select></div><div id="electricField" class="hidden-actual"><label for="actualElectric">Electricity kWh per year</label><input id="actualElectric" type="number" min="0" inputmode="decimal" placeholder="e.g. 2900"></div><div id="gasField" class="hidden-actual"><label for="actualGas">Gas kWh per year</label><input id="actualGas" type="number" min="0" inputmode="decimal" placeholder="e.g. 11500"></div><div><label for="ev">Electric vehicle</label><select id="ev"><option value="no">No</option><option value="yes">Yes</option></select></div><div><label for="solar">Solar panels</label><select id="solar"><option value="no">No</option><option value="yes">Yes</option></select></div></div>
-<div class="notice blue"><a href="/bill-helper">Use the bill helper</a> to identify annual kWh without uploading the document.</div></section>
+        <section class="check-panel" data-check-panel="1">
+          <div class="check-panel-head"><div><span class="kicker">Step 2</span><h2>Tell me about the home.</h2><p>These details create a sensible fallback energy estimate when annual kWh is unavailable.</p></div><span>2 of 5</span></div>
+          <div class="fields">
+            <div><label for="propertyType">Property type</label><select id="propertyType"><option value="flat">Flat / apartment</option><option value="terrace">Terraced house</option><option value="semi" selected>Semi-detached</option><option value="detached">Detached house</option><option value="bungalow">Bungalow</option></select></div>
+            <div><label for="bedrooms">Bedrooms</label><select id="bedrooms"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option></select></div>
+            <div><label for="occupants">People in the home</label><select id="occupants"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select></div>
+            <div><label for="heating">Main heating</label><select id="heating"><option value="gas" selected>Gas boiler</option><option value="electric">Electric heating</option><option value="heatpump">Heat pump</option><option value="other">Oil / other</option></select></div>
+            <div><label for="efficiency">Home efficiency</label><select id="efficiency"><option value="efficient">Well insulated / newer</option><option value="average" selected>Average / unknown</option><option value="inefficient">Older / draughty</option></select></div>
+            <div><label for="daytime">Daytime occupancy</label><select id="daytime"><option value="low">Usually empty</option><option value="mixed" selected>Mixed</option><option value="high">Usually occupied</option></select></div>
+            <div><label for="ev">Electric vehicle</label><select id="ev"><option value="no">No</option><option value="yes">Yes</option></select></div>
+            <div><label for="solar">Solar panels</label><select id="solar"><option value="no">No</option><option value="yes">Yes</option></select></div>
+          </div>
+          <aside class="paul-coach"><img src="/paul-scrase-480.webp" alt="" width="70" height="88"><div><strong>Paul’s note</strong><p>“Not sure” is perfectly fine. A real bill will always be more useful than guessing about the property.</p></div></aside>
+        </section>
 
-<section class="app-panel wizard-panel" data-panel="3"><div class="panel-head"><div><span class="kicker">Step 4</span><h2>Services that may be brought together</h2><p>Add broadband, mobile and insurance details so Paul can discuss which eligible services may suit your household.</p></div><span class="step-count">4 of 6</span></div>
-<div class="fields"><div><label for="broadbandExperience">Broadband experience</label><select id="broadbandExperience"><option value="happy">Generally happy</option><option value="slow">Too slow</option><option value="unreliable">Unreliable</option><option value="expensive">Feels expensive</option><option value="unknown">Not sure</option></select></div><div><label for="broadbandContract">Broadband contract</label><select id="broadbandContract"><option value="unknown">Not sure</option><option value="in">Still in contract</option><option value="ending">Ending soon</option><option value="out">Out of contract</option></select></div><div><label for="workFromHome">Home usage</label><select id="workFromHome"><option value="standard">Standard browsing and streaming</option><option value="work">Regular home working</option><option value="heavy">Heavy streaming / gaming / large household</option></select></div><div><label for="mobileLines">Mobile lines</label><select id="mobileLines"><option value="none">No mobile review needed</option><option value="one">One mobile</option><option value="family">Several / family mobiles</option><option value="unknown">Not sure</option></select></div><div><label for="mobileConcern">Mobile concern</label><select id="mobileConcern"><option value="none">No concern</option><option value="signal">Signal / coverage</option><option value="data">Data allowance</option><option value="cost">Monthly cost</option><option value="upgrade">Upgrade timing</option></select></div><div><label for="mobileContract">Mobile contract timing</label><select id="mobileContract"><option value="unknown">Not sure</option><option value="in">Still in contract</option><option value="ending">Ending soon</option><option value="out">Out of contract</option></select></div><div><label for="insuranceInterest">Insurance to discuss</label><select id="insuranceInterest"><option value="none">Not at the moment</option><option value="home">Home insurance</option><option value="cover">Boiler or home cover</option><option value="both">Home insurance and cover</option><option value="unknown">Not sure</option></select></div><div><label for="insuranceRenewal">Insurance renewal timing</label><select id="insuranceRenewal"><option value="unknown">Not sure</option><option value="in">More than three months away</option><option value="soon">Within three months</option><option value="due">Due now / recently renewed</option></select></div></div></section>
+        <section class="check-panel" data-check-panel="2">
+          <div class="check-panel-head"><div><span class="kicker">Step 3</span><h2>Use the strongest energy information available.</h2><p>The result will clearly say whether the figures are actual, annualised, EPC-informed or estimated.</p></div><span>3 of 5</span></div>
+          <div class="energy-source-selector">
+            <label><input type="radio" name="energyMode" value="actual"><span><strong>Annual kWh from a bill or supplier</strong><small>Strongest starting point</small></span></label>
+            <label><input type="radio" name="energyMode" value="annualised"><span><strong>Annualised from meter readings</strong><small>Useful when the period is clear</small></span></label>
+            <label><input type="radio" name="energyMode" value="epc"><span><strong>EPC-informed estimate</strong><small>Official property context, not actual usage</small></span></label>
+            <label><input type="radio" name="energyMode" value="estimate" checked><span><strong>Estimate from the household</strong><small>Indicative fallback</small></span></label>
+          </div>
+          <div class="fields" id="energyFigures">
+            <div><label for="actualElectric">Electricity kWh per year</label><input id="actualElectric" type="number" min="0" inputmode="decimal" placeholder="For example, 2900"></div>
+            <div><label for="actualGas">Gas kWh per year</label><input id="actualGas" type="number" min="0" inputmode="decimal" placeholder="For example, 11500"></div>
+            <div><label for="energyConcern">Main energy priority</label><select id="energyConcern"><option value="review">General review</option><option value="cost">Managing costs</option><option value="usage">Understanding usage</option><option value="none">Not a priority</option></select></div>
+          </div>
+          <div class="energy-quality-message" id="energyQualityMessage"></div>
+          <div class="helper-actions"><a class="btn btn-blue" href="/calculator">Open Energy Data Passport</a><a class="btn btn-light" href="/bill-helper">Find annual kWh on my bill</a></div>
+          <aside class="paul-coach"><img src="/paul-scrase-480.webp" alt="" width="70" height="88"><div><strong>Paul’s note</strong><p>Do not enter a monthly cost or a current meter reading as annual kWh. The check will flag figures that look unusual.</p></div></aside>
+        </section>
 
-<section class="app-panel wizard-panel" data-panel="4"><div class="panel-head"><div><span class="kicker">Step 5</span><h2>Flexible earning</h2><p>Optional. This creates discussion points, not an income forecast.</p></div><span class="step-count">5 of 6</span></div>
-<div class="fields"><div><label for="earningInterest">Interest level</label><select id="earningInterest"><option value="none">Not interested just now</option><option value="curious">Curious and want the facts</option><option value="explore">Open to exploring it</option><option value="ready">Ready for a conversation</option></select></div><div><label for="earningTime">Realistic weekly time</label><select id="earningTime"><option value="unknown">Not sure</option><option value="one">Around 1–2 hours</option><option value="few">A few hours</option><option value="flexible">Flexible / varies</option></select></div><div class="full"><label for="earningGoal">What would extra income help with?</label><select id="earningGoal"><option value="general">General financial breathing room</option><option value="bills">Household bills</option><option value="savings">Savings or a specific goal</option><option value="career">A flexible longer-term opportunity</option><option value="prefer">Prefer not to say</option></select></div></div>
-<div class="notice"><strong>Important:</strong> income is not guaranteed and depends on personal activity and results.</div></section>
+        <section class="check-panel" data-check-panel="3">
+          <div class="check-panel-head"><div><span class="kicker">Step 4</span><h2>Which services may be worth discussing?</h2><p>Add the information you know. Exact renewal dates make the final timeline much more useful.</p></div><span>4 of 5</span></div>
 
-<section class="app-panel wizard-panel" data-panel="5"><div id="dashboardContent"></div></section>
+          <div class="service-question-card">
+            <div class="service-question-title"><span>⌁</span><div><h3>Broadband</h3><p>Experience, household use and contract timing.</p></div></div>
+            <div class="fields">
+              <div><label for="broadbandExperience">Current experience</label><select id="broadbandExperience"><option value="happy">Generally happy</option><option value="slow">Too slow</option><option value="unreliable">Unreliable</option><option value="expensive">Feels expensive</option><option value="unknown">Not sure</option></select></div>
+              <div><label for="workFromHome">Household use</label><select id="workFromHome"><option value="standard">Standard browsing and streaming</option><option value="work">Regular home working</option><option value="heavy">Heavy streaming, gaming or large household</option></select></div>
+              <div><label for="broadbandContract">Contract position</label><select id="broadbandContract"><option value="unknown">Not sure</option><option value="in">Still in contract</option><option value="ending">Ending soon</option><option value="out">Out of contract</option></select></div>
+              <div><label for="broadbandRenewalDate">Contract end date <small>Optional</small></label><input id="broadbandRenewalDate" type="date"></div>
+            </div>
+          </div>
 
-<div class="app-panel wizard-actions no-print"><button class="btn btn-light" type="button" id="commandBack">Back</button><div><button class="btn btn-light" type="button" id="importPlan">Import plan</button><input id="importPlanFile" type="file" accept="application/json,.json" hidden><button class="btn btn-light" type="button" id="exportPlanTop">Export plan</button><button class="btn btn-light" type="button" id="clearPlan">Clear saved plan</button><button class="btn btn-blue" type="button" id="commandNext">Next</button></div></div>
-</form></div></div></main>
+          <div class="service-question-card">
+            <div class="service-question-title"><span>▣</span><div><h3>Mobile</h3><p>Lines, concerns and upgrade timing.</p></div></div>
+            <div class="fields">
+              <div><label for="mobileLines">Mobile lines</label><select id="mobileLines"><option value="none">No mobile review needed</option><option value="one">One mobile</option><option value="family">Several or family mobiles</option><option value="unknown">Not sure</option></select></div>
+              <div><label for="mobileConcern">Main concern</label><select id="mobileConcern"><option value="none">No concern</option><option value="signal">Signal or coverage</option><option value="data">Data allowance</option><option value="cost">Monthly cost</option><option value="upgrade">Upgrade timing</option></select></div>
+              <div><label for="mobileContract">Contract position</label><select id="mobileContract"><option value="unknown">Not sure</option><option value="in">Still in contract</option><option value="ending">Ending soon</option><option value="out">Out of contract</option></select></div>
+              <div><label for="mobileRenewalDate">Upgrade or end date <small>Optional</small></label><input id="mobileRenewalDate" type="date"></div>
+            </div>
+          </div>
+
+          <div class="service-question-card">
+            <div class="service-question-title"><span>⌂</span><div><h3>Insurance and cover</h3><p>Only include areas you want to discuss.</p></div></div>
+            <div class="fields">
+              <div><label for="insuranceInterest">Cover to discuss</label><select id="insuranceInterest"><option value="none">Not at the moment</option><option value="home">Home insurance</option><option value="cover">Boiler or home cover</option><option value="both">Home insurance and cover</option><option value="unknown">Not sure</option></select></div>
+              <div><label for="insuranceRenewal">Renewal position</label><select id="insuranceRenewal"><option value="unknown">Not sure</option><option value="in">More than three months away</option><option value="soon">Within three months</option><option value="due">Due now or recently renewed</option></select></div>
+              <div><label for="insuranceRenewalDate">Renewal date <small>Optional</small></label><input id="insuranceRenewalDate" type="date"></div>
+            </div>
+          </div>
+          <aside class="paul-coach"><img src="/paul-scrase-480.webp" alt="" width="70" height="88"><div><strong>Paul’s note</strong><p>A renewal date is helpful, but you do not need it to continue. We can look at it together later.</p></div></aside>
+        </section>
+
+        <section class="check-panel" data-check-panel="4">
+          <div class="check-panel-head"><div><span class="kicker">Step 5</span><h2>Would you also like the facts about earning?</h2><p>This is optional and separate from discussing household services.</p></div><span>5 of 5</span></div>
+          <div class="choice-grid check-choice-grid earning-choice-grid">
+            <label class="choice-card"><input type="radio" name="earningInterest" value="none" checked><strong>Not at the moment</strong><small>Keep the plan focused on household services.</small></label>
+            <label class="choice-card"><input type="radio" name="earningInterest" value="curious"><strong>I am curious</strong><small>Explain how it works without assumptions.</small></label>
+            <label class="choice-card"><input type="radio" name="earningInterest" value="explore"><strong>I would like to explore it</strong><small>Discuss activity, training, time and current costs.</small></label>
+            <label class="choice-card"><input type="radio" name="earningInterest" value="ready"><strong>I am ready for a conversation</strong><small>Prepare the questions I should ask.</small></label>
+          </div>
+          <div class="fields">
+            <div><label for="earningTime">Time potentially available</label><select id="earningTime"><option value="unknown">Not sure</option><option value="one">Around one hour a week</option><option value="few">A few hours a week</option><option value="flexible">Flexible</option></select></div>
+            <div><label for="earningGoal">What would additional income help with?</label><select id="earningGoal"><option value="savings">Build savings</option><option value="bills">Support household bills</option><option value="holiday">Holiday or family goal</option><option value="replace">Longer-term income goal</option></select></div>
+            <div class="full consent-check"><label><input id="consentContact" type="checkbox"> I am happy to contact Paul using the booking or WhatsApp buttons. Completing the check does not send my answers automatically.</label></div>
+          </div>
+          <div class="notice yellow"><strong>Income is not guaranteed.</strong> Results depend on personal activity, consistency and outcomes.</div>
+          <aside class="paul-coach"><img src="/paul-scrase-480.webp" alt="" width="70" height="88"><div><strong>Paul’s note</strong><p>I’ll explain the opportunity factually. You can say no, pause or revisit it at any time.</p></div></aside>
+        </section>
+
+      </form>
+
+      <section class="check-result" id="checkResult" hidden aria-live="polite"></section>
+
+      <div class="check-navigation no-print" id="checkNavigation">
+        <button class="btn btn-light" type="button" id="checkBack">Back</button>
+        <button class="btn btn-yellow" type="button" id="checkNext">Continue</button>
+      </div>
+      <input type="file" id="checkImportInput" accept="application/json,.json" hidden>
+    </section>
+  </div>
+</div>
+</main>
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="footer-title">Save &amp; Earn with Paul <span class="footer-version">v6.0</span></div>
+        <div class="footer-title">Save &amp; Earn with Paul <span class="footer-version">v6.1</span></div>
         <div>Helping households explore simpler bills, potential savings and an optional way to earn additional income.</div>
         <div class="footer-actions"><button class="btn btn-light btn-small" data-share-site type="button">Share website</button><button class="btn btn-light btn-small" data-install-app type="button" hidden>Install app</button></div>
       </div>
@@ -90,4 +196,5 @@
   <a class="btn btn-light" href="https://wa.me/447925008477" target="_blank" rel="noopener">WhatsApp</a>
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script defer src="/analytics.v6.js"></script><script defer src="/site.v6.js"></script><script defer src="/command-centre.v6.js"></script></body></html>
+<script defer src="/analytics.v6.1.js"></script><script defer src="/site.v6.1.js"></script><script defer src="/energy-model.v6.1.js"></script><script defer src="/household-check-model.v6.1.js"></script><script defer src="/command-centre.v6.1.js"></script>
+</body></html>

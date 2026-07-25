@@ -1,44 +1,46 @@
-SAVE & EARN WITH PAUL - VERSION 6.0
+SAVE & EARN WITH PAUL - VERSION 6.1
 
-CUSTOMER PROPOSITION
-Help households explore simpler bills and potential savings by bringing eligible services together:
-one bill, one app and one payment. The optional Partner opportunity is presented separately and income is not guaranteed.
+THE CUSTOMER JOURNEY
+Version 6.1 introduces one guided five-minute Household Check.
 
-MAJOR VERSION 6 FEATURE
+The visitor:
+1. Chooses the main household goal.
+2. Adds basic home information.
+3. Uses the strongest available energy information.
+4. Records broadband, mobile and insurance details and renewal dates.
+5. Chooses whether optional earning is relevant.
+6. Receives one clear household snapshot.
+
+THE HOUSEHOLD SNAPSHOT
+- Readiness percentage and plain-English status
+- Services that may be worth discussing
+- Missing details that would improve the conversation
+- Energy source and confidence
+- Contract and renewal timeline
+- A short ordered next-action list
+- Paul’s recommended next step
+- One-page professional PDF
+- Full household and Energy Data Passport summaries remain available
+
 ENERGY DATA PASSPORT
-
-The Energy Data Passport clearly separates:
-A - Customer-supplied annual usage
-B - Meter-reading annualisation
-C - Official EPC-informed property model
-D - Transparent household estimate
-
-It also displays current national domestic medians and quartiles from the NEED 2026 release, using 2024 consumption.
-
-LIVE PROPERTY LOOKUP
-The deployment includes protected API functions in the /api folder.
-Official EPC lookup activates only after the private EPC_API_TOKEN environment variable is configured.
-See ENERGY_DATA_SETUP.txt.
+The official EPC integration, annual-kWh entry, meter annualisation, public NEED benchmarks and transparent household estimate remain included.
+See ENERGY_DATA_SETUP.txt for optional property-lookup configuration.
 
 DEPLOYMENT
 1. Extract the ZIP.
-2. Upload all files and folders, including /api and /data, to the repository root.
+2. Upload every file and folder from the extracted package to the repository root.
 3. Commit:
-   Launch Version 6.0 Energy Data Passport
-4. Configure EPC_API_TOKEN in the hosting project's private environment settings.
-5. Redeploy.
-6. Test:
+   Launch Version 6.1 Household Check
+4. Keep the existing private EPC_API_TOKEN setting when official property lookup is enabled.
+5. Deploy and test:
    /
-   /calculator
-   /api/epc-status
    /command-centre
+   /command-centre?view=result
    /household-os
-   /report-studio?type=energy
+   /calculator
+   /report-studio?type=snapshot
    /privacy
 
-PROFESSIONAL OUTPUT
-Print actions create branded A4 summaries. No customer-facing report is downloaded as a plain-text file.
-
-PRIVACY
-Postcodes are sent to the official property-data service only when the visitor actively searches and confirms the search.
-Annual kWh, readings and estimates remain in the browser unless the visitor chooses to save or share them.
+DATA AND PRIVACY
+Answers remain on the visitor’s device unless the visitor chooses to share them.
+The readiness result is a planning aid, not a quotation, eligibility decision, credit assessment or guaranteed saving.

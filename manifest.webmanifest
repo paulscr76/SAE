@@ -1,7 +1,7 @@
 {
   "name": "Save and Earn with Paul",
   "short_name": "Save & Earn",
-  "description": "Explore simpler household bills, potential savings, an optional earning opportunity and a source-labelled Energy Data Passport.",
+  "description": "Complete a five-minute Household Check, understand energy information and prepare one clear household snapshot.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -23,8 +23,8 @@
   ],
   "shortcuts": [
     {
-      "name": "Build my household plan",
-      "short_name": "Build plan",
+      "name": "Start my five-minute Household Check",
+      "short_name": "Household Check",
       "url": "/command-centre"
     },
     {

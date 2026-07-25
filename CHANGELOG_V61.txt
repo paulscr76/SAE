@@ -1,0 +1,14 @@
+VERSION 6.1 - GUIDED HOUSEHOLD CHECK
+- Rebuilt the plan journey as a five-minute conversational Household Check.
+- Added automatic progress saving and resume.
+- Added household labels and optional postcode storage on the device.
+- Added exact broadband, mobile and insurance renewal dates.
+- Added intelligent annual-kWh plausibility warnings.
+- Added one clear household readiness status and percentage.
+- Added service-priority cards, missing-information prompts and renewal timeline.
+- Added Paul’s contextual guidance throughout the journey.
+- Added ordered next-best actions and a booking-focused result.
+- Added a premium one-page Household Snapshot PDF.
+- Added the readiness result to My household.
+- Kept the Energy Data Passport, official property lookup and full professional summaries.
+- Updated all cacheable asset names for the 6.1 release.
