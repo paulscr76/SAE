@@ -1,0 +1,8 @@
+VERSION 6.2 - STEP 3 ENERGY SOURCE REFINEMENT
+- Rebuilt the Step 3 energy-source choices as spacious, responsive selection cards.
+- Fixed text wrapping, overflow and alignment inside every energy-source box.
+- Added plain-English choices and confidence labels.
+- Added stronger selected, hover and keyboard-focus states.
+- Improved mobile layout to one full-width card per row.
+- Hid irrelevant annual-kWh fields when the household-estimate option is selected.
+- Preserved the Household Check, Energy Data Passport, My household and professional PDF outputs.

@@ -1,8 +1,8 @@
-const CACHE='save-earn-v6-1';
+const CACHE='save-earn-v6-2';
 const STATIC=[
-'/styles.v6.1.css','/report.v6.1.css','/site.v6.1.js','/analytics.v6.1.js','/home.v6.1.js','/household-os.v6.1.js',
-'/copilot.v6.1.js','/consent-centre.v6.1.js','/command-centre.v6.1.js','/bill-helper.v6.1.js','/document-register.v6.1.js',
-'/calculator.v6.1.js','/energy-model.v6.1.js','/household-check-model.v6.1.js','/guides.v6.1.js','/privacy.v6.1.js','/report-studio.v6.1.js',
+'/styles.v6.2.css','/report.v6.2.css','/site.v6.2.js','/analytics.v6.2.js','/home.v6.2.js','/household-os.v6.2.js',
+'/copilot.v6.2.js','/consent-centre.v6.2.js','/command-centre.v6.2.js','/bill-helper.v6.2.js','/document-register.v6.2.js',
+'/calculator.v6.2.js','/energy-model.v6.2.js','/household-check-model.v6.2.js','/guides.v6.2.js','/privacy.v6.2.js','/report-studio.v6.2.js',
 '/paul-scrase-480.webp','/paul-scrase-800.webp','/social-share.webp','/calendly-qr.png','/whatsapp-qr.png',
 '/favicon.svg','/manifest.webmanifest','/icon-192.png','/icon-512.png','/data/need-benchmarks-2024.json'
 ];

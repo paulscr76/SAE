@@ -1,7 +1,7 @@
 {
   "name": "Save and Earn with Paul",
   "short_name": "Save & Earn",
-  "description": "Complete a five-minute Household Check, understand energy information and prepare one clear household snapshot.",
+  "description": "Complete a clear five-minute Household Check with an improved energy-information step and professional household snapshot.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

@@ -1,7 +1,7 @@
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#02172f">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="manifest" href="/manifest.webmanifest">
-<link rel="stylesheet" href="/styles.v6.1.css">
+<link rel="stylesheet" href="/styles.v6.2.css">
 <title>Five-minute Household Check | Save &amp; Earn with Paul</title>
 <meta name="description" content="Complete a simple five-minute household check covering eligible services, energy information, renewal dates and optional earning.">
 <link rel="canonical" href="https://www.saveandearnwithpaul.live/command-centre">
@@ -82,12 +82,48 @@
         </section>
 
         <section class="check-panel" data-check-panel="2">
-          <div class="check-panel-head"><div><span class="kicker">Step 3</span><h2>Use the strongest energy information available.</h2><p>The result will clearly say whether the figures are actual, annualised, EPC-informed or estimated.</p></div><span>3 of 5</span></div>
-          <div class="energy-source-selector">
-            <label><input type="radio" name="energyMode" value="actual"><span><strong>Annual kWh from a bill or supplier</strong><small>Strongest starting point</small></span></label>
-            <label><input type="radio" name="energyMode" value="annualised"><span><strong>Annualised from meter readings</strong><small>Useful when the period is clear</small></span></label>
-            <label><input type="radio" name="energyMode" value="epc"><span><strong>EPC-informed estimate</strong><small>Official property context, not actual usage</small></span></label>
-            <label><input type="radio" name="energyMode" value="estimate" checked><span><strong>Estimate from the household</strong><small>Indicative fallback</small></span></label>
+          <div class="check-panel-head"><div><span class="kicker">Step 3</span><h2>Use the strongest energy information available.</h2><p>Pick the clearest option below. The result will always show where the figures came from and how much confidence to place in them.</p></div><span>3 of 5</span></div>
+          <div class="energy-source-selector" role="radiogroup" aria-label="Choose the strongest available energy information">
+            <label class="energy-source-card energy-source-best">
+              <input type="radio" name="energyMode" value="actual">
+              <span class="energy-source-icon" aria-hidden="true">✓</span>
+              <span class="energy-source-copy">
+                <strong>I have annual kWh</strong>
+                <small>From a bill or supplier statement</small>
+                <b>Best accuracy</b>
+              </span>
+            </label>
+            <label class="energy-source-card">
+              <input type="radio" name="energyMode" value="annualised">
+              <span class="energy-source-icon" aria-hidden="true">↗</span>
+              <span class="energy-source-copy">
+                <strong>I have meter readings</strong>
+                <small>We can annualise a known period</small>
+                <b>Very useful</b>
+              </span>
+            </label>
+            <label class="energy-source-card">
+              <input type="radio" name="energyMode" value="epc">
+              <span class="energy-source-icon" aria-hidden="true">⌂</span>
+              <span class="energy-source-copy">
+                <strong>I know the property</strong>
+                <small>Use official EPC context where available</small>
+                <b>Good estimate</b>
+              </span>
+            </label>
+            <label class="energy-source-card">
+              <input type="radio" name="energyMode" value="estimate" checked>
+              <span class="energy-source-icon" aria-hidden="true">?</span>
+              <span class="energy-source-copy">
+                <strong>I am not sure</strong>
+                <small>We will estimate it from the household</small>
+                <b>Indicative</b>
+              </span>
+            </label>
+          </div>
+          <div class="energy-source-help" id="energySourceHelp">
+            <strong>Choose the strongest source you genuinely have.</strong>
+            <span>Actual annual kWh is best. Property data and estimates are useful context, but they are not actual household consumption.</span>
           </div>
           <div class="fields" id="energyFigures">
             <div><label for="actualElectric">Electricity kWh per year</label><input id="actualElectric" type="number" min="0" inputmode="decimal" placeholder="For example, 2900"></div>
@@ -167,7 +203,7 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="footer-title">Save &amp; Earn with Paul <span class="footer-version">v6.1</span></div>
+        <div class="footer-title">Save &amp; Earn with Paul <span class="footer-version">v6.2</span></div>
         <div>Helping households explore simpler bills, potential savings and an optional way to earn additional income.</div>
         <div class="footer-actions"><button class="btn btn-light btn-small" data-share-site type="button">Share website</button><button class="btn btn-light btn-small" data-install-app type="button" hidden>Install app</button></div>
       </div>
@@ -196,5 +232,5 @@
   <a class="btn btn-light" href="https://wa.me/447925008477" target="_blank" rel="noopener">WhatsApp</a>
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script defer src="/analytics.v6.1.js"></script><script defer src="/site.v6.1.js"></script><script defer src="/energy-model.v6.1.js"></script><script defer src="/household-check-model.v6.1.js"></script><script defer src="/command-centre.v6.1.js"></script>
+<script defer src="/analytics.v6.2.js"></script><script defer src="/site.v6.2.js"></script><script defer src="/energy-model.v6.2.js"></script><script defer src="/household-check-model.v6.2.js"></script><script defer src="/command-centre.v6.2.js"></script>
 </body></html>
