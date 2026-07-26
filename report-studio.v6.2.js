@@ -205,5 +205,10 @@
   select.value=initial;render(initial);
   select.addEventListener('change',()=>{history.replaceState(null,'',location.pathname+'?type='+select.value+(SAMPLE?'&sample=1':''));render(select.value);});
   document.getElementById('refreshReport').onclick=()=>render(select.value);
-  document.getElementById('printReport').onclick=()=>{window.trackSafe?.('professional_report_print',{type:select.value});window.print();};
+  document.getElementById('printReport').onclick=()=>{
+    window.trackSafe?.('professional_report_print',{type:select.value});
+    document.documentElement.classList.add('is-printing-report');
+    requestAnimationFrame(()=>requestAnimationFrame(()=>window.print()));
+  };
+  window.addEventListener('afterprint',()=>document.documentElement.classList.remove('is-printing-report'));
 })();

@@ -58,3 +58,85 @@ body.report-body{margin:0;background:#d9e1ea;color:var(--r-ink);font-family:Inte
 .snapshot-report-missing{display:flex;gap:1.4mm;flex-wrap:wrap}.snapshot-report-missing span{font-size:6.5pt;background:#fff3bd;color:#665000;border-radius:99px;padding:1.5mm 2.2mm}.snapshot-report-renewals{display:grid;gap:1.7mm;margin-top:3mm}.snapshot-report-renewals div{background:#f2f6fa;border-radius:3mm;padding:2.5mm}.snapshot-report-renewals span,.snapshot-report-renewals strong,.snapshot-report-renewals small{display:block}.snapshot-report-renewals span{font-size:6pt;color:var(--r-muted);text-transform:uppercase}.snapshot-report-renewals strong{font-size:7.5pt;color:var(--r-navy);margin-top:.7mm}.snapshot-report-renewals small{font-size:6pt;color:var(--r-muted);margin-top:.5mm}
 .snapshot-report-next{margin-top:4mm;border-top:.4mm solid var(--r-line);padding-top:3mm}.snapshot-report-next>div:last-child{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5mm}.snapshot-report-action{display:grid;grid-template-columns:8mm 1fr;gap:2mm;background:#f4f8fc;border-radius:3mm;padding:2.5mm}.snapshot-report-action>span{width:7mm;height:7mm;border-radius:2mm;background:var(--r-yellow);display:grid;place-items:center;color:var(--r-navy);font-weight:1000;font-size:7pt}.snapshot-report-action strong{display:block;color:var(--r-navy);font-size:7pt}.snapshot-report-action p{font-size:6pt;color:var(--r-muted);margin:.7mm 0 0}
 .snapshot-report-contact{display:grid;grid-template-columns:1fr 26mm;gap:5mm;align-items:center;background:linear-gradient(145deg,var(--r-navy),var(--r-blue));border-radius:4mm;padding:4mm 5mm;margin-top:4mm;color:#fff}.snapshot-report-contact h3{font-size:13pt;color:var(--r-yellow);margin:1mm 0}.snapshot-report-contact p{font-size:7pt;color:#d9e7f5;margin:0 0 1.5mm}.snapshot-report-contact strong{font-size:7pt;color:#fff}.snapshot-report-contact img{width:24mm;height:24mm;background:#fff;border-radius:3mm;padding:1.5mm}.snapshot-report-disclaimer{font-size:5.8pt;color:var(--r-muted);line-height:1.4;margin:2.5mm 0 0}
+
+
+/* FULL-A4 PRINT OUTPUT - authoritative final print rules */
+@page{
+  size:A4 portrait;
+  margin:0;
+}
+@media print{
+  html{
+    width:210mm!important;
+    min-width:210mm!important;
+    height:auto!important;
+    margin:0!important;
+    padding:0!important;
+    background:#fff!important;
+  }
+  body.report-body{
+    width:210mm!important;
+    min-width:210mm!important;
+    margin:0!important;
+    padding:0!important;
+    background:#fff!important;
+    overflow:visible!important;
+  }
+  body.report-body > .report-toolbar,
+  body.report-body > .no-print{
+    display:none!important;
+  }
+  body.report-body main#main{
+    display:block!important;
+    width:210mm!important;
+    min-width:210mm!important;
+    margin:0!important;
+    padding:0!important;
+    border:0!important;
+    background:#fff!important;
+    overflow:visible!important;
+  }
+  body.report-body main#main > h1{
+    display:none!important;
+  }
+  .report-document{
+    display:block!important;
+    width:210mm!important;
+    min-width:210mm!important;
+    margin:0!important;
+    padding:0!important;
+    gap:0!important;
+    background:#fff!important;
+  }
+  .report-page,
+  .snapshot-report-page{
+    display:block!important;
+    box-sizing:border-box!important;
+    width:210mm!important;
+    min-width:210mm!important;
+    max-width:210mm!important;
+    height:297mm!important;
+    min-height:297mm!important;
+    max-height:297mm!important;
+    margin:0!important;
+    border:0!important;
+    box-shadow:none!important;
+    overflow:hidden!important;
+    transform:none!important;
+    break-before:auto!important;
+    break-inside:avoid!important;
+    break-after:page!important;
+    page-break-before:auto!important;
+    page-break-inside:avoid!important;
+    page-break-after:always!important;
+  }
+  .report-page:last-child,
+  .snapshot-report-page:last-child{
+    break-after:auto!important;
+    page-break-after:auto!important;
+  }
+  *{
+    -webkit-print-color-adjust:exact!important;
+    print-color-adjust:exact!important;
+  }
+}
