@@ -1,4 +1,4 @@
-SAVE & EARN WITH PAUL - VERSION 6.2
+SAVE & EARN WITH PAUL - VERSION 6.3
 
 THE CUSTOMER JOURNEY
 Version 6.1 introduces one guided five-minute Household Check.
@@ -30,7 +30,7 @@ DEPLOYMENT
 1. Extract the ZIP.
 2. Upload every file and folder from the extracted package to the repository root.
 3. Commit:
-   Launch Version 6.2 Step 3 refinement
+   Launch Version 6.3 Step 3 refinement
 4. Keep the existing private EPC_API_TOKEN setting when official property lookup is enabled.
 5. Deploy and test:
    /
@@ -46,9 +46,13 @@ Answers remain on the visitor’s device unless the visitor chooses to share the
 The readiness result is a planning aid, not a quotation, eligibility decision, credit assessment or guaranteed saving.
 
 
-VERSION 6.2 REFINEMENT
+VERSION 6.3 REFINEMENT
 - Rebuilt Step 3 energy-source selection as larger, overflow-safe cards.
 - Added clearer language: annual kWh, meter readings, property context or household estimate.
 - Added accuracy labels and improved mobile stacking.
 - Added stronger selected-state visibility and keyboard focus.
 - Hid unused annual-kWh fields when the estimate option is selected.
+
+
+VERSION 6.3 VIDEO
+The homepage includes the enhanced how-paul-can-help-v6.3.mp4 file and an interactive chapter guide. Upload the MP4, poster JPG and video-guide.v6.3.js with the rest of the site.

@@ -1,0 +1,10 @@
+VERSION 6.3 - INTERACTIVE VIDEO GUIDE
+- Added Paul’s enhanced “How can I help?” video.
+- Reduced the web video from approximately 138 MB to approximately 5.2 MB.
+- Added branded opening and closing cards.
+- Normalised speech audio and lightly improved picture clarity.
+- Added interactive chapter controls.
+- Added a context-sensitive recommended action that changes with the video.
+- Added responsive mobile and desktop layouts.
+- Added long-lived media cache headers and byte-range support.
+- The video does not autoplay and remains under visitor control.
