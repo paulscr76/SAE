@@ -140,3 +140,45 @@ body.report-body{margin:0;background:#d9e1ea;color:var(--r-ink);font-family:Inte
     print-color-adjust:exact!important;
   }
 }
+
+
+/* BALANCED FULL-PAGE HOUSEHOLD SNAPSHOT */
+.snapshot-report-page{
+  display:flex;
+  flex-direction:column;
+}
+.snapshot-report-brand,
+.snapshot-report-hero,
+.snapshot-report-metrics,
+.snapshot-report-columns,
+.snapshot-report-next,
+.snapshot-report-contact,
+.snapshot-report-disclaimer{
+  flex:0 0 auto;
+}
+.snapshot-report-columns{
+  flex:1 1 auto;
+  min-height:0;
+  align-content:start;
+}
+.snapshot-report-contact{
+  margin-top:auto;
+}
+.snapshot-report-disclaimer{
+  margin-bottom:12mm;
+}
+@media print{
+  .snapshot-report-page{
+    display:flex!important;
+    flex-direction:column!important;
+  }
+  .snapshot-report-columns{
+    flex:1 1 auto!important;
+  }
+  .snapshot-report-contact{
+    margin-top:auto!important;
+  }
+  .snapshot-report-disclaimer{
+    margin-bottom:12mm!important;
+  }
+}
